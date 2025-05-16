@@ -1,74 +1,66 @@
 
-# Model danych i proces ETL dla projektu hurtowni danych opartego na wynikach wyborów parlamentarnych w Polsce
+# Projekt Hurtowni Danych
 
-## 🧱 Model danych (Data Warehouse Schema)
+## Fakty (tabele faktów)
 
-Proponuję klasyczny **schemat gwiazdy (star schema)**:
+### Fakt_Wyniki_Wyborcze
+| Nazwa kolumny | Typ danych | Klucz | Opis |
+|---------------|------------|-------|------|
+| id_wyniku     | INT        | PK    | Unikalny identyfikator wyniku |
+| id_obwodu     | INT        | FK    | Identyfikator obwodu głosowania |
+| id_komitetu   | INT        | FK    | Identyfikator komitetu wyborczego |
+| rok           | INT        |       | Rok wyborów (np. 2015, 2019, 2023) |
+| glosy_oddane  | INT        |       | Liczba oddanych głosów |
+| glosy_wazne   | INT        |       | Liczba ważnych głosów |
+| glosy_na_komitet | INT     |       | Liczba głosów na komitet |
 
-### 🧮 Tabela faktów: `Fakty_Glosy`
-Zawiera dane liczbowe, które będziemy analizować.
+### Fakt_Rejestr_Wyborców
+| Nazwa kolumny | Typ danych | Klucz | Opis |
+|---------------|------------|-------|------|
+| id_rejestru   | INT        | PK    | Unikalny identyfikator rejestru |
+| id_gminy      | INT        | FK    | Identyfikator gminy |
+| rok           | INT        |       | Rok |
+| liczba_mieszkancow | INT   |       | Liczba mieszkańców |
+| liczba_wyborcow | INT     |       | Liczba wyborców |
 
-| Kolumna              | Opis |
-|----------------------|------|
-| `id_glosowania`      | Klucz główny |
-| `id_kandydat`        | Klucz obcy do wymiaru Kandydat |
-| `id_komitet`         | Klucz obcy do wymiaru Komitet |
-| `id_okreg`           | Klucz obcy do wymiaru Okręg |
-| `id_data`            | Klucz obcy do wymiaru Data |
-| `glosy`              | Liczba głosów oddanych |
-| `glosy_wazne`        | Liczba ważnych głosów |
-| `glosy_niewazne`     | Liczba nieważnych głosów |
-| `frekwencja`         | Frekwencja w % |
+## Wymiary (tabele wymiarów)
 
-### 📐 Wymiary (Dimensions)
+### Wymiar_Gmina
+| Nazwa kolumny | Typ danych | Klucz | Opis |
+|---------------|------------|-------|------|
+| id_gminy      | INT        | PK    | Unikalny identyfikator gminy |
+| kod_teryt     | VARCHAR    |       | Kod TERYT gminy |
+| nazwa_gminy   | VARCHAR    |       | Nazwa gminy |
+| typ_gminy     | VARCHAR    |       | Typ gminy (m., gm., etc.) |
+| powiat        | VARCHAR    |       | Powiat |
+| wojewodztwo   | VARCHAR    |       | Województwo |
 
-#### 📅 `Wymiar_Data`
-| Kolumna | Opis |
-|---------|------|
-| `id_data` | Klucz główny |
-| `data` | Data wyborów |
-| `rok` | Rok |
-| `miesiac` | Miesiąc |
-| `dzien_tygodnia` | Dzień tygodnia |
+### Wymiar_Obwod
+| Nazwa kolumny | Typ danych | Klucz | Opis |
+|---------------|------------|-------|------|
+| id_obwodu     | INT        | PK    | Unikalny identyfikator obwodu |
+| numer_obwodu  | INT        |       | Numer obwodu |
+| adres         | VARCHAR    |       | Adres obwodu |
+| id_gminy      | INT        | FK    | Identyfikator gminy |
 
-#### 🧑 `Wymiar_Kandydat`
-| Kolumna | Opis |
-|---------|------|
-| `id_kandydat` | Klucz główny |
-| `imie` | Imię |
-| `nazwisko` | Nazwisko |
-| `plec` | Płeć |
-| `wiek` | Wiek |
-| `miejsce_na_liscie` | Pozycja na liście |
+### Wymiar_Komitet
+| Nazwa kolumny | Typ danych | Klucz | Opis |
+|---------------|------------|-------|------|
+| id_komitetu   | INT        | PK    | Unikalny identyfikator komitetu |
+| nazwa_komitetu | VARCHAR   |       | Nazwa komitetu |
+| skrot         | VARCHAR    |       | Skrót nazwy komitetu |
+| typ           | VARCHAR    |       | Typ komitetu (koalicja, partia, etc.) |
 
-#### 🏛️ `Wymiar_Komitet`
-| Kolumna | Opis |
-|---------|------|
-| `id_komitet` | Klucz główny |
-| `nazwa_komitetu` | Nazwa komitetu |
-| `typ_komitetu` | Typ (partia, koalicja, niezależny) |
+### Wymiar_Czas
+| Nazwa kolumny | Typ danych | Klucz | Opis |
+|---------------|------------|-------|------|
+| id_czasu      | INT        | PK    | Unikalny identyfikator czasu |
+| rok           | INT        |       | Rok |
+| miesiac       | INT        |       | Miesiąc |
+| dzien         | INT        |       | Dzień |
+| kwartal       | INT        |       | Kwartał |
 
-#### 🗺️ `Wymiar_Okreg`
-| Kolumna | Opis |
-|---------|------|
-| `id_okreg` | Klucz główny |
-| `nazwa_okregu` | Nazwa okręgu |
-| `wojewodztwo` | Województwo |
-| `liczba_mandatow` | Liczba mandatów w okręgu |
-
-## 🔄 Proces ETL
-
-### 1. Extract (Pobieranie danych)
-- Pobranie plików CSV/XLSX z repozytorium PKW.
-- Można zautomatyzować pobieranie lub ręcznie załadować pliki.
-
-### 2. Transform (Przekształcanie danych)
-- Czyszczenie danych (np. usunięcie pustych wierszy, konwersja typów).
-- Agregacja głosów na poziomie okręgów.
-- Obliczanie frekwencji.
-- Mapowanie kandydatów do komitetów i okręgów.
-- Obsługa delty danych (np. tylko nowe dane z kolejnych wyborów).
-
-### 3. Load (Ładowanie danych)
-- Załadowanie danych do tabel wymiarów i tabeli faktów w hurtowni danych (np. SQL Server).
-- Można użyć SSIS, Python + SQLAlchemy, Airflow lub innego narzędzia ETL.
+## Relacje między tabelami
+- `Fakt_Wyniki_Wyborcze.id_obwodu` -> `Wymiar_Obwod.id_obwodu`
+- `Fakt_Wyniki_Wyborcze.id_komitetu` -> `Wymiar_Komitet.id_komitetu`
+- `Fakt_Rejestr_Wyborców.id_gminy` -> `Wymiar_Gmina.id_gminy`

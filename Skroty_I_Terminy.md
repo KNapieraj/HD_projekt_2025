@@ -15,3 +15,21 @@
 | **Pentaho**          | Platforma open-source do integracji danych i analizy biznesowej.          |
 | **Oracle Data Integrator** | Narzędzie firmy Oracle do tworzenia procesów ETL.                   |
 | **CSV**              | Comma-Separated Values – format plików tekstowych do danych tabelarycznych. |
+
+
+## 🔄 Proces ETL
+
+### 1. Extract (Pobieranie danych)
+- Pobranie plików CSV/XLSX z repozytorium PKW.
+- Można zautomatyzować pobieranie lub ręcznie załadować pliki.
+
+### 2. Transform (Przekształcanie danych)
+- Czyszczenie danych (np. usunięcie pustych wierszy, konwersja typów).
+- Agregacja głosów na poziomie okręgów.
+- Obliczanie frekwencji.
+- Mapowanie kandydatów do komitetów i okręgów.
+- Obsługa delty danych (np. tylko nowe dane z kolejnych wyborów).
+
+### 3. Load (Ładowanie danych)
+- Załadowanie danych do tabel wymiarów i tabeli faktów w hurtowni danych (np. SQL Server).
+- Można użyć SSIS, Python + SQLAlchemy, Airflow lub innego narzędzia ETL.
