@@ -1,0 +1,2497 @@
+﻿KOD TERYTORIALNY;Nazwa jednostki;Liczba mieszkańców;Liczba wyborców ogółem
+020101;m. Bolesławiec;37456;31446
+020102;gm. Bolesławiec;13760;11055
+020103;gm. Gromadka;5438;4563
+020104;gm. Nowogrodziec;15071;11986
+020105;gm. Osiecznica;6924;5484
+020106;gm. Warta Bolesławiecka;8474;6753
+020201;m. Bielawa;29939;25393
+020202;m. Dzierżoniów;32730;27710
+020203;m. Pieszyce;9343;7691
+020204;m. Piława Górna;6416;5338
+020205;gm. Dzierżoniów;9242;7620
+020206;gm. Łagiewniki;7489;6104
+020207;gm. Niemcza;5678;4774
+020301;m. Głogów;65995;54273
+020302;gm. Głogów;6606;5235
+020303;gm. Jerzmanowa;4723;3584
+020304;gm. Kotla;4396;3427
+020305;gm. Pęcław;2275;1783
+020306;gm. Żukowice;3506;2793
+020401;gm. Góra;20218;16307
+020402;gm. Jemielno;3119;2499
+020403;gm. Niechlów;4971;3983
+020404;gm. Wąsosz;7366;5959
+020501;m. Jawor;23479;19746
+020502;gm. Bolków;10592;8717
+020503;gm. Męcinka;4969;3974
+020504;gm. Mściwojów;4095;3318
+020505;gm. Paszowice;3954;3227
+020506;gm. Wądroże Wielkie;4075;3265
+020601;m. Karpacz;4847;4181
+020602;m. Kowary;10690;8975
+020603;m. Piechowice;6294;5297
+020604;m. Szklarska Poręba;6382;5471
+020605;gm. Janowice Wielkie;4216;3453
+020606;gm. Jeżów Sudecki;7094;5702
+020607;gm. Mysłakowice;10052;8277
+020608;gm. Podgórzyn;8070;6707
+020609;gm. Stara Kamienica;5205;4257
+020701;m. Kamienna Góra;19447;16334
+020702;gm. Kamienna Góra;9022;7104
+020703;gm. Lubawka;11146;9258
+020704;gm. Marciszów;4596;3774
+020801;m. Duszniki-Zdrój;4689;4017
+020802;m. Kłodzko;26350;22272
+020803;m. Kudowa-Zdrój;9970;8334
+020804;m. Nowa Ruda;22608;19232
+020805;m. Polanica-Zdrój;6425;5560
+020806;gm. Bystrzyca Kłodzka;18953;16003
+020807;gm. Kłodzko;17164;14010
+020808;gm. Lądek-Zdrój;8287;7080
+020809;gm. Lewin Kłodzki;1964;1622
+020810;gm. Międzylesie;7311;6054
+020811;gm. Nowa Ruda;11864;9835
+020812;gm. Radków;9117;7540
+020813;gm. Stronie Śląskie;7255;6122
+020814;gm. Szczytna;7330;5981
+020901;m. Chojnów;13330;11167
+020902;gm. Chojnów;9414;7682
+020903;gm. Krotoszyce;3202;2562
+020904;gm. Kunice;6277;5014
+020905;gm. Legnickie Pole;5079;3814
+020906;gm. Miłkowice;6355;5204
+020907;gm. Prochowice;7468;6061
+020908;gm. Ruja;2707;2149
+021001;m. Lubań;21083;17769
+021002;m. Świeradów-Zdrój;4264;3569
+021003;gm. Leśna;10162;8249
+021004;gm. Lubań;6533;5244
+021005;gm. Olszyna;6517;5412
+021006;gm. Platerówka;1635;1329
+021007;gm. Siekierczyn;4525;3695
+021101;m. Lubin;71083;59069
+021102;gm. Lubin;14752;11785
+021103;gm. Rudna;7752;6181
+021104;gm. Ścinawa;9919;8183
+021201;gm. Gryfów Śląski;9751;8173
+021202;gm. Lubomierz;5978;4888
+021203;gm. Lwówek Śląski;17395;14316
+021204;gm. Mirsk;8575;7159
+021205;gm. Wleń;4298;3626
+021301;gm. Cieszków;4752;3731
+021302;gm. Krośnice;8107;6416
+021303;gm. Milicz;24178;19420
+021401;m. Oleśnica;36517;30127
+021402;gm. Bierutów;9985;8228
+021403;gm. Dobroszyce;6483;5180
+021404;gm. Dziadowa Kłoda;4635;3646
+021405;gm. Międzybórz;5080;4010
+021406;gm. Oleśnica;12701;10046
+021407;gm. Syców;16456;13349
+021408;gm. Twardogóra;12909;10480
+021501;m. Oława;31441;25799
+021502;gm. Domaniów;5293;4220
+021503;gm. Jelcz-Laskowice;22352;18177
+021504;gm. Oława;14948;11834
+021601;gm. Chocianów;12824;10403
+021602;gm. Gaworzyce;3943;3131
+021603;gm. Grębocice;5319;4211
+021604;gm. Polkowice;26344;21070
+021605;gm. Przemków;8598;7015
+021606;gm. Radwanice;4703;3744
+021701;gm. Borów;5275;4373
+021702;gm. Kondratowice;4555;3691
+021703;gm. Przeworno;4970;4092
+021704;gm. Strzelin;21491;17766
+021705;gm. Wiązów;7374;6001
+021801;gm. Kostomłoty;7128;5779
+021802;gm. Malczyce;5833;4811
+021803;gm. Miękinia;14135;11164
+021804;gm. Środa Śląska;19272;15764
+021805;gm. Udanin;5407;4464
+021901;m. Świdnica;56192;47388
+021902;m. Świebodzice;22232;18542
+021903;gm. Dobromierz;5322;4348
+021904;gm. Jaworzyna Śląska;10305;8420
+021905;gm. Marcinowice;6408;5208
+021906;gm. Strzegom;26200;21707
+021907;gm. Świdnica;16731;13412
+021908;gm. Żarów;12520;10199
+022001;gm. Oborniki Śląskie;19442;15720
+022002;gm. Prusice;9308;7543
+022003;gm. Trzebnica;23116;18461
+022004;gm. Wisznia Mała;9661;7808
+022005;gm. Zawonia;5797;4660
+022006;gm. Żmigród;14680;11871
+022101;m. Boguszów-Gorce;15335;12924
+022102;m. Jedlina-Zdrój;4750;3951
+022103;m. Szczawno-Zdrój;5594;4799
+022104;gm. Czarny Bór;4844;3904
+022105;gm. Głuszyca;8648;7328
+022106;gm. Mieroszów;6643;5609
+022107;gm. Stare Bogaczowice;4178;3417
+022108;gm. Walim;5560;4652
+022201;gm. Brzeg Dolny;15724;13094
+022202;gm. Wińsko;8502;7005
+022203;gm. Wołów;22275;18405
+022301;gm. Czernica;13167;10258
+022302;gm. Długołęka;27590;21619
+022303;gm. Jordanów Śląski;3154;2574
+022304;gm. Kąty Wrocławskie;21490;16908
+022305;gm. Kobierzyce;17909;13719
+022306;gm. Mietków;3866;3150
+022307;gm. Sobótka;12637;10351
+022308;gm. Siechnice;18966;14746
+022309;gm. Żórawina;9899;7951
+022401;gm. Bardo;5385;4424
+022402;gm. Ciepłowody;3137;2580
+022403;gm. Kamieniec Ząbkowicki;8383;6929
+022404;gm. Stoszowice;5480;4506
+022405;gm. Ząbkowice Śląskie;21799;18362
+022406;gm. Ziębice;17421;14448
+022407;gm. Złoty Stok;4625;3868
+022501;m. Zawidów;4222;3481
+022502;m. Zgorzelec;30468;25993
+022503;gm. Bogatynia;23670;19333
+022504;gm. Pieńsk;8999;7384
+022505;gm. Sulików;6126;4923
+022506;gm. Węgliniec;8512;7033
+022507;gm. Zgorzelec;8311;6762
+022601;m. Wojcieszów;3714;3088
+022602;m. Złotoryja;15560;13030
+022603;gm. Pielgrzymka;4675;3748
+022604;gm. Świerzawa;7686;6281
+022605;gm. Zagrodno;5452;4487
+022606;gm. Złotoryja;7099;5734
+026101;m. Jelenia Góra;77175;65784
+026201;m. Legnica;95665;79785
+026401;m. Wrocław;586390;488481
+026501;m. Wałbrzych;108588;92657
+040101;m. Aleksandrów Kujawski;12036;9839
+040102;m. Ciechocinek;10231;8748
+040103;m. Nieszawa;1991;1649
+040104;gm. Aleksandrów Kujawski;11545;9077
+040105;gm. Bądkowo;4448;3582
+040106;gm. Koneck;3314;2709
+040107;gm. Raciążek;3113;2542
+040108;gm. Waganiec;4548;3664
+040109;gm. Zakrzewo;3579;2950
+040201;m. Brodnica;26755;21743
+040202;gm. Bobrowo;6404;5071
+040203;gm. Brodnica;7895;6022
+040204;gm. Brzozie;3814;2934
+040205;gm. Górzno;3955;3185
+040206;gm. Bartniczka;4775;3685
+040207;gm. Jabłonowo Pomorskie;9117;7245
+040208;gm. Osiek;4101;3245
+040209;gm. Świedziebnia;5318;4184
+040210;gm. Zbiczno;4911;3865
+040301;gm. Białe Błota;19187;14698
+040302;gm. Dąbrowa Chełmińska;8005;6267
+040303;gm. Dobrcz;10967;8542
+040304;gm. Koronowo;23558;18836
+040305;gm. Nowa Wieś Wielka;9491;7535
+040306;gm. Osielsko;12417;9527
+040307;gm. Sicienko;9636;7604
+040308;gm. Solec Kujawski;16005;12906
+040401;m. Chełmno;18741;15469
+040402;gm. Chełmno;5793;4449
+040403;gm. Kijewo Królewskie;4503;3514
+040404;gm. Lisewo;5240;4119
+040405;gm. Papowo Biskupie;4433;3491
+040406;gm. Stolno;5189;4095
+040407;gm. Unisław;6792;5424
+040501;m. Golub-Dobrzyń;12351;10018
+040502;gm. Ciechocin;4081;3202
+040503;gm. Golub-Dobrzyń;8818;6951
+040504;gm. Kowalewo Pomorskie;11526;9212
+040505;gm. Radomin;4125;3336
+040506;gm. Zbójno;4484;3507
+040601;gm. Grudziądz;12113;9399
+040602;gm. Gruta;6631;5269
+040603;gm. Łasin;8156;6490
+040604;gm. Radzyń Chełmiński;4842;3812
+040605;gm. Rogóźno;4222;3253
+040606;gm. Świecie nad Osą;4454;3388
+040701;m. Inowrocław;70770;59773
+040702;gm. Dąbrowa Biskupia;5157;4102
+040703;gm. Gniewkowo;14320;11537
+040704;gm. Inowrocław;11627;9388
+040705;gm. Janikowo;13320;10974
+040706;gm. Kruszwica;19352;15920
+040707;gm. Pakość;9824;7990
+040708;gm. Rojewo;4702;3744
+040709;gm. Złotniki Kujawskie;9187;7426
+040801;m. Lipno;14014;11479
+040802;gm. Bobrowniki;3154;2485
+040803;gm. Chrostkowo;3053;2431
+040804;gm. Dobrzyń nad Wisłą;7902;6395
+040805;gm. Kikół;7288;5755
+040806;gm. Lipno;11835;9249
+040807;gm. Skępe;7655;6096
+040808;gm. Tłuchowo;4718;3683
+040809;gm. Wielgie;6891;5326
+040901;gm. Dąbrowa;4680;3737
+040902;gm. Jeziora Wielkie;4957;3995
+040903;gm. Mogilno;24717;20116
+040904;gm. Strzelno;11794;9586
+041001;gm. Kcynia;13481;10753
+041002;gm. Mrocza;9280;7206
+041003;gm. Nakło nad Notecią;30970;24932
+041004;gm. Sadki;7366;5743
+041005;gm. Szubin;23726;18836
+041101;m. Radziejów;5591;4713
+041102;gm. Bytoń;3704;3066
+041103;gm. Dobre;5432;4565
+041104;gm. Osięciny;7981;6550
+041105;gm. Piotrków Kujawski;9459;7733
+041106;gm. Radziejów;4515;3686
+041107;gm. Topólka;5054;4137
+041201;m. Rypin;16031;13217
+041202;gm. Brzuze;5421;4311
+041203;gm. Rogowo;4920;3904
+041204;gm. Rypin;7583;5961
+041205;gm. Skrwilno;6125;4880
+041206;gm. Wąpielsk;4180;3317
+041301;gm. Kamień Krajeński;7112;5501
+041302;gm. Sępólno Krajeńskie;15873;12713
+041303;gm. Sośno;5198;4062
+041304;gm. Więcbork;13185;10434
+041401;gm. Bukowiec;5142;4020
+041402;gm. Dragacz;7213;5720
+041403;gm. Drzycim;5064;4026
+041404;gm. Jeżewo;7959;6286
+041405;gm. Lniano;4240;3326
+041406;gm. Nowe;10273;8403
+041407;gm. Osie;5480;4337
+041408;gm. Pruszcz;9461;7533
+041409;gm. Świecie;32261;26225
+041410;gm. Świekatowo;3534;2810
+041411;gm. Warlubie;6412;5068
+041501;m. Chełmża;14130;11499
+041502;gm. Chełmża;9794;7671
+041503;gm. Czernikowo;8994;6982
+041504;gm. Lubicz;18926;14589
+041505;gm. Łubianka;6755;5178
+041506;gm. Łysomice;9605;7444
+041507;gm. Obrowo;15163;11430
+041508;gm. Wielka Nieszawka;4761;3678
+041509;gm. Zławieś Wielka;13249;10147
+041601;gm. Cekcyn;6785;5301
+041602;gm. Gostycyn;5305;4179
+041603;gm. Kęsowo;4534;3561
+041604;gm. Lubiewo;5988;4665
+041605;gm. Śliwice;5639;4369
+041606;gm. Tuchola;19742;15983
+041701;m. Wąbrzeźno;13187;10861
+041702;gm. Dębowa Łąka;3285;2569
+041703;gm. Książki;4270;3400
+041704;gm. Płużnica;4913;3930
+041705;gm. Wąbrzeźno;8718;6879
+041801;m. Kowal;3516;2946
+041802;gm. Baruchowo;3591;2907
+041803;gm. Boniewo;3495;2809
+041804;gm. Brześć Kujawski;11386;9349
+041805;gm. Choceń;8115;6601
+041806;gm. Chodecz;6303;5124
+041807;gm. Fabianki;9715;7755
+041808;gm. Izbica Kujawska;7835;6230
+041809;gm. Kowal;3949;3205
+041810;gm. Lubanie;4611;3775
+041811;gm. Lubień Kujawski;7479;6110
+041812;gm. Lubraniec;9885;8141
+041813;gm. Włocławek;7123;5694
+041901;gm. Barcin;14358;11715
+041902;gm. Gąsawa;5299;4272
+041903;gm. Janowiec Wielkopolski;9167;7380
+041904;gm. Łabiszyn;9902;7809
+041905;gm. Rogowo;6909;5493
+041906;gm. Żnin;24242;19699
+046101;m. Bydgoszcz;333493;278368
+046201;m. Grudziądz;88531;73249
+046301;m. Toruń;186588;154920
+046401;m. Włocławek;108161;90852
+060101;m. Międzyrzec Podlaski;17102;13945
+060102;m. Terespol;5841;4732
+060103;gm. Biała Podlaska;13983;10849
+060104;gm. Drelów;5592;4439
+060105;gm. Janów Podlaski;5436;4373
+060106;gm. Kodeń;3848;3163
+060107;gm. Konstantynów;4162;3301
+060108;gm. Leśna Podlaska;4397;3508
+060109;gm. Łomazy;5233;4259
+060110;gm. Międzyrzec Podlaski;10522;8241
+060111;gm. Piszczac;7449;5994
+060112;gm. Rokitno;3178;2542
+060113;gm. Rossosz;2393;1951
+060114;gm. Sławatycze;2519;2044
+060115;gm. Sosnówka;2627;2194
+060116;gm. Terespol;6759;5475
+060117;gm. Tuczna;3313;2706
+060118;gm. Wisznice;5132;4223
+060119;gm. Zalesie;4549;3602
+060201;m. Biłgoraj;26807;21824
+060202;gm. Aleksandrów;3311;2562
+060203;gm. Biłgoraj;13328;10576
+060204;gm. Biszcza;3987;3202
+060205;gm. Frampol;6359;5248
+060206;gm. Goraj;4298;3544
+060207;gm. Józefów;7127;5903
+060208;gm. Księżpol;7001;5563
+060209;gm. Łukowa;4435;3570
+060210;gm. Obsza;4377;3509
+060211;gm. Potok Górny;5641;4659
+060212;gm. Tarnogród;6907;5581
+060213;gm. Tereszpol;4026;3258
+060214;gm. Turobin;6524;5521
+060301;m. Rejowiec Fabryczny;4475;3722
+060302;gm. Białopole;3162;2582
+060303;gm. Chełm;14167;11325
+060304;gm. Dorohusk;6674;5467
+060305;gm. Dubienka;2512;2116
+060306;gm. Kamień;4172;3336
+060307;gm. Leśniowice;3885;3159
+060308;gm. Rejowiec Fabryczny;4386;3585
+060309;gm. Ruda-Huta;4706;3765
+060310;gm. Sawin;5836;4746
+060311;gm. Siedliszcze;6932;5605
+060312;gm. Wierzbica;5369;4327
+060313;gm. Wojsławice;3997;3328
+060314;gm. Żmudź;3325;2696
+060315;gm. Rejowiec;6546;5399
+060401;m. Hrubieszów;18222;15156
+060402;gm. Dołhobyczów;5891;4907
+060403;gm. Horodło;5433;4492
+060404;gm. Hrubieszów;10577;8565
+060405;gm. Mircze;7479;6281
+060406;gm. Trzeszczany;4414;3681
+060407;gm. Uchanie;4879;4064
+060408;gm. Werbkowice;9947;8187
+060501;gm. Batorz;3444;2782
+060502;gm. Chrzanów;3068;2486
+060503;gm. Dzwola;6574;5365
+060504;gm. Godziszów;6073;4880
+060505;gm. Janów Lubelski;16129;13299
+060506;gm. Modliborzyce;7208;5907
+060507;gm. Potok Wielki;4931;3938
+060601;m. Krasnystaw;19099;16051
+060602;gm. Fajsławice;4740;3936
+060603;gm. Gorzków;3678;3149
+060604;gm. Izbica;8544;7089
+060605;gm. Krasnystaw;8860;7322
+060606;gm. Kraśniczyn;3827;3364
+060607;gm. Łopiennik Górny;4145;3453
+060609;gm. Rudnik;3213;2731
+060610;gm. Siennica Różana;4149;3495
+060611;gm. Żółkiewka;5770;4856
+060701;m. Kraśnik;34715;29244
+060702;gm. Annopol;8962;7335
+060703;gm. Dzierzkowice;5446;4398
+060704;gm. Gościeradów;7423;5962
+060705;gm. Kraśnik;7338;5909
+060706;gm. Szastarka;5995;4865
+060707;gm. Trzydnik Duży;6590;5418
+060708;gm. Urzędów;8765;7057
+060709;gm. Wilkołaz;5545;4416
+060710;gm. Zakrzówek;6753;5546
+060801;m. Lubartów;21939;18069
+060802;gm. Abramów;4239;3446
+060803;gm. Firlej;5958;4788
+060804;gm. Jeziorzany;2909;2372
+060805;gm. Kamionka;6398;5142
+060806;gm. Kock;6688;5353
+060807;gm. Lubartów;11122;8708
+060808;gm. Michów;6226;5092
+060809;gm. Niedźwiada;6426;5130
+060810;gm. Ostrów Lubelski;5400;4407
+060811;gm. Ostrówek;4067;3202
+060812;gm. Serniki;4910;3970
+060813;gm. Uścimów;3325;2689
+060901;gm. Bełżyce;13394;10834
+060902;gm. Borzechów;3854;3188
+060903;gm. Bychawa;11969;9734
+060904;gm. Garbów;8937;7184
+060905;gm. Głusk;9957;7724
+060906;gm. Jabłonna;7878;6321
+060907;gm. Jastków;13413;10631
+060908;gm. Konopnica;12801;10383
+060909;gm. Krzczonów;4594;3993
+060910;gm. Niedrzwica Duża;11664;9099
+060911;gm. Niemce;18659;14714
+060912;gm. Strzyżewice;7799;6227
+060913;gm. Wojciechów;6009;4838
+060914;gm. Wólka;11154;8521
+060915;gm. Wysokie;4759;3976
+060916;gm. Zakrzew;3054;2608
+061001;gm. Cyców;7951;6205
+061002;gm. Ludwin;5420;4212
+061003;gm. Łęczna;23426;19157
+061004;gm. Milejów;9169;7415
+061005;gm. Puchaczów;5515;4347
+061006;gm. Spiczyn;5561;4391
+061101;m. Łuków;30028;24222
+061102;m. Stoczek Łukowski;2694;2178
+061103;gm. Adamów;5904;4692
+061104;gm. Krzywda;10785;8292
+061105;gm. Łuków;17822;13554
+061106;gm. Serokomla;4199;3358
+061107;gm. Stanin;9949;7700
+061108;gm. Stoczek Łukowski;8214;6579
+061109;gm. Trzebieszów;7605;5940
+061110;gm. Wojcieszków;7119;5546
+061111;gm. Wola Mysłowska;5008;4038
+061201;gm. Chodel;6866;5372
+061202;gm. Józefów nad Wisłą;6835;5590
+061203;gm. Karczmiska;5789;4805
+061204;gm. Łaziska;5043;4106
+061205;gm. Opole Lubelskie;17758;14494
+061206;gm. Poniatowa;14626;12053
+061207;gm. Wilków;4706;3849
+061301;gm. Dębowa Kłoda;4084;3323
+061302;gm. Jabłoń;3935;3203
+061303;gm. Milanów;4079;3248
+061304;gm. Parczew;14987;12288
+061305;gm. Podedwórze;1785;1501
+061306;gm. Siemień;4752;3894
+061307;gm. Sosnowica;2724;2253
+061401;m. Puławy;47932;40170
+061402;gm. Baranów;4094;3387
+061403;gm. Janowiec;3820;3127
+061404;gm. Kazimierz Dolny;6942;5760
+061405;gm. Końskowola;9083;7464
+061406;gm. Kurów;7809;6356
+061407;gm. Markuszów;3037;2477
+061408;gm. Nałęczów;9096;7496
+061409;gm. Puławy;11919;9752
+061410;gm. Wąwolnica;4755;3849
+061411;gm. Żyrzyn;6696;5463
+061501;m. Radzyń Podlaski;15851;12959
+061502;gm. Borki;6222;4898
+061503;gm. Czemierniki;4555;3685
+061504;gm. Kąkolewnica;8490;6709
+061505;gm. Komarówka Podlaska;4630;3793
+061506;gm. Radzyń Podlaski;8293;6574
+061507;gm. Ulan-Majorat;6235;4888
+061508;gm. Wohyń;7079;5712
+061601;m. Dęblin;16199;13554
+061602;gm. Kłoczew;7486;5899
+061603;gm. Nowodwór;4310;3390
+061604;gm. Ryki;20829;16962
+061605;gm. Stężyca;5363;4429
+061606;gm. Ułęż;3356;2806
+061701;m. Świdnik;39150;32602
+061702;gm. Mełgiew;9283;7353
+061703;gm. Piaski;10592;8707
+061704;gm. Rybczewice;3592;3023
+061705;gm. Trawniki;9110;7336
+061801;m. Tomaszów Lubelski;19847;16609
+061802;gm. Bełżec;3478;2784
+061803;gm. Jarczów;3669;3006
+061804;gm. Krynice;3438;2855
+061805;gm. Lubycza Królewska;6614;5364
+061806;gm. Łaszczów;6397;5320
+061807;gm. Rachanie;5559;4569
+061808;gm. Susiec;7866;6431
+061809;gm. Tarnawatka;4071;3292
+061810;gm. Telatyn;4265;3531
+061811;gm. Tomaszów Lubelski;11476;9221
+061812;gm. Tyszowce;6010;4868
+061813;gm. Ulhówek;5035;4213
+061901;m. Włodawa;13488;11231
+061902;gm. Hanna;3148;2637
+061903;gm. Hańsk;3914;3109
+061904;gm. Stary Brus;2187;1788
+061905;gm. Urszulin;4281;3435
+061906;gm. Włodawa;6092;4945
+061907;gm. Wola Uhruska;4014;3365
+061908;gm. Wyryki;2748;2253
+062001;gm. Adamów;4924;4043
+062002;gm. Grabowiec;4354;3634
+062003;gm. Komarów-Osada;5358;4406
+062004;gm. Krasnobród;7351;5937
+062005;gm. Łabunie;6344;5104
+062006;gm. Miączyn;6122;4977
+062007;gm. Nielisz;5811;4826
+062008;gm. Radecznica;5815;4922
+062009;gm. Sitno;6897;5582
+062010;gm. Skierbieszów;5394;4435
+062011;gm. Stary Zamość;5434;4468
+062012;gm. Sułów;4735;3965
+062013;gm. Szczebrzeszyn;11662;9645
+062014;gm. Zamość;22798;18358
+062015;gm. Zwierzyniec;7058;5850
+066101;m. Biała Podlaska;56276;46028
+066201;m. Chełm;63160;53181
+066301;m. Lublin;324546;268558
+066401;m. Zamość;63538;52956
+080101;m. Kostrzyn nad Odrą;17183;13761
+080102;gm. Bogdaniec;6935;5517
+080103;gm. Deszczno;9060;7130
+080104;gm. Kłodawa;8017;6386
+080105;gm. Lubiszyn;6778;5440
+080106;gm. Santok;8191;6523
+080107;gm. Witnica;12770;10219
+080201;m. Gubin;16179;13331
+080202;gm. Bobrowice;3266;2644
+080203;gm. Bytnica;2557;2049
+080204;gm. Dąbie;5032;3998
+080205;gm. Gubin;7275;5827
+080206;gm. Krosno Odrzańskie;17935;14737
+080207;gm. Maszewo;2926;2353
+080301;gm. Bledzew;4462;3621
+080302;gm. Międzyrzecz;24314;19854
+080303;gm. Przytoczna;5722;4625
+080304;gm. Pszczew;4215;3422
+080305;gm. Skwierzyna;12065;10023
+080306;gm. Trzciel;6420;5247
+080401;m. Nowa Sól;37633;31192
+080402;gm. Bytom Odrzański;5494;4368
+080403;gm. Kolsko;3337;2649
+080404;gm. Kożuchów;15932;12867
+080405;gm. Nowa Sól;6951;5502
+080406;gm. Nowe Miasteczko;5407;4392
+080407;gm. Otyń;6718;5334
+080408;gm. Siedlisko;3605;2843
+080501;gm. Cybinka;6685;5366
+080502;gm. Górzyca;4243;3327
+080503;gm. Ośno Lubuskie;6387;5178
+080504;gm. Rzepin;9832;7894
+080505;gm. Słubice;18859;15326
+080601;gm. Dobiegniew;6687;5532
+080602;gm. Drezdenko;17197;13879
+080603;gm. Stare Kurowo;4177;3348
+080604;gm. Strzelce Krajeńskie;17157;13891
+080605;gm. Zwierzyn;4417;3517
+080701;gm. Krzeszyce;4736;3781
+080702;gm. Lubniewice;3107;2608
+080703;gm. Słońsk;4812;3804
+080704;gm. Sulęcin;15640;12562
+080705;gm. Torzym;6779;5388
+080801;gm. Lubrza;3522;2845
+080802;gm. Łagów;5158;4246
+080803;gm. Skąpe;5018;4049
+080804;gm. Szczaniec;3913;3121
+080805;gm. Świebodzin;29274;23788
+080806;gm. Zbąszynek;8301;6698
+080901;gm. Babimost;6185;5016
+080902;gm. Bojadła;3312;2710
+080903;gm. Czerwieńsk;9563;7725
+080904;gm. Kargowa;5849;4680
+080905;gm. Nowogród Bobrzański;9264;7531
+080906;gm. Sulechów;25333;20835
+080907;gm. Świdnica;6389;5162
+080908;gm. Trzebiechów;3317;2653
+080909;gm. Zabór;3994;3194
+080910;gm. Zielona Góra;0;0
+081001;m. Gozdnica;3232;2698
+081002;m. Żagań;25235;20878
+081003;gm. Brzeźnica;3820;3027
+081004;gm. Iłowa;6928;5719
+081005;gm. Małomice;5306;4369
+081006;gm. Niegosławice;4535;3627
+081007;gm. Szprotawa;20896;17109
+081008;gm. Wymiarki;2336;1917
+081009;gm. Żagań;7132;5683
+081101;m. Łęknica;2498;1997
+081102;m. Żary;37311;30667
+081103;gm. Brody;3451;2789
+081104;gm. Jasień;7086;5802
+081105;gm. Lipinki Łużyckie;3234;2610
+081106;gm. Lubsko;18747;15412
+081107;gm. Przewóz;3209;2601
+081108;gm. Trzebiel;5720;4614
+081109;gm. Tuplice;3118;2609
+081110;gm. Żary;12135;9695
+081201;gm. Sława;12545;9889
+081202;gm. Szlichtyngowa;5143;4050
+081203;gm. Wschowa;21204;17098
+086101;m. Gorzów Wielkopolski;117601;97483
+086201;m. Zielona Góra;130346;107150
+100101;m. Bełchatów;58256;48046
+100102;gm. Bełchatów;10792;8718
+100103;gm. Drużbice;5217;4259
+100104;gm. Kleszczów;5704;4235
+100105;gm. Kluki;4337;3485
+100106;gm. Rusiec;5231;4286
+100107;gm. Szczerców;8092;6524
+100108;gm. Zelów;15055;12223
+100201;m. Kutno;44478;37785
+100202;gm. Bedlno;5670;4727
+100203;gm. Dąbrowice;1962;1624
+100204;gm. Krośniewice;8619;7190
+100205;gm. Krzyżanów;4326;3598
+100206;gm. Kutno;8650;7126
+100207;gm. Łanięta;2476;1961
+100208;gm. Nowe Ostrowy;3612;3005
+100209;gm. Oporów;2701;2219
+100210;gm. Strzelce;4054;3349
+100211;gm. Żychlin;12193;10345
+100301;gm. Buczek;5090;4076
+100302;gm. Łask;27635;22880
+100303;gm. Sędziejowice;6435;5263
+100304;gm. Widawa;7636;6400
+100305;gm. Wodzierady;3329;2746
+100401;m. Łęczyca;14381;11976
+100402;gm. Daszyna;4094;3369
+100403;gm. Góra Świętej Małgorzaty;4469;3633
+100404;gm. Grabów;6192;5155
+100405;gm. Łęczyca;8538;7015
+100406;gm. Piątek;6197;5092
+100407;gm. Świnice Warckie;3986;3318
+100408;gm. Witonia;3317;2791
+100501;m. Łowicz;28695;23749
+100502;gm. Bielawy;5688;4705
+100503;gm. Chąśno;3003;2468
+100504;gm. Domaniewice;4665;3762
+100505;gm. Kiernozia;3536;2905
+100506;gm. Kocierzew Południowy;4385;3552
+100507;gm. Łowicz;7691;6179
+100508;gm. Łyszkowice;6692;5430
+100509;gm. Nieborów;9489;7734
+100510;gm. Zduny;5866;4882
+100602;gm. Andrespol;13102;10532
+100603;gm. Brójce;6371;5050
+100607;gm. Koluszki;23245;19068
+100608;gm. Nowosolna;4676;3690
+100610;gm. Rzgów;9671;7782
+100611;gm. Tuszyn;12128;9929
+100701;gm. Białaczów;5897;4789
+100702;gm. Drzewica;10965;8898
+100703;gm. Mniszków;4756;3808
+100704;gm. Opoczno;34983;28202
+100705;gm. Paradyż;4596;3578
+100706;gm. Poświętne;3408;2797
+100707;gm. Sławno;7745;6014
+100708;gm. Żarnów;6105;5104
+100801;m. Konstantynów Łódzki;17491;14558
+100802;m. Pabianice;64298;54459
+100803;gm. Dłutów;4403;3572
+100804;gm. Dobroń;7400;6006
+100805;gm. Ksawerów;7571;6146
+100806;gm. Lutomiersk;7817;6365
+100807;gm. Pabianice;6605;5283
+100901;gm. Działoszyn;12732;10387
+100902;gm. Kiełczygłów;4239;3518
+100903;gm. Nowa Brzeźnica;4675;3916
+100904;gm. Pajęczno;11885;9699
+100905;gm. Rząśnia;4881;3929
+100906;gm. Siemkowice;5008;3990
+100907;gm. Strzelce Wielkie;4686;3881
+100908;gm. Sulmierzyce;4481;3706
+101001;gm. Aleksandrów;4581;3763
+101002;gm. Czarnocin;4036;3273
+101003;gm. Gorzkowice;8648;6902
+101004;gm. Grabica;6096;4832
+101005;gm. Łęki Szlacheckie;3683;2962
+101006;gm. Moszczenica;12710;10199
+101007;gm. Ręczno;3712;3044
+101008;gm. Rozprza;12272;9667
+101009;gm. Sulejów;16312;13328
+101010;gm. Wola Krzysztoporska;11798;9347
+101011;gm. Wolbórz;7727;6286
+101101;gm. Dalików;3855;3140
+101102;gm. Pęczniew;3617;2972
+101103;gm. Poddębice;15550;12846
+101104;gm. Uniejów;7161;6003
+101105;gm. Wartkowice;6279;5160
+101106;gm. Zadzim;5161;4319
+101201;m. Radomsko;46504;38891
+101202;gm. Dobryszyce;4300;3444
+101203;gm. Gidle;6288;5272
+101204;gm. Gomunice;5951;4836
+101205;gm. Kamieńsk;6083;4932
+101206;gm. Kobiele Wielkie;4500;3625
+101207;gm. Kodrąb;4723;3847
+101208;gm. Lgota Wielka;4380;3552
+101209;gm. Ładzice;4908;3911
+101210;gm. Masłowice;4333;3549
+101211;gm. Przedbórz;7321;6069
+101212;gm. Radomsko;5573;4576
+101213;gm. Wielgomłyny;4824;3949
+101214;gm. Żytno;5400;4494
+101301;m. Rawa Mazowiecka;17621;14471
+101302;gm. Biała Rawska;11510;9373
+101303;gm. Cielądz;4062;3297
+101304;gm. Rawa Mazowiecka;8647;6970
+101305;gm. Regnów;1886;1509
+101306;gm. Sadkowice;5676;4576
+101401;m. Sieradz;42080;34993
+101402;gm. Błaszki;14981;12160
+101403;gm. Brąszewice;4555;3571
+101404;gm. Brzeźnio;6357;5109
+101405;gm. Burzenin;5583;4557
+101406;gm. Goszczanów;5615;4493
+101407;gm. Klonowa;2968;2385
+101408;gm. Sieradz;10388;8249
+101409;gm. Warta;12865;10503
+101410;gm. Wróblew;6159;5007
+101411;gm. Złoczew;7365;5936
+101501;gm. Bolimów;4006;3245
+101502;gm. Głuchów;5938;4740
+101503;gm. Godzianów;2615;2097
+101504;gm. Kowiesy;3035;2487
+101505;gm. Lipce Reymontowskie;3326;2681
+101506;gm. Maków;6024;4896
+101507;gm. Nowy Kawęczyn;3407;2796
+101508;gm. Skierniewice;7288;5847
+101509;gm. Słupia;2704;2146
+101601;m. Tomaszów Mazowiecki;62146;51452
+101602;gm. Będków;3385;2801
+101603;gm. Budziszewice;2269;1810
+101604;gm. Czerniewice;5217;4194
+101605;gm. Inowłódz;3890;3248
+101606;gm. Lubochnia;7062;5517
+101607;gm. Rokiciny;6156;5034
+101608;gm. Rzeczyca;4851;3983
+101609;gm. Tomaszów Mazowiecki;10865;8627
+101610;gm. Ujazd;7922;6413
+101611;gm. Żelechlinek;3392;2707
+101701;gm. Biała;5598;4502
+101702;gm. Czarnożyły;4566;3684
+101703;gm. Konopnica;3941;3255
+101704;gm. Mokrsko;5477;4384
+101705;gm. Osjaków;4860;3882
+101706;gm. Ostrówek;4596;3663
+101707;gm. Pątnów;6624;5266
+101708;gm. Skomlin;3406;2719
+101709;gm. Wieluń;32034;26568
+101710;gm. Wierzchlas;6640;5430
+101801;gm. Bolesławiec;4147;3374
+101802;gm. Czastary;3966;3193
+101803;gm. Galewice;6246;5019
+101804;gm. Lututów;4642;3755
+101805;gm. Łubnice;4204;3371
+101806;gm. Sokolniki;4905;3996
+101807;gm. Wieruszów;14307;11533
+101901;m. Zduńska Wola;42059;34712
+101902;gm. Szadek;7371;6062
+101903;gm. Zapolice;5126;4178
+101904;gm. Zduńska Wola;11908;9447
+102001;m. Głowno;14407;12038
+102002;m. Ozorków;19357;16083
+102003;m. Zgierz;55111;46007
+102004;gm. Aleksandrów Łódzki;29892;24063
+102005;gm. Głowno;4816;3958
+102006;gm. Ozorków;7009;5804
+102007;gm. Parzęczew;5011;4094
+102008;gm. Stryków;12328;10088
+102009;gm. Zgierz;13370;10962
+102101;m. Brzeziny;12271;10096
+102102;gm. Brzeziny;5495;4406
+102103;gm. Dmosin;4531;3773
+102104;gm. Jeżów;3472;2821
+102105;gm. Rogów;4723;3899
+106101;m. Łódź;658214;560604
+106201;m. Piotrków Trybunalski;73371;60525
+106301;m. Skierniewice;47199;38712
+120101;m. Bochnia;29545;23673
+120102;gm. Bochnia;19514;15453
+120103;gm. Drwinia;6452;5207
+120104;gm. Lipnica Murowana;5609;4423
+120105;gm. Łapanów;7991;6192
+120106;gm. Nowy Wiśnicz;13641;10566
+120107;gm. Rzezawa;11082;8743
+120108;gm. Trzciana;5486;4218
+120109;gm. Żegocina;5380;4120
+120201;gm. Borzęcin;8454;6799
+120202;gm. Brzesko;36370;29181
+120203;gm. Czchów;9808;7593
+120204;gm. Dębno;14590;11605
+120205;gm. Gnojnik;7875;6049
+120206;gm. Iwkowa;6436;4858
+120207;gm. Szczurowa;9684;7859
+120301;gm. Alwernia;12537;10392
+120302;gm. Babice;9026;7443
+120303;gm. Chrzanów;45850;38734
+120304;gm. Libiąż;22230;18345
+120305;gm. Trzebinia;33399;27768
+120401;gm. Bolesław;2777;2365
+120402;gm. Dąbrowa Tarnowska;20939;16931
+120403;gm. Gręboszów;3447;2977
+120404;gm. Mędrzechów;3501;2867
+120405;gm. Olesno;7926;6418
+120406;gm. Radgoszcz;7519;5893
+120407;gm. Szczucin;13297;10807
+120501;m. Gorlice;28054;23287
+120502;gm. Biecz;17294;13869
+120503;gm. Bobowa;9810;7368
+120504;gm. Gorlice;17250;13804
+120505;gm. Lipinki;6884;5578
+120506;gm. Łużna;8537;6655
+120507;gm. Moszczenica;4978;3881
+120508;gm. Ropa;5394;4067
+120509;gm. Sękowa;5118;4054
+120510;gm. Uście Gorlickie;6887;5275
+120601;gm. Czernichów;14016;11173
+120602;gm. Igołomia-Wawrzeńczyce;7664;6186
+120603;gm. Iwanowice;8913;7057
+120604;gm. Jerzmanowice-Przeginia;10887;8784
+120605;gm. Kocmyrzów-Luborzyca;14410;11533
+120606;gm. Krzeszowice;31962;26206
+120607;gm. Liszki;16417;13108
+120608;gm. Michałowice;9445;7475
+120609;gm. Mogilany;13152;10263
+120610;gm. Skała;10429;8260
+120611;gm. Skawina;42028;33966
+120612;gm. Słomniki;13588;11023
+120613;gm. Sułoszowa;5884;4687
+120614;gm. Świątniki Górne;9670;7698
+120615;gm. Wielka Wieś;11002;8681
+120616;gm. Zabierzów;25152;20238
+120617;gm. Zielonki;20123;15520
+120701;m. Limanowa;15053;11945
+120702;m. Mszana Dolna;7922;6212
+120703;gm. Dobra;9943;7697
+120704;gm. Jodłownik;8587;6538
+120705;gm. Kamienica;7937;5937
+120706;gm. Laskowa;8044;5942
+120707;gm. Limanowa;25055;18811
+120708;gm. Łukowica;9950;7355
+120709;gm. Mszana Dolna;17524;13164
+120710;gm. Niedźwiedź;7320;5420
+120711;gm. Słopnice;6568;4639
+120712;gm. Tymbark;6551;5009
+120801;gm. Charsznica;7555;6243
+120802;gm. Gołcza;6125;5089
+120803;gm. Kozłów;4761;3966
+120804;gm. Książ Wielki;5258;4351
+120805;gm. Miechów;19498;16137
+120806;gm. Racławice;2545;2107
+120807;gm. Słaboszów;3754;3072
+120901;gm. Dobczyce;14944;11727
+120902;gm. Lubień;9991;7593
+120903;gm. Myślenice;42958;33860
+120904;gm. Pcim;11002;8462
+120905;gm. Raciechowice;6340;5019
+120906;gm. Siepraw;8573;6659
+120907;gm. Sułkowice;14561;11370
+120908;gm. Tokarnia;8698;6619
+120909;gm. Wiśniowa;7280;5570
+121001;m. Grybów;6161;4893
+121002;gm. Chełmiec;27747;21063
+121003;gm. Gródek nad Dunajcem;9343;6971
+121004;gm. Grybów;25009;18547
+121005;gm. Kamionka Wielka;10221;7574
+121006;gm. Korzenna;14369;10843
+121007;gm. Krynica-Zdrój;17021;13784
+121008;gm. Łabowa;5873;4273
+121009;gm. Łącko;16381;12235
+121010;gm. Łososina Dolna;10796;8035
+121011;gm. Muszyna;11784;9210
+121012;gm. Nawojowa;8411;6276
+121013;gm. Piwniczna-Zdrój;10722;8413
+121014;gm. Podegrodzie;12883;9544
+121015;gm. Rytro;3873;3019
+121016;gm. Stary Sącz;23498;18314
+121101;m. Nowy Targ;32776;26631
+121102;gm. Szczawnica;7392;5971
+121103;gm. Czarny Dunajec;22155;17612
+121104;gm. Czorsztyn;7638;5962
+121105;gm. Jabłonka;18601;14050
+121106;gm. Krościenko nad Dunajcem;6813;5338
+121107;gm. Lipnica Wielka;6044;4524
+121108;gm. Łapsze Niżne;9202;7268
+121109;gm. Nowy Targ;23670;18460
+121110;gm. Ochotnica Dolna;8519;6409
+121111;gm. Raba Wyżna;14692;11385
+121112;gm. Rabka-Zdrój;17280;14060
+121113;gm. Spytkowice;4536;3429
+121114;gm. Szaflary;10776;8469
+121201;m. Bukowno;10041;8587
+121203;gm. Bolesław;7852;6561
+121204;gm. Klucze;15060;12492
+121205;gm. Olkusz;48665;40487
+121206;gm. Trzyciąż;7104;5723
+121207;gm. Wolbrom;23023;18959
+121301;m. Oświęcim;38274;32109
+121302;gm. Brzeszcze;21277;17554
+121303;gm. Chełmek;12843;10531
+121304;gm. Kęty;33639;27346
+121305;gm. Osiek;8113;6495
+121306;gm. Oświęcim;18286;14702
+121307;gm. Polanka Wielka;4291;3436
+121308;gm. Przeciszów;6788;5492
+121309;gm. Zator;9302;7525
+121401;gm. Koniusza;8854;7066
+121402;gm. Koszyce;5663;4691
+121403;gm. Nowe Brzesko;5772;4733
+121404;gm. Pałecznica;3670;2899
+121405;gm. Proszowice;16248;13394
+121406;gm. Radziemice;3467;2799
+121501;m. Jordanów;5362;4283
+121502;m. Sucha Beskidzka;9387;7664
+121503;gm. Budzów;8841;6689
+121504;gm. Bystra-Sidzina;6835;5215
+121505;gm. Jordanów;10998;8519
+121506;gm. Maków Podhalański;16231;12947
+121507;gm. Stryszawa;11952;9646
+121508;gm. Zawoja;9172;7222
+121509;gm. Zembrzyce;5626;4536
+121601;gm. Ciężkowice;11408;8994
+121602;gm. Gromnik;8886;6898
+121603;gm. Lisia Góra;15001;11604
+121604;gm. Pleśna;12085;9503
+121605;gm. Radłów;9752;7986
+121606;gm. Ryglice;11764;9208
+121607;gm. Rzepiennik Strzyżewski;6854;5340
+121608;gm. Skrzyszów;14109;11089
+121609;gm. Tarnów;25034;20036
+121610;gm. Tuchów;18211;14354
+121611;gm. Wierzchosławice;10819;8679
+121612;gm. Wietrzychowice;4053;3362
+121613;gm. Wojnicz;13446;10726
+121614;gm. Zakliczyn;12513;9741
+121615;gm. Żabno;18900;15429
+121616;gm. Szerzyny;8074;6450
+121701;m. Zakopane;26639;22099
+121702;gm. Biały Dunajec;7126;5595
+121703;gm. Bukowina Tatrzańska;13177;10262
+121704;gm. Kościelisko;8458;6743
+121705;gm. Poronin;11353;8766
+121801;gm. Andrychów;43746;35022
+121802;gm. Brzeźnica;10106;8030
+121803;gm. Kalwaria Zebrzydowska;19691;15872
+121804;gm. Lanckorona;6113;4749
+121805;gm. Mucharz;4026;3171
+121806;gm. Spytkowice;10241;8129
+121807;gm. Stryszów;6919;5461
+121808;gm. Tomice;7825;6092
+121809;gm. Wadowice;37721;30415
+121810;gm. Wieprz;12157;9462
+121901;gm. Biskupice;9672;7516
+121902;gm. Gdów;17663;13740
+121903;gm. Kłaj;10528;8429
+121904;gm. Niepołomice;25782;20373
+121905;gm. Wieliczka;54597;43317
+126101;m. Kraków;703654;581719
+126201;m. Nowy Sącz;82262;66641
+126301;m. Tarnów;108338;90652
+140101;gm. Białobrzegi;10360;8310
+140102;gm. Promna;5652;4535
+140103;gm. Radzanów;3916;3036
+140104;gm. Stara Błotnica;5381;4145
+140105;gm. Stromiec;5680;4502
+140106;gm. Wyśmierzyce;2964;2402
+140201;m. Ciechanów;43858;36447
+140202;gm. Ciechanów;6947;5536
+140203;gm. Glinojeck;8044;6422
+140204;gm. Gołymin-Ośrodek;4013;3224
+140205;gm. Grudusk;3775;3049
+140206;gm. Ojrzeń;4384;3514
+140207;gm. Opinogóra Górna;5980;4803
+140208;gm. Regimin;5013;4085
+140209;gm. Sońsk;7821;6357
+140301;m. Garwolin;17068;13468
+140302;m. Łaskarzew;4900;3986
+140303;gm. Borowie;5240;4178
+140304;gm. Garwolin;13091;9961
+140305;gm. Górzno;6412;4997
+140306;gm. Łaskarzew;5464;4330
+140307;gm. Maciejowice;7334;5926
+140308;gm. Miastków Kościelny;4980;3970
+140309;gm. Parysów;4268;3297
+140310;gm. Pilawa;10928;8565
+140311;gm. Sobolew;8256;6494
+140312;gm. Trojanów;7570;5998
+140313;gm. Wilga;5325;4301
+140314;gm. Żelechów;8568;6758
+140401;m. Gostynin;18352;15326
+140402;gm. Gostynin;12263;9901
+140403;gm. Pacyna;3747;3138
+140404;gm. Sanniki;6311;5164
+140405;gm. Szczawin Kośc.;5099;4152
+140501;m. Milanówek;15991;13072
+140502;m. Podkowa Leśna;3888;3194
+140503;gm. Baranów;5107;4032
+140504;gm. Grodzisk Mazowiecki;43026;33782
+140505;gm. Jaktorów;11577;9125
+140506;gm. Żabia Wola;8196;6364
+140601;gm. Belsk Duży;6599;5379
+140602;gm. Błędów;7722;6291
+140603;gm. Chynów;9888;7926
+140604;gm. Goszczyn;3002;2352
+140605;gm. Grójec;24480;19613
+140606;gm. Jasieniec;5422;4324
+140607;gm. Mogielnica;8965;7424
+140608;gm. Nowe Miasto nad Pilicą;8058;6841
+140609;gm. Pniewy;4762;3827
+140611;gm. Warka;19122;15432
+140701;gm. Garbatka-Letnisko;5205;4399
+140702;gm. Głowaczów;7578;6204
+140703;gm. Gniewoszów;4038;3329
+140704;gm. Grabów nad Pilicą;4037;3208
+140705;gm. Kozienice;30141;24947
+140706;gm. Magnuszew;7065;5703
+140707;gm. Sieciechów;4095;3347
+140801;m. Legionowo;51497;41116
+140802;gm. Jabłonna;17392;13111
+140803;gm. Nieporęt;13813;10825
+140804;gm. Serock;14135;11241
+140805;gm. Wieliszew;12518;9915
+140901;gm. Chotcza;2440;2046
+140902;gm. Ciepielów;5833;4699
+140903;gm. Lipsko;11505;9663
+140904;gm. Rzeczniów;4541;3752
+140905;gm. Sienno;6079;5063
+140906;gm. Solec nad Wisłą;5260;4448
+141001;gm. Huszlew;2977;2364
+141002;gm. Łosice;11177;9151
+141003;gm. Olszanka;3126;2502
+141004;gm. Platerów;5078;4109
+141005;gm. Sarnaki;5042;4197
+141006;gm. Stara Kornica;4982;4038
+141101;m. Maków Mazowiecki;9884;7996
+141102;gm. Czerwonka;2762;2208
+141103;gm. Karniewo;5360;4246
+141104;gm. Krasnosielc;6677;5288
+141105;gm. Młynarze;1796;1416
+141106;gm. Płoniawy-Bramura;5683;4641
+141107;gm. Różan;4545;3697
+141108;gm. Rzewnie;2728;2200
+141109;gm. Sypniewo;3483;2814
+141110;gm. Szelków;3737;2990
+141201;m. Mińsk Mazowiecki;38822;30732
+141204;gm. Cegłów;6171;4959
+141205;gm. Dębe Wielkie;9725;7572
+141206;gm. Dobre;6038;4816
+141207;gm. Halinów;15075;11550
+141208;gm. Jakubów;5118;4032
+141209;gm. Kałuszyn;5914;4760
+141210;gm. Latowicz;5443;4256
+141211;gm. Mińsk Mazowiecki;14514;11384
+141212;gm. Mrozy;8611;6931
+141213;gm. Siennica;7249;5739
+141214;gm. Stanisławów;6714;5323
+141215;m. Sulejówek;19026;15390
+141301;m. Mława;29905;24463
+141302;gm. Dzierzgowo;3247;2628
+141303;gm. Lipowiec Kościelny;4927;3943
+141304;gm. Radzanów;3533;2813
+141305;gm. Strzegowo;7838;6381
+141306;gm. Stupsk;4981;4002
+141307;gm. Szreńsk;4389;3501
+141308;gm. Szydłowo;4677;3741
+141309;gm. Wieczfnia Kościelna;4120;3237
+141310;gm. Wiśniewo;5289;4224
+141401;m. Nowy Dwór Mazowiecki;27343;22053
+141402;gm. Czosnów;10013;8156
+141403;gm. Leoncin;5555;4553
+141404;gm. Nasielsk;19655;15858
+141405;gm. Pomiechówek;8915;7308
+141406;gm. Zakroczym;6266;5148
+141501;gm. Baranowo;6737;5421
+141502;gm. Czarnia;2685;2032
+141503;gm. Czerwin;5234;4224
+141504;gm. Goworowo;8678;6995
+141505;gm. Kadzidło;11485;8948
+141506;gm. Lelis;9403;7241
+141507;gm. Łyse;8535;6591
+141508;gm. Myszyniec;10717;8384
+141509;gm. Olszewo-Borki;10386;8139
+141510;gm. Rzekuń;10393;8154
+141511;gm. Troszyn;4955;3973
+141601;m. Ostrów Mazowiecka;22639;18412
+141602;gm. Andrzejewo;4366;3563
+141603;gm. Boguty-Pianki;2737;2246
+141604;gm. Brok;2926;2358
+141605;gm. Małkinia Górna;11973;9771
+141606;gm. Nur;2972;2534
+141607;gm. Ostrów Mazowiecka;12808;10183
+141608;gm. Stary Lubotyń;3851;3054
+141609;gm. Szulborze Wielkie;1803;1494
+141610;gm. Wąsewo;4468;3632
+141611;gm. Zaręby Kościelne;3812;3056
+141701;m. Józefów;19217;14922
+141702;m. Otwock;43365;35254
+141703;gm. Celestynów;11568;9305
+141704;gm. Karczew;15585;12801
+141705;gm. Kołbiel;8163;6543
+141706;gm. Osieck;3599;2883
+141707;gm. Sobienie-Jeziory;6345;5156
+141708;gm. Wiązowna;11944;9234
+141801;gm. Góra Kalwaria;25592;20521
+141802;gm. Konstancin-Jeziorna;24056;19574
+141803;gm. Lesznowola;22892;16731
+141804;gm. Piaseczno;73463;56032
+141805;gm. Prażmów;10254;7991
+141806;gm. Tarczyn;11058;8861
+141901;gm. Bielsk;9027;7232
+141902;gm. Bodzanów;8345;6807
+141903;gm. Brudzeń Duży;8169;6516
+141904;gm. Bulkowo;5844;4681
+141905;gm. Drobin;8203;6472
+141906;gm. Gąbin;11038;9069
+141907;gm. Łąck;5337;4341
+141908;gm. Mała Wieś;6167;5069
+141909;gm. Nowy Duninów;4004;3271
+141910;gm. Radzanowo;8104;6506
+141911;gm. Słubice;4580;3709
+141912;gm. Słupno;7109;5666
+141913;gm. Stara Biała;11289;8882
+141914;gm. Staroźreby;7444;5966
+141915;gm. Wyszogród;5762;4747
+142001;m. Płońsk;21799;17832
+142002;m. Raciąż;4559;3765
+142003;gm. Baboszewo;8095;6433
+142004;gm. Czerwińsk nad Wisłą;7813;6293
+142005;gm. Dzierzążnia;3842;3128
+142006;gm. Joniec;2611;2150
+142007;gm. Naruszewo;6490;5224
+142008;gm. Nowe Miasto;4668;3873
+142009;gm. Płońsk;7746;6158
+142010;gm. Raciąż;8446;6847
+142011;gm. Sochocin;5977;4841
+142012;gm. Załuski;5693;4543
+142101;m. Piastów;22147;18164
+142102;m. Pruszków;57064;45975
+142103;gm. Brwinów;24578;19592
+142104;gm. Michałowice;16974;13323
+142105;gm. Nadarzyn;12801;9927
+142106;gm. Raszyn;20893;16541
+142201;m. Przasnysz;17007;13728
+142202;gm. Chorzele;10320;8088
+142203;gm. Czernice Borowe;3889;3168
+142204;gm. Jednorożec;7340;5717
+142205;gm. Krasne;3844;3080
+142206;gm. Krzynowłoga Mała;3649;2883
+142207;gm. Przasnysz;7413;5838
+142301;gm. Borkowice;4429;3722
+142302;gm. Gielniów;4703;3892
+142303;gm. Klwów;3529;2851
+142304;gm. Odrzywół;4012;3336
+142305;gm. Potworów;4319;3427
+142306;gm. Przysucha;12455;10440
+142307;gm. Rusinów;4437;3583
+142308;gm. Wieniawa;5524;4476
+142401;gm. Gzy;3854;3130
+142402;gm. Obryte;4995;4001
+142403;gm. Pokrzywnica;5019;3967
+142404;gm. Pułtusk;23779;19217
+142405;gm. Świercze;4779;3849
+142406;gm. Winnica;4155;3274
+142407;gm. Zatory;4899;3898
+142501;m. Pionki;18628;15854
+142502;gm. Gózd;8763;6780
+142503;gm. Iłża;15264;12586
+142504;gm. Jastrzębia;7006;5462
+142505;gm. Jedlińsk;14123;10870
+142506;gm. Jedlnia-Letnisko;12630;10012
+142507;gm. Kowala;11906;9178
+142508;gm. Pionki;10181;8118
+142509;gm. Przytyk;7363;5712
+142510;gm. Skaryszew;14472;11156
+142511;gm. Wierzbica;9944;7965
+142512;gm. Wolanów;8800;6774
+142513;gm. Zakrzew;12622;9689
+142601;gm. Domanice;2703;2119
+142602;gm. Korczew;2826;2358
+142603;gm. Kotuń;8619;6871
+142604;gm. Mokobody;5137;4119
+142605;gm. Mordy;6103;4985
+142606;gm. Paprotnia;2715;2190
+142607;gm. Przesmyki;3454;2838
+142608;gm. Siedlce;17637;13761
+142609;gm. Skórzec;7742;6022
+142610;gm. Suchożebry;4725;3778
+142611;gm. Wiśniew;5899;4610
+142612;gm. Wodynie;4585;3726
+142613;gm. Zbuczyn;10182;7970
+142701;m. Sierpc;18118;15026
+142702;gm. Gozdowo;6010;4817
+142703;gm. Mochowo;6230;4947
+142704;gm. Rościszewo;4308;3459
+142705;gm. Sierpc;7057;5541
+142706;gm. Szczutowo;4406;3552
+142707;gm. Zawidz;6904;5544
+142801;m. Sochaczew;35712;29546
+142802;gm. Brochów;4313;3517
+142803;gm. Iłów;6203;4995
+142804;gm. Młodzieszyn;5566;4491
+142805;gm. Nowa Sucha;6539;5200
+142806;gm. Rybno;3509;2776
+142807;gm. Sochaczew;10315;8065
+142808;gm. Teresin;11297;9061
+142901;m. Sokołów Podlaski;18804;15339
+142902;gm. Bielany;3821;3056
+142903;gm. Ceranów;2354;1984
+142904;gm. Jabłonna Lacka;4787;3968
+142905;gm. Kosów Lacki;6467;5310
+142906;gm. Repki;5507;4546
+142907;gm. Sabnie;3893;3238
+142908;gm. Sokołów Podlaski;6174;5029
+142909;gm. Sterdyń;4253;3568
+143001;gm. Chlewiska;6244;5236
+143002;gm. Jastrząb;5316;4243
+143003;gm. Mirów;3908;3037
+143004;gm. Orońsko;5983;4700
+143005;gm. Szydłowiec;19001;15513
+143201;gm. Błonie;20789;16764
+143202;gm. Izabelin;10183;8170
+143203;gm. Kampinos;4325;3534
+143204;gm. Leszno;9636;7670
+143205;gm. Łomianki;24384;19031
+143206;gm. Ożarów Mazowiecki;22142;17670
+143207;gm. Stare Babice;17147;13413
+143301;m. Węgrów;12867;10591
+143302;gm. Grębków;4513;3627
+143303;gm. Korytnica;6461;5219
+143304;gm. Liw;7616;6178
+143305;gm. Łochów;17884;14279
+143306;gm. Miedzna;4070;3392
+143307;gm. Sadowne;6045;4902
+143308;gm. Stoczek;5149;4175
+143309;gm. Wierzbno;2925;2432
+143401;m. Kobyłka;21118;16422
+143402;m. Marki;28792;21747
+143403;m. Ząbki;31376;23248
+143404;m. Zielonka;16876;13597
+143405;gm. Dąbrówka;7782;6038
+143406;gm. Jadów;7717;6242
+143407;gm. Klembów;9561;7404
+143408;gm. Poświętne;6166;4833
+143409;gm. Radzymin;24783;18811
+143410;gm. Strachówka;2901;2393
+143411;gm. Tłuszcz;19669;15402
+143412;gm. Wołomin;50070;40070
+143501;gm. Brańszczyk;8224;6689
+143502;gm. Długosiodło;7891;6185
+143503;gm. Rząśnik;7027;5484
+143504;gm. Somianka;5658;4487
+143505;gm. Wyszków;38695;30846
+143506;gm. Zabrodzie;5937;4631
+143601;gm. Kazanów;4713;3744
+143602;gm. Policzna;5907;4903
+143603;gm. Przyłęk;6350;5097
+143604;gm. Tczów;4913;3854
+143605;gm. Zwoleń;15330;12507
+143701;gm. Bieżuń;5177;4241
+143702;gm. Kuczbork-Osada;4954;3991
+143703;gm. Lubowidz;7207;5820
+143704;gm. Lutocin;4582;3641
+143705;gm. Siemiątkowo;3633;2893
+143706;gm. Żuromin;14619;11973
+143801;m. Żyrardów;38788;31591
+143802;gm. Mszczonów;11353;9163
+143803;gm. Puszcza Mariańska;8389;6788
+143804;gm. Radziejowice;5462;4343
+143805;gm. Wiskitki;9813;7907
+146101;m. Ostrołęka;52013;42180
+146201;m. Płock;118554;98118
+146301;m. Radom;207619;171431
+146401;m. Siedlce;74166;59935
+146502;Bemowo;112983;91029
+146503;Białołęka;103663;75888
+146504;Bielany;124998;104535
+146505;Mokotów;204453;172124
+146506;Ochota;76380;64131
+146507;Praga-Południe;168404;141047
+146508;Praga-Północ;61466;51530
+146509;Rembertów;22424;18033
+146510;Śródmieście;106617;92132
+146511;Targówek;117611;97068
+146512;Ursus;53460;41354
+146513;Ursynów;139350;111474
+146514;Wawer;70020;55539
+146515;Wesoła;22776;17754
+146516;Wilanów;29968;21812
+146517;Włochy;37746;30300
+146518;Wola;126578;107424
+146519;Żoliborz;46908;39378
+160101;m. Brzeg;35296;29304
+160102;gm. Skarbimierz;7509;5949
+160103;gm. Grodków;19330;15613
+160104;gm. Lewin Brzeski;12999;10581
+160105;gm. Lubsza;8932;7298
+160106;gm. Olszanka;4973;4033
+160201;gm. Baborów;6178;5166
+160202;gm. Branice;6700;5623
+160203;gm. Głubczyce;22383;18434
+160204;gm. Kietrz;10990;9092
+160301;m. Kędzierzyn-Koźle;58890;49461
+160302;gm. Bierawa;7517;6287
+160303;gm. Cisek;5576;4678
+160304;gm. Pawłowiczki;7641;6369
+160305;gm. Polska Cerekiew;4125;3555
+160306;gm. Reńska Wieś;8046;6753
+160401;gm. Byczyna;9380;7627
+160402;gm. Kluczbork;35588;29940
+160403;gm. Lasowice Wielkie;6855;5833
+160404;gm. Wołczyn;13508;11132
+160501;gm. Gogolin;12197;10148
+160502;gm. Krapkowice;22547;18996
+160503;gm. Strzeleczki;7319;6144
+160504;gm. Walce;5567;4680
+160505;gm. Zdzieszowice;15187;12627
+160601;gm. Domaszowice;3648;2988
+160602;gm. Namysłów;25357;20857
+160603;gm. Pokój;5223;4356
+160604;gm. Świerczów;3508;2900
+160605;gm. Wilków;4558;3628
+160701;gm. Głuchołazy;24250;20378
+160702;gm. Kamiennik;3551;2936
+160703;gm. Korfantów;9256;7686
+160704;gm. Łambinowice;7524;6215
+160705;gm. Nysa;56467;47581
+160706;gm. Otmuchów;13863;11479
+160707;gm. Paczków;12844;10674
+160708;gm. Pakosławice;3636;3058
+160709;gm. Skoroszyce;6302;5150
+160801;gm. Dobrodzień;9775;8205
+160802;gm. Gorzów Śląski;7250;6019
+160803;gm. Olesno;17607;14862
+160804;gm. Praszka;13766;11475
+160805;gm. Radłów;4356;3554
+160806;gm. Rudniki;8349;6865
+160807;gm. Zębowice;3665;3085
+160901;gm. Chrząstowice;6635;5560
+160902;gm. Dąbrowa;9441;7794
+160903;gm. Dobrzeń Wielki;14187;11788
+160904;gm. Komprachcice;10708;9084
+160905;gm. Łubniany;9402;7850
+160906;gm. Murów;5437;4649
+160907;gm. Niemodlin;13071;10684
+160908;gm. Ozimek;19354;16484
+160909;gm. Popielów;7933;6666
+160910;gm. Prószków;9545;7937
+160911;gm. Tarnów Opolski;9389;7815
+160912;gm. Tułowice;5191;4318
+160913;gm. Turawa;9514;7965
+161001;gm. Biała;10658;8884
+161002;gm. Głogówek;13226;10972
+161003;gm. Lubrza;4342;3571
+161004;gm. Prudnik;26872;22399
+161101;gm. Izbicko;5358;4447
+161102;gm. Jemielnica;7208;5984
+161103;gm. Kolonowskie;5831;4996
+161104;gm. Leśnica;7737;6448
+161105;gm. Strzelce Opolskie;29870;24903
+161106;gm. Ujazd;6318;5127
+161107;gm. Zawadzkie;11512;9830
+166101;m. Opole;112259;94741
+180103;gm. Czarna;2447;1957
+180105;gm. Lutowiska;2193;1824
+180108;gm. Ustrzyki Dolne;17751;14440
+180201;gm. Brzozów;26995;21380
+180202;gm. Domaradz;6162;4915
+180203;gm. Dydnia;8216;6588
+180204;gm. Haczów;9413;7490
+180205;gm. Jasienica Rosielna;7836;6096
+180206;gm. Nozdrzec;8479;6843
+180301;m. Dębica;45917;37787
+180302;gm. Brzostek;13368;10468
+180303;gm. Czarna;13064;10372
+180304;gm. Dębica;25375;19955
+180305;gm. Jodłowa;5471;4381
+180306;gm. Pilzno;18104;14308
+180307;gm. Żyraków;13980;11006
+180401;m. Jarosław;37811;31540
+180402;m. Radymno;5462;4540
+180403;gm. Chłopice;5711;4606
+180404;gm. Jarosław;13146;10485
+180405;gm. Laszki;7141;5601
+180406;gm. Pawłosiów;8540;6913
+180407;gm. Pruchnik;10002;7848
+180408;gm. Radymno;11591;9126
+180409;gm. Rokietnica;4470;3578
+180410;gm. Roźwienica;6327;5046
+180411;gm. Wiązownica;11778;9245
+180501;m. Jasło;35960;30057
+180502;gm. Brzyska;6592;5209
+180503;gm. Dębowiec;8835;6923
+180504;gm. Jasło;16656;13453
+180505;gm. Kołaczyce;8987;7192
+180506;gm. Krempna;1967;1596
+180507;gm. Nowy Żmigród;9424;7666
+180508;gm. Osiek Jasielski;5430;4336
+180509;gm. Skołyszyn;12686;10190
+180511;gm. Tarnowiec;9340;7612
+180601;gm. Cmolas;8220;6460
+180602;gm. Kolbuszowa;24982;20267
+180603;gm. Majdan Królewski;10099;8011
+180604;gm. Niwiska;6113;4811
+180605;gm. Raniżów;7224;5710
+180606;gm. Dzikowiec;6602;5276
+180701;gm. Chorkówka;13725;10757
+180702;gm. Dukla;14761;11908
+180703;gm. Iwonicz-Zdrój;10997;8677
+180704;gm. Jedlicze;15522;12615
+180705;gm. Korczyna;11285;9081
+180706;gm. Krościenko Wyżne;5597;4412
+180707;gm. Miejsce Piastowe;13707;11114
+180708;gm. Rymanów;15973;12805
+180709;gm. Wojaszówka;9295;7457
+180710;gm. Jaśliska;2087;1603
+180801;m. Leżajsk;14147;11808
+180802;gm. Grodzisko Dolne;8236;6632
+180803;gm. Kuryłówka;5810;4657
+180804;gm. Leżajsk;20333;16024
+180805;gm. Nowa Sarzyna;21837;17356
+180901;m. Lubaczów;12468;10277
+180902;gm. Cieszanów;7595;6147
+180903;gm. Horyniec-Zdrój;5024;4126
+180904;gm. Lubaczów;9343;7513
+180905;gm. Narol;8324;6741
+180906;gm. Oleszyce;6565;5358
+180907;gm. Stary Dzików;4535;3690
+180908;gm. Wielkie Oczy;3888;3080
+181001;m. Łańcut;17697;14591
+181002;gm. Białobrzegi;8616;6720
+181003;gm. Czarna;11467;9105
+181004;gm. Łańcut;21384;16870
+181005;gm. Markowa;6623;5293
+181006;gm. Rakszawa;7390;5815
+181007;gm. Żołynia;6998;5490
+181101;m. Mielec;59892;49745
+181102;gm. Borowa;5643;4537
+181103;gm. Czermin;7058;5593
+181104;gm. Gawłuszowice;2792;2237
+181105;gm. Mielec;13134;10494
+181106;gm. Padew Narodowa;5440;4339
+181107;gm. Przecław;11763;9179
+181108;gm. Radomyśl Wielki;14163;11108
+181109;gm. Tuszów Narodowy;8082;6370
+181110;gm. Wadowice Górne;7580;5920
+181201;gm. Harasiuki;6302;5156
+181202;gm. Jarocin;5511;4525
+181203;gm. Jeżowe;10298;8008
+181204;gm. Krzeszów;4281;3553
+181205;gm. Nisko;22263;18387
+181206;gm. Rudnik nad Sanem;10302;8537
+181207;gm. Ulanów;8665;7150
+181301;gm. Bircza;6922;5559
+181302;gm. Dubiecko;9582;7628
+181303;gm. Fredropol;5695;4544
+181304;gm. Krasiczyn;5125;4091
+181305;gm. Krzywcza;5025;4033
+181306;gm. Medyka;6525;5189
+181307;gm. Orły;8939;7059
+181308;gm. Przemyśl;10300;8383
+181309;gm. Stubno;4127;3288
+181310;gm. Żurawica;12969;10453
+181401;m. Przeworsk;15754;12903
+181402;gm. Adamówka;4274;3371
+181403;gm. Gać;4673;3724
+181404;gm. Jawornik Polski;4689;3893
+181405;gm. Kańczuga;12662;10273
+181406;gm. Przeworsk;14942;11889
+181407;gm. Sieniawa;7158;5780
+181408;gm. Tryńcza;8543;6662
+181409;gm. Zarzecze;7237;5823
+181501;gm. Iwierzyce;7684;6118
+181502;gm. Ostrów;7253;5779
+181503;gm. Ropczyce;27222;21503
+181504;gm. Sędziszów Małopolski;23686;18769
+181505;gm. Wielopole Skrzyńskie;8395;6564
+181601;m. Dynów;6236;5031
+181602;gm. Błażowa;10898;8776
+181603;gm. Boguchwała;19773;15745
+181604;gm. Chmielnik;6694;5328
+181605;gm. Dynów;7152;5706
+181606;gm. Głogów Małopolski;19395;15269
+181607;gm. Hyżne;7025;5552
+181608;gm. Kamień;7057;5596
+181609;gm. Krasne;10793;8522
+181610;gm. Lubenia;6509;5252
+181611;gm. Sokołów Małopolski;17026;13333
+181612;gm. Świlcza;15974;12827
+181613;gm. Trzebownisko;20671;16301
+181614;gm. Tyczyn;11432;8980
+181701;m. Sanok;37859;31569
+181702;gm. Besko;4536;3532
+181703;gm. Bukowsko;5580;4358
+181704;gm. Komańcza;5050;4196
+181705;gm. Sanok;17951;14190
+181706;gm. Tyrawa Wołoska;2043;1596
+181707;gm. Zagórz;13249;10642
+181708;gm. Zarszyn;9384;7566
+181801;m. Stalowa Wola;60803;51011
+181802;gm. Bojanów;7548;6015
+181803;gm. Pysznica;10615;8603
+181804;gm. Radomyśl nad Sanem;7416;6019
+181805;gm. Zaklików;8668;7156
+181806;gm. Zaleszany;10993;8832
+181901;gm. Czudec;11826;9477
+181902;gm. Frysztak;10709;8554
+181903;gm. Niebylec;10640;8568
+181904;gm. Strzyżów;20724;16977
+181905;gm. Wiśniowa;8424;6723
+182001;gm. Baranów Sandomierski;12183;9938
+182002;gm. Gorzyce;13370;10895
+182003;gm. Grębów;9914;8040
+182004;gm. Nowa Dęba;18426;15260
+182101;gm. Baligród;3250;2674
+182102;gm. Cisna;1721;1453
+182103;gm. Lesko;11549;9451
+182104;gm. Olszanica;5119;4176
+182105;gm. Solina;5403;4582
+186101;m. Krosno;46350;38441
+186201;m. Przemyśl;61663;51222
+186301;m. Rzeszów;174413;141589
+186401;m. Tarnobrzeg;47194;39445
+200101;m. Augustów;29356;24176
+200102;gm. Augustów;6955;5453
+200103;gm. Bargłów Kościelny;5800;4582
+200104;gm. Lipsk;5515;4585
+200105;gm. Nowinka;3002;2446
+200106;gm. Płaska;2659;2188
+200107;gm. Sztabin;5331;4358
+200201;gm. Choroszcz;14391;11566
+200202;gm. Czarna Białostocka;11295;9255
+200203;gm. Dobrzyniewo Duże;8868;7049
+200204;gm. Gródek;5524;4663
+200205;gm. Juchnowiec Kościelny;15343;12141
+200206;gm. Łapy;21869;18308
+200207;gm. Michałowo;6905;5861
+200208;gm. Poświętne;3654;2974
+200209;gm. Supraśl;14295;11638
+200210;gm. Suraż;2051;1646
+200211;gm. Turośń Kościelna;6051;4813
+200212;gm. Tykocin;6462;5288
+200213;gm. Wasilków;15010;11898
+200214;gm. Zabłudów;9112;7409
+200215;gm. Zawady;2901;2391
+200301;m. Bielsk Podlaski;26202;21553
+200302;m. Brańsk;3942;3205
+200303;gm. Bielsk Podlaski;7259;6179
+200304;gm. Boćki;4680;3891
+200305;gm. Brańsk;6282;5086
+200306;gm. Orla;3022;2696
+200307;gm. Rudka;2008;1652
+200308;gm. Wyszki;4731;3861
+200401;m. Grajewo;21561;17745
+200402;gm. Grajewo;6063;4720
+200403;gm. Radziłów;5069;4090
+200404;gm. Rajgród;5507;4462
+200405;gm. Szczuczyn;6457;5204
+200406;gm. Wąsosz;3946;3091
+200501;m. Hajnówka;21290;17960
+200502;gm. Białowieża;2252;1958
+200503;gm. Czeremcha;3423;2944
+200504;gm. Czyże;2217;1950
+200505;gm. Dubicze Cerkiewne;1660;1488
+200506;gm. Hajnówka;4069;3480
+200507;gm. Kleszczele;2705;2326
+200508;gm. Narew;3733;3223
+200509;gm. Narewka;3854;3335
+200601;m. Kolno;10245;8588
+200602;gm. Grabowo;3696;2944
+200603;gm. Kolno;8939;6938
+200604;gm. Mały Płock;4998;4060
+200605;gm. Stawiski;6402;5181
+200606;gm. Turośl;5234;4022
+200701;gm. Jedwabne;5630;4569
+200702;gm. Łomża;11132;8834
+200703;gm. Miastkowo;4385;3417
+200704;gm. Nowogród;4095;3279
+200705;gm. Piątnica;10570;8478
+200706;gm. Przytuły;2219;1793
+200707;gm. Śniadowo;5617;4484
+200708;gm. Wizna;4274;3481
+200709;gm. Zbójna;4355;3518
+200801;gm. Goniądz;5131;4192
+200802;gm. Jasionówka;2930;2434
+200803;gm. Jaświły;5283;4362
+200804;gm. Knyszyn;4921;4056
+200805;gm. Krypno;4059;3285
+200806;gm. Mońki;15042;12541
+200807;gm. Trzcianne;4611;3758
+200901;m. Sejny;5560;4595
+200902;gm. Giby;2894;2406
+200903;gm. Krasnopol;3927;3195
+200904;gm. Puńsk;4339;3557
+200905;gm. Sejny;4139;3422
+201001;m. Siemiatycze;14664;12277
+201002;gm. Drohiczyn;6722;5531
+201003;gm. Dziadkowice;3054;2479
+201004;gm. Grodzisk;4482;3655
+201005;gm. Mielnik;2630;2280
+201006;gm. Milejczyce;2086;1752
+201007;gm. Nurzec-Stacja;4292;3625
+201008;gm. Perlejewo;3096;2546
+201009;gm. Siemiatycze;6238;5180
+201101;gm. Dąbrowa Białostocka;12175;10180
+201102;gm. Janów;4410;3575
+201103;gm. Korycin;3382;2720
+201104;gm. Krynki;3303;2795
+201105;gm. Kuźnica;4279;3452
+201106;gm. Nowy Dwór;2900;2400
+201107;gm. Sidra;3676;3071
+201108;gm. Sokółka;26058;21390
+201109;gm. Suchowola;7187;5934
+201110;gm. Szudziałowo;3179;2653
+201201;gm. Bakałarzewo;3196;2593
+201202;gm. Filipów;4548;3649
+201203;gm. Jeleniewo;3235;2556
+201204;gm. Przerośl;3074;2469
+201205;gm. Raczki;6133;4842
+201206;gm. Rutka-Tartak;2538;2022
+201207;gm. Suwałki;7563;6073
+201208;gm. Szypliszki;4077;3274
+201209;gm. Wiżajny;2531;2032
+201301;m. Wysokie Mazowieckie;9436;7622
+201302;gm. Ciechanowiec;8978;7459
+201303;gm. Czyżew;6629;5302
+201304;gm. Klukowo;4635;3746
+201305;gm. Kobylin-Borzymy;3428;2795
+201306;gm. Kulesze Kościelne;3229;2594
+201307;gm. Nowe Piekuty;4084;3250
+201308;gm. Sokoły;5896;4793
+201309;gm. Szepietowo;7289;5893
+201310;gm. Wysokie Mazowieckie;5489;4342
+201401;m. Zambrów;21957;18145
+201402;gm. Kołaki Kościelne;2489;1984
+201403;gm. Rutki;5834;4685
+201404;gm. Szumowo;5040;3983
+201405;gm. Zambrów;8968;7071
+206101;m. Białystok;275859;226196
+206201;m. Łomża;59723;49312
+206301;m. Suwałki;67257;54276
+220101;gm. Borzytuchom;3100;2389
+220102;gm. Bytów;24542;19238
+220103;gm. Czarna Dąbrówka;5939;4536
+220104;gm. Kołczygłowy;4356;3372
+220105;gm. Lipnica;5307;4173
+220106;gm. Miastko;19563;15761
+220107;gm. Parchowo;3759;2749
+220108;gm. Studzienice;3606;2792
+220109;gm. Trzebielino;3725;2939
+220110;gm. Tuchomie;4203;3244
+220201;m. Chojnice;38782;31550
+220202;gm. Brusy;14247;10738
+220203;gm. Chojnice;18056;13758
+220204;gm. Czersk;21082;16544
+220205;gm. Konarzyny;2310;1759
+220301;m. Człuchów;13706;11460
+220302;gm. Czarne;9157;7269
+220303;gm. Człuchów;10694;8323
+220304;gm. Debrzno;9199;7339
+220305;gm. Koczała;3445;2785
+220306;gm. Przechlewo;6291;4940
+220307;gm. Rzeczenica;3725;2994
+220401;m. Pruszcz Gdański;27559;21597
+220402;gm. Cedry Wielkie;6644;5186
+220403;gm. Kolbudy;15380;11747
+220404;gm. Pruszcz Gdański;25410;19189
+220405;gm. Przywidz;5744;4455
+220406;gm. Pszczółki;8822;6898
+220407;gm. Suchy Dąb;4159;3257
+220408;gm. Trąbki Wielkie;10640;8151
+220501;gm. Chmielno;7538;5565
+220502;gm. Kartuzy;31939;24607
+220503;gm. Przodkowo;8611;6205
+220504;gm. Sierakowice;18830;13443
+220505;gm. Somonino;10261;7551
+220506;gm. Stężyca;10038;7161
+220507;gm. Sulęczyno;5409;4009
+220508;gm. Żukowo;32976;24597
+220601;m. Kościerzyna;22760;18113
+220602;gm. Dziemiany;4338;3319
+220603;gm. Karsin;6241;4776
+220604;gm. Kościerzyna;15206;11488
+220605;gm. Liniewo;4641;3598
+220606;gm. Lipusz;3623;2746
+220607;gm. Nowa Karczma;6783;5004
+220608;gm. Stara Kiszewa;6725;5156
+220701;m. Kwidzyn;36697;29430
+220702;gm. Gardeja;8548;6538
+220703;gm. Kwidzyn;11105;8600
+220704;gm. Prabuty;13059;10320
+220705;gm. Ryjewo;5780;4432
+220706;gm. Sadlinki;5824;4527
+220801;m. Lębork;33973;27517
+220802;m. Łeba;3680;3215
+220803;gm. Cewice;7135;5357
+220804;gm. Nowa Wieś Lęborska;13345;10309
+220805;gm. Wicko;5877;4513
+220901;m. Malbork;37467;30807
+220903;gm. Lichnowy;4657;3600
+220904;gm. Malbork;4765;3706
+220906;gm. Miłoradz;3443;2726
+220907;gm. Nowy Staw;7559;6036
+220908;gm. Stare Pole;4693;3681
+221001;m. Krynica Morska;1355;1138
+221002;gm. Nowy Dwór Gdański;17607;14135
+221003;gm. Ostaszewo;3179;2548
+221004;gm. Stegna;9844;7886
+221005;gm. Sztutowo;3702;2975
+221101;m. Hel;3555;2927
+221102;m. Jastarnia;3846;3113
+221103;m. Puck;11033;8922
+221104;m. Władysławowo;15122;12068
+221105;gm. Kosakowo;12387;9496
+221106;gm. Krokowa;10661;8101
+221107;gm. Puck;24910;18721
+221201;m. Ustka;15290;12819
+221202;gm. Damnica;6121;4824
+221203;gm. Dębnica Kaszubska;9634;7583
+221204;gm. Główczyce;9351;7247
+221205;gm. Kępice;9091;7302
+221206;gm. Kobylnica;10949;8630
+221207;gm. Potęgowo;7041;5496
+221208;gm. Słupsk;16221;12627
+221209;gm. Smołdzino;3328;2731
+221210;gm. Ustka;8020;6398
+221301;m. Czarna Woda;3293;2678
+221302;m. Skórcz;3460;2717
+221303;m. Starogard Gdański;45530;36573
+221304;gm. Bobowo;3083;2329
+221305;gm. Kaliska;5306;4159
+221306;gm. Lubichowo;6341;4895
+221307;gm. Osieczna;2904;2266
+221308;gm. Osiek;2445;2052
+221309;gm. Skarszewy;14104;10824
+221310;gm. Skórcz;4625;3557
+221311;gm. Smętowo Graniczne;5287;4175
+221312;gm. Starogard Gdański;15538;11744
+221313;gm. Zblewo;11436;8796
+221401;m. Tczew;57123;46219
+221402;gm. Gniew;15620;12321
+221403;gm. Morzeszczyn;3766;2858
+221404;gm. Pelplin;16487;12864
+221405;gm. Subkowy;5420;4174
+221406;gm. Tczew;13515;10210
+221501;m. Reda;22806;17614
+221502;m. Rumia;45641;36678
+221503;m. Wejherowo;46931;37104
+221504;gm. Choczewo;5668;4459
+221505;gm. Gniewino;7186;5378
+221506;gm. Linia;6180;4528
+221507;gm. Luzino;14908;10842
+221508;gm. Łęczyce;11908;8850
+221509;gm. Szemud;16451;12000
+221510;gm. Wejherowo;23436;17229
+221601;gm. Dzierzgoń;9474;7457
+221602;gm. Mikołajki Pomorskie;3672;2890
+221603;gm. Stary Dzierzgoń;4182;3312
+221604;gm. Stary Targ;6443;5045
+221605;gm. Sztum;17978;14452
+226101;m. Gdańsk;428377;354533
+226201;m. Gdynia;231408;192731
+226301;m. Słupsk;88377;73830
+226401;m. Sopot;35038;30241
+240101;m. Będzin;55034;46232
+240102;m. Czeladź;31332;26674
+240103;m. Wojkowice;8760;7508
+240104;gm. Bobrowniki;11708;9818
+240105;gm. Mierzęcice;7391;6164
+240106;gm. Psary;11599;9720
+240107;gm. Siewierz;12201;10196
+240108;m. Sławków;7016;5758
+240201;m. Szczyrk;5702;4699
+240202;gm. Bestwina;11402;9145
+240203;gm. Buczkowice;10953;8781
+240204;gm. Czechowice-Dziedzice;43711;35331
+240205;gm. Jasienica;23179;18121
+240206;gm. Jaworze;6820;5597
+240207;gm. Kozy;12537;10067
+240208;gm. Porąbka;15411;12402
+240209;gm. Wilamowice;16812;13356
+240210;gm. Wilkowice;12858;10605
+240301;m. Cieszyn;33217;27552
+240302;m. Ustroń;15456;12888
+240303;m. Wisła;11087;9205
+240304;gm. Brenna;10994;8670
+240305;gm. Chybie;9641;7556
+240306;gm. Dębowiec;5743;4570
+240307;gm. Goleszów;12767;10388
+240308;gm. Hażlach;10401;8232
+240309;gm. Istebna;11993;9120
+240310;gm. Skoczów;25782;20669
+240311;gm. Strumień;12876;10170
+240312;gm. Zebrzydowice;12898;10222
+240401;gm. Blachownia;12943;10793
+240402;gm. Dąbrowa Zielona;4029;3405
+240403;gm. Janów;6010;4948
+240404;gm. Kamienica Polska;5578;4655
+240405;gm. Kłomnice;13564;11339
+240406;gm. Koniecpol;9902;8318
+240407;gm. Konopiska;10678;8818
+240408;gm. Kruszyna;4941;4040
+240409;gm. Lelów;5024;4185
+240410;gm. Mstów;10790;8806
+240411;gm. Mykanów;14846;11961
+240412;gm. Olsztyn;8026;6488
+240413;gm. Poczesna;12732;10527
+240414;gm. Przyrów;3861;3249
+240415;gm. Rędziny;9918;8179
+240416;gm. Starcza;2820;2286
+240501;m. Knurów;37544;30383
+240502;m. Pyskowice;17284;14534
+240503;gm. Gierałtowice;11428;9195
+240504;gm. Pilchowice;11236;9054
+240505;gm. Rudziniec;10482;8680
+240506;gm. Sośnicowice;8431;6903
+240507;gm. Toszek;9237;7651
+240508;gm. Wielowieś;5844;4837
+240601;gm. Kłobuck;20491;16931
+240602;gm. Krzepice;9286;7734
+240603;gm. Lipie;6460;5335
+240604;gm. Miedźno;7676;6266
+240605;gm. Opatów;6857;5568
+240606;gm. Panki;5092;4174
+240607;gm. Popów;6015;4928
+240608;gm. Przystajń;5950;4868
+240609;gm. Wręczyca Wielka;17710;14471
+240701;m. Lubliniec;22648;18726
+240702;gm. Boronów;3382;2780
+240703;gm. Ciasna;7638;6325
+240704;gm. Herby;6783;5522
+240705;gm. Kochanowice;6928;5600
+240706;gm. Koszęcin;11716;9516
+240707;gm. Pawonków;6592;5355
+240708;gm. Woźniki;9617;7818
+240801;m. Łaziska Górne;21191;17345
+240802;m. Mikołów;38992;31674
+240803;m. Orzesze;19973;15942
+240804;gm. Ornontowice;5761;4611
+240805;gm. Wyry;7613;5960
+240901;m. Myszków;31557;26327
+240902;gm. Koziegłowy;14301;11894
+240903;gm. Niegowa;5832;4692
+240904;gm. Poraj;10839;9023
+240905;gm. Żarki;8496;6897
+241001;gm. Goczałkowice-Zdrój;6582;5326
+241002;gm. Kobiór;4824;3887
+241003;gm. Miedźna;15572;12416
+241004;gm. Pawłowice;17728;13913
+241005;gm. Pszczyna;50778;40361
+241006;gm. Suszec;11864;9131
+241101;m. Racibórz;51587;43374
+241102;gm. Kornowac;5053;4044
+241103;gm. Krzanowice;5662;4751
+241104;gm. Krzyżanowice;11210;9183
+241105;gm. Kuźnia Raciborska;11329;9512
+241106;gm. Nędza;7062;5917
+241107;gm. Pietrowice Wielkie;6683;5591
+241108;gm. Rudnik;5098;4240
+241201;gm. Czerwionka-Leszczyny;40605;32982
+241202;gm. Gaszowice;9346;7426
+241203;gm. Jejkowice;4043;3168
+241204;gm. Lyski;9567;7810
+241205;gm. Świerklany;11938;9344
+241301;m. Kalety;8549;7237
+241302;m. Miasteczko Śląskie;7073;5818
+241303;m. Radzionków;16564;13739
+241304;m. Tarnowskie Góry;58310;48500
+241305;gm. Krupski Młyn;3239;2722
+241306;gm. Ożarowice;5594;4600
+241307;gm. Świerklaniec;11661;9535
+241308;gm. Tworóg;7888;6540
+241309;gm. Zbrosławice;14849;12301
+241401;m. Bieruń;19140;15580
+241402;m. Imielin;8616;6920
+241403;m. Lędziny;16208;13068
+241404;gm. Bojszowy;7519;5912
+241405;gm. Chełm Śląski;5942;4838
+241501;m. Pszów;13601;11278
+241502;m. Radlin;17278;14045
+241503;m. Rydułtowy;20646;17055
+241504;m. Wodzisław Śląski;46668;38636
+241505;gm. Godów;13367;10836
+241506;gm. Gorzyce;20459;16385
+241507;gm. Lubomia;7822;6394
+241508;gm. Marklowice;5458;4325
+241509;gm. Mszana;7462;5922
+241601;m. Poręba;8583;7205
+241602;m. Zawiercie;49826;41984
+241603;gm. Irządze;2732;2274
+241604;gm. Kroczyce;6358;5178
+241605;gm. Łazy;15712;13192
+241606;gm. Ogrodzieniec;9264;7799
+241607;gm. Pilica;8754;7341
+241608;gm. Szczekociny;7988;6711
+241609;gm. Włodowice;5284;4379
+241610;gm. Żarnowiec;4781;3827
+241701;m. Żywiec;31149;25651
+241702;gm. Czernichów;6562;5347
+241703;gm. Gilowice;6122;4839
+241704;gm. Jeleśnia;13535;10935
+241705;gm. Koszarawa;2522;2069
+241706;gm. Lipowa;10383;8286
+241707;gm. Łękawica;4422;3554
+241708;gm. Łodygowice;14134;11283
+241709;gm. Milówka;10096;8043
+241710;gm. Radziechowy-Wieprz;13071;10384
+241711;gm. Rajcza;8853;7215
+241712;gm. Ślemień;3564;2909
+241713;gm. Świnna;8046;6561
+241714;gm. Ujsoły;4594;3752
+241715;gm. Węgierska Górka;15123;12009
+246101;m. Bielsko-Biała;165548;136346
+246201;m. Bytom;154660;128958
+246301;m. Chorzów;102988;85223
+246401;m. Częstochowa;220430;185832
+246501;m. Dąbrowa Górnicza;118489;99965
+246601;m. Gliwice;173812;145793
+246701;m. Jastrzębie-Zdrój;87068;71487
+246801;m. Jaworzno;90157;75308
+246901;m. Katowice;280873;239196
+247001;m. Mysłowice;71042;58589
+247101;m. Piekary Śląskie;53881;44946
+247201;m. Ruda Śląska;134585;110691
+247301;m. Rybnik;133221;109042
+247401;m. Siemianowice Śląskie;64905;54590
+247501;m. Sosnowiec;198121;170093
+247601;m. Świętochłowice;48286;40016
+247701;m. Tychy;123553;102143
+247801;m. Zabrze;164350;137164
+247901;m. Żory;59127;47628
+260101;gm. Busko-Zdrój;32195;26808
+260102;gm. Gnojno;4605;3739
+260103;gm. Nowy Korczyn;6234;5215
+260104;gm. Pacanów;7657;6355
+260105;gm. Solec-Zdrój;5148;4161
+260106;gm. Stopnica;7820;6484
+260107;gm. Tuczępy;3771;3085
+260108;gm. Wiślica;5713;4772
+260201;gm. Imielno;4546;3675
+260202;gm. Jędrzejów;28469;23440
+260203;gm. Małogoszcz;11755;9410
+260204;gm. Nagłowice;5088;4159
+260205;gm. Oksa;4742;3873
+260206;gm. Sędziszów;12877;10628
+260207;gm. Słupia (Jędrzejowska);4403;3651
+260208;gm. Sobków;8562;6899
+260209;gm. Wodzisław;7360;6109
+260301;gm. Bejsce;4132;3499
+260302;gm. Czarnocin;4015;3376
+260303;gm. Kazimierza Wielka;16236;13739
+260304;gm. Opatowiec;3554;3047
+260305;gm. Skalbmierz;6711;5488
+260401;gm. Bieliny;10306;8014
+260402;gm. Bodzentyn;11662;9486
+260403;gm. Chęciny;14885;12127
+260404;gm. Chmielnik;11516;9319
+260405;gm. Daleszyce;15575;12489
+260406;gm. Górno;14008;10999
+260407;gm. Łagów;7035;5685
+260408;gm. Łopuszno;9124;7333
+260409;gm. Masłów;10507;8464
+260410;gm. Miedziana Góra;11152;8933
+260411;gm. Mniów;9497;7509
+260412;gm. Morawica;15408;12022
+260413;gm. Nowa Słupia;9932;8197
+260414;gm. Piekoszów;16155;12896
+260415;gm. Pierzchnica;4809;3907
+260416;gm. Raków;5845;4851
+260417;gm. Sitkówka-Nowiny;7374;5857
+260418;gm. Strawczyn;10526;8285
+260419;gm. Zagnańsk;12788;10679
+260501;gm. Fałków;4701;3899
+260502;gm. Gowarczów;4760;3875
+260503;gm. Końskie;36037;30169
+260504;gm. Radoszyce;9198;7499
+260505;gm. Ruda Maleniecka;3271;2732
+260506;gm. Słupia (Konecka);3462;2809
+260507;gm. Smyków;3882;3044
+260508;gm. Stąporków;17595;14970
+260601;gm. Baćkowice;5040;4135
+260602;gm. Iwaniska;6963;5634
+260603;gm. Lipnik;5544;4595
+260604;gm. Opatów;11989;10050
+260605;gm. Ożarów;11192;9120
+260606;gm. Sadowie;4134;3424
+260607;gm. Tarłów;5603;4708
+260608;gm. Wojciechowice;4165;3507
+260701;m. Ostrowiec Świętokrzyski;69445;58997
+260702;gm. Bałtów;3765;3117
+260703;gm. Bodzechów;13702;11282
+260704;gm. Ćmielów;7569;6338
+260705;gm. Kunów;9988;8309
+260706;gm. Waśniów;7089;5673
+260801;gm. Działoszyce;5245;4429
+260802;gm. Kije;4557;3778
+260803;gm. Michałów;4817;3904
+260804;gm. Pińczów;21097;17614
+260805;gm. Złota;4660;3932
+260901;m. Sandomierz;23904;20195
+260902;gm. Dwikozy;8925;7467
+260903;gm. Klimontów;8397;6865
+260904;gm. Koprzywnica;6921;5724
+260905;gm. Łoniów;7609;6221
+260906;gm. Obrazów;6670;5513
+260907;gm. Samborzec;8739;7246
+260908;gm. Wilczyce;3883;3194
+260909;gm. Zawichost;4564;3772
+261001;m. Skarżysko-Kamienna;46480;39824
+261002;gm. Bliżyn;8345;7046
+261003;gm. Łączna;5304;4306
+261004;gm. Skarżysko Kościelne;6296;5193
+261005;gm. Suchedniów;10431;8888
+261101;m. Starachowice;49904;42554
+261102;gm. Brody;11050;9043
+261103;gm. Mirzec;8466;6928
+261104;gm. Pawłów;15418;12209
+261105;gm. Wąchock;7011;5904
+261201;gm. Bogoria;8089;6430
+261202;gm. Łubnice;4316;3530
+261203;gm. Oleśnica;3996;3280
+261204;gm. Osiek;7945;6389
+261205;gm. Połaniec;12071;9910
+261206;gm. Rytwiany;6408;5231
+261207;gm. Staszów;26794;21758
+261208;gm. Szydłów;4855;3991
+261301;gm. Kluczewsko;5348;4288
+261302;gm. Krasocin;10866;8675
+261303;gm. Moskorzew;2854;2385
+261304;gm. Radków;2547;2123
+261305;gm. Secemin;4956;4113
+261306;gm. Włoszczowa;19967;16473
+266101;m. Kielce;191079;159550
+280101;m. Bartoszyce;23975;19904
+280102;m. Górowo Iławeckie;4175;3485
+280103;gm. Bartoszyce;11100;8886
+280104;gm. Bisztynek;6665;5403
+280105;gm. Górowo Iławeckie;7108;5707
+280106;gm. Sępopol;6556;5345
+280201;m. Braniewo;16645;13651
+280202;gm. Braniewo;6424;5036
+280203;gm. Frombork;3757;3112
+280204;gm. Lelkowo;3096;2531
+280205;gm. Pieniężno;6691;5563
+280206;gm. Płoskinia;2675;2085
+280207;gm. Wilczęta;3064;2452
+280301;m. Działdowo;21327;17364
+280302;gm. Działdowo;10036;7526
+280303;gm. Iłowo-Osada;7332;5749
+280304;gm. Lidzbark;14737;11735
+280305;gm. Płośnica;5962;4716
+280306;gm. Rybno;7361;5755
+280401;gm. Elbląg;7471;5833
+280402;gm. Godkowo;3313;2663
+280403;gm. Gronowo Elbląskie;5117;4025
+280404;gm. Markusy;4206;3196
+280405;gm. Milejewo;3331;2705
+280406;gm. Młynary;4683;3719
+280407;gm. Pasłęk;19514;15778
+280408;gm. Rychliki;4000;3207
+280409;gm. Tolkmicko;6644;5326
+280501;m. Ełk;57401;46295
+280502;gm. Ełk;11226;8747
+280503;gm. Kalinowo;7095;5462
+280504;gm. Prostki;7603;5936
+280505;gm. Stare Juchy;4033;3156
+280601;m. Giżycko;28772;23951
+280604;gm. Giżycko;8345;6743
+280605;gm. Kruklanki;3220;2559
+280606;gm. Miłki;3929;3143
+280608;gm. Ryn;5897;4850
+280610;gm. Wydminy;6678;5305
+280701;m. Iława;32252;26592
+280702;m. Lubawa;9685;7613
+280703;gm. Iława;12903;9783
+280704;gm. Kisielice;6316;4923
+280705;gm. Lubawa;10756;8240
+280706;gm. Susz;13101;10079
+280707;gm. Zalewo;7031;5662
+280801;m. Kętrzyn;27467;23034
+280802;gm. Barciany;6559;5345
+280803;gm. Kętrzyn;8409;6689
+280804;gm. Korsze;10231;8290
+280805;gm. Reszel;7762;6540
+280806;gm. Srokowo;4085;3330
+280901;m. Lidzbark Warmiński;15647;13031
+280902;gm. Kiwity;3449;2814
+280903;gm. Lidzbark Warmiński;6828;5485
+280904;gm. Lubomino;3722;2939
+280905;gm. Orneta;12244;10019
+281001;m. Mrągowo;21557;17814
+281002;gm. Mikołajki;8266;6718
+281003;gm. Mrągowo;7945;6339
+281004;gm. Piecki;7894;6315
+281005;gm. Sorkwity;4775;3740
+281101;gm. Janowiec Kościelny;3361;2663
+281102;gm. Janowo;2778;2193
+281103;gm. Kozłowo;6343;4849
+281104;gm. Nidzica;21135;17204
+281201;m. Nowe Miasto Lubawskie;10786;8698
+281202;gm. Biskupiec;9755;7648
+281203;gm. Grodziczno;6489;4961
+281204;gm. Kurzętnik;9139;7032
+281205;gm. Nowe Miasto Lubawskie;8225;6327
+281303;gm. Kowale Oleckie;5380;4193
+281304;gm. Olecko;21460;17225
+281305;gm. Świętajno;4116;3289
+281306;gm. Wieliczki;3455;2744
+281401;gm. Barczewo;16920;13575
+281402;gm. Biskupiec;18784;15358
+281403;gm. Dobre Miasto;15904;12905
+281404;gm. Dywity;11100;8736
+281405;gm. Gietrzwałd;6231;4960
+281406;gm. Jeziorany;7930;6359
+281407;gm. Jonkowo;7100;5569
+281408;gm. Kolno;3390;2767
+281409;gm. Olsztynek;13714;10919
+281410;gm. Purda;8451;6772
+281411;gm. Stawiguda;8178;6342
+281412;gm. Świątki;4193;3289
+281501;m. Ostróda;32893;27081
+281502;gm. Dąbrówno;4375;3425
+281503;gm. Grunwald;5695;4423
+281504;gm. Łukta;4504;3542
+281505;gm. Małdyty;6399;5140
+281506;gm. Miłakowo;5665;4519
+281507;gm. Miłomłyn;5111;4128
+281508;gm. Morąg;24516;19760
+281509;gm. Ostróda;15854;12427
+281601;gm. Biała Piska;12206;9578
+281602;gm. Orzysz;9334;7526
+281603;gm. Pisz;27479;22109
+281604;gm. Ruciane-Nida;8320;6967
+281701;m. Szczytno;23437;19543
+281702;gm. Dźwierzuty;6823;5447
+281703;gm. Jedwabno;3802;3019
+281704;gm. Pasym;5341;4282
+281705;gm. Rozogi;5866;4614
+281706;gm. Szczytno;12582;9681
+281707;gm. Świętajno;6104;4872
+281708;gm. Wielbark;6690;5199
+281801;gm. Banie Mazurskie;4010;3313
+281802;gm. Dubeninki;3132;2499
+281803;gm. Gołdap;20191;15975
+281901;gm. Budry;3134;2498
+281902;gm. Pozezdrze;3428;2774
+281903;gm. Węgorzewo;17023;13974
+286101;m. Elbląg;116045;96108
+286201;m. Olsztyn;162898;133917
+300101;m. Chodzież;18731;15488
+300102;gm. Budzyń;8432;6639
+300103;gm. Chodzież;5847;4601
+300104;gm. Margonin;6299;4937
+300105;gm. Szamocin;7492;5850
+300201;m. Czarnków;10906;8982
+300202;gm. Czarnków;11157;8780
+300203;gm. Drawsko;5952;4788
+300204;gm. Krzyż Wielkopolski;8755;7067
+300205;gm. Lubasz;7439;5857
+300206;gm. Połajewo;6214;4857
+300207;gm. Trzcianka;23897;18998
+300208;gm. Wieleń;12496;9926
+300301;m. Gniezno;66839;54878
+300302;gm. Czerniejewo;7180;5702
+300303;gm. Gniezno;11028;8363
+300304;gm. Kiszkowo;5425;4283
+300305;gm. Kłecko;7611;6001
+300306;gm. Łubowo;6187;4776
+300307;gm. Mieleszyn;4048;3094
+300308;gm. Niechanowo;5813;4427
+300309;gm. Trzemeszno;14114;11228
+300310;gm. Witkowo;13617;10830
+300401;gm. Borek Wielkopolski;7691;6085
+300402;gm. Gostyń;27704;22535
+300403;gm. Krobia;13038;10366
+300404;gm. Pępowo;6010;4774
+300405;gm. Piaski;8549;6827
+300406;gm. Pogorzela;5166;4074
+300407;gm. Poniec;7894;6321
+300501;gm. Granowo;5018;3943
+300502;gm. Grodzisk Wielkopolski;19182;15260
+300503;gm. Kamieniec;6651;5212
+300504;gm. Rakoniewice;12997;10029
+300505;gm. Wielichowo;6931;5440
+300601;gm. Jaraczewo;8315;6574
+300602;gm. Jarocin;45199;36402
+300603;gm. Kotlin;7288;5737
+300604;gm. Żerków;10520;8344
+300701;gm. Blizanów;9903;7907
+300702;gm. Brzeziny;5887;4672
+300703;gm. Ceków-Kolonia;4828;3865
+300704;gm. Godziesze Wielkie;9306;7366
+300705;gm. Koźminek;7557;6090
+300706;gm. Lisków;5292;4285
+300707;gm. Mycielin;4966;4024
+300708;gm. Opatówek;10743;8709
+300709;gm. Stawiszyn;7225;5862
+300710;gm. Szczytniki;7885;6317
+300711;gm. Żelazków;9391;7546
+300801;gm. Baranów;7843;6176
+300802;gm. Bralin;5985;4709
+300803;gm. Kępno;24370;19768
+300804;gm. Łęka Opatowska;5322;4181
+300805;gm. Perzów;3819;3081
+300806;gm. Rychtal;3920;3188
+300807;gm. Trzcinica;4866;3858
+300901;m. Koło;22304;18442
+300902;gm. Babiak;8066;6506
+300903;gm. Chodów;3278;2738
+300904;gm. Dąbie;6513;5367
+300905;gm. Grzegorzew;5723;4571
+300906;gm. Kłodawa;13082;10670
+300907;gm. Koło;7683;6089
+300908;gm. Kościelec;6751;5400
+300909;gm. Olszówka;4646;3772
+300910;gm. Osiek Mały;6085;4746
+300911;gm. Przedecz;4336;3497
+301001;gm. Golina;11879;9653
+301002;gm. Grodziec;5256;4170
+301003;gm. Kazimierz Biskupi;11389;9132
+301004;gm. Kleczew;9955;8064
+301005;gm. Kramsk;10974;8612
+301006;gm. Krzymów;7789;6084
+301007;gm. Rychwał;8410;6712
+301008;gm. Rzgów;7138;5667
+301009;gm. Skulsk;6187;4955
+301010;gm. Sompolno;10548;8427
+301011;gm. Stare Miasto;11711;9118
+301012;gm. Ślesin;14001;11258
+301013;gm. Wierzbinek;7521;5914
+301014;gm. Wilczyn;6260;4937
+301101;m. Kościan;23006;19264
+301102;gm. Czempiń;11304;9120
+301103;gm. Kościan;15738;12540
+301104;gm. Krzywiń;10015;7951
+301105;gm. Śmigiel;17655;14006
+301201;m. Sulmierzyce;2866;2226
+301202;gm. Kobylin;8225;6506
+301203;gm. Koźmin Wielkopolski;13469;10790
+301204;gm. Krotoszyn;39798;32144
+301205;gm. Rozdrażew;5180;4039
+301206;gm. Zduny;7468;5850
+301301;gm. Krzemieniewo;8436;6748
+301302;gm. Lipno;7561;5733
+301303;gm. Osieczna;8953;7122
+301304;gm. Rydzyna;8880;6949
+301305;gm. Święciechowa;7668;6022
+301306;gm. Wijewo;3742;2874
+301307;gm. Włoszakowice;9300;7164
+301401;gm. Chrzypsko Wielkie;3297;2634
+301402;gm. Kwilcz;6250;4964
+301403;gm. Międzychód;18256;14683
+301404;gm. Sieraków;8808;7005
+301501;gm. Kuślin;5517;4290
+301502;gm. Lwówek;9195;7186
+301503;gm. Miedzichowo;3737;2995
+301504;gm. Nowy Tomyśl;25640;20266
+301505;gm. Opalenica;16231;12796
+301506;gm. Zbąszyń;13594;10750
+301601;gm. Oborniki;32838;26118
+301602;gm. Rogoźno;17569;13862
+301603;gm. Ryczywół;7370;5705
+301701;m. Ostrów Wielkopolski;70930;59114
+301702;gm. Nowe Skalmierzyce;15257;12260
+301703;gm. Odolanów;14353;11496
+301704;gm. Ostrów Wielkopolski;18846;15000
+301705;gm. Przygodzice;11963;9544
+301706;gm. Raszków;11772;9287
+301707;gm. Sieroszewice;9754;7733
+301708;gm. Sośnie;6636;5264
+301801;gm. Czajków;2567;2092
+301802;gm. Doruchów;5344;4162
+301803;gm. Grabów nad Prosną;7842;6290
+301804;gm. Kobyla Góra;6069;4755
+301805;gm. Kraszewice;3628;2851
+301806;gm. Mikstat;6158;4955
+301807;gm. Ostrzeszów;23528;18833
+301901;m. Piła;71140;58311
+301902;gm. Białośliwie;4881;3824
+301903;gm. Kaczory;7752;6160
+301904;gm. Łobżenica;9775;7614
+301905;gm. Miasteczko Krajeńskie;3245;2595
+301906;gm. Szydłowo;8660;6777
+301907;gm. Ujście;8044;6482
+301908;gm. Wyrzysk;14025;11123
+301909;gm. Wysoka;6784;5351
+302001;gm. Chocz;4743;3836
+302002;gm. Czermin;4919;3844
+302003;gm. Dobrzyca;8279;6521
+302004;gm. Gizałki;4682;3683
+302005;gm. Gołuchów;10463;8288
+302006;gm. Pleszew;29291;23948
+302101;m. Luboń;29586;23287
+302102;m. Puszczykowo;9339;7881
+302103;gm. Buk;12099;9647
+302104;gm. Czerwonak;25739;20422
+302105;gm. Dopiewo;22245;16682
+302106;gm. Kleszczewo;7223;5389
+302107;gm. Komorniki;24395;18002
+302108;gm. Kostrzyn;17344;13755
+302109;gm. Kórnik;23400;17883
+302110;gm. Mosina;30021;23552
+302111;gm. Murowana Goślina;16447;13206
+302112;gm. Pobiedziska;18527;14832
+302113;gm. Rokietnica;14766;11185
+302114;gm. Stęszew;14821;11849
+302115;gm. Suchy Las;15713;11971
+302116;gm. Swarzędz;45720;35916
+302117;gm. Tarnowo Podgórne;23927;18427
+302201;gm. Bojanowo;8963;7067
+302202;gm. Jutrosin;7185;5555
+302203;gm. Miejska Górka;9473;7465
+302204;gm. Pakosław;4820;3670
+302205;gm. Rawicz;29568;23871
+302301;m. Słupca;13793;11430
+302302;gm. Lądek;5864;4739
+302303;gm. Orchowo;3960;3126
+302304;gm. Ostrowite;5160;4180
+302305;gm. Powidz;2252;1871
+302306;gm. Słupca;9488;7563
+302307;gm. Strzałkowo;10207;8066
+302308;gm. Zagórów;8965;7214
+302401;m. Obrzycko;2384;1930
+302402;gm. Duszniki;8723;6819
+302403;gm. Kaźmierz;7946;6270
+302404;gm. Obrzycko;4409;3481
+302405;gm. Ostroróg;4949;3914
+302406;gm. Pniewy;12245;9744
+302407;gm. Szamotuły;28762;23186
+302408;gm. Wronki;18670;15017
+302501;gm. Dominowo;2978;2297
+302502;gm. Krzykosy;6829;5382
+302503;gm. Nowe Miasto nad Wartą;9086;7192
+302504;gm. Środa Wielkopolska;30819;24804
+302505;gm. Zaniemyśl;6621;5286
+302601;gm. Brodnica;4914;3864
+302602;gm. Dolsk;5857;4630
+302603;gm. Książ Wielkopolski;8599;6666
+302604;gm. Śrem;40227;32242
+302701;m. Turek;27684;23128
+302702;gm. Brudzew;6003;4770
+302703;gm. Dobra;6275;5026
+302704;gm. Kawęczyn;5292;4248
+302705;gm. Malanów;6553;5158
+302706;gm. Przykona;4454;3557
+302707;gm. Tuliszków;10714;8481
+302708;gm. Turek;9199;7114
+302709;gm. Władysławów;8221;6479
+302801;m. Wągrowiec;24493;19990
+302802;gm. Damasławek;5598;4403
+302803;gm. Gołańcz;8491;6579
+302804;gm. Mieścisko;6108;4755
+302805;gm. Skoki;9147;7192
+302806;gm. Wapno;3070;2426
+302807;gm. Wągrowiec;12091;9253
+302901;gm. Przemęt;14066;11005
+302902;gm. Siedlec;12524;9662
+302903;gm. Wolsztyn;29810;23786
+303001;gm. Kołaczkowo;6025;4742
+303002;gm. Miłosław;10358;8326
+303003;gm. Nekla;7265;5784
+303004;gm. Pyzdry;7193;5809
+303005;gm. Września;44578;35738
+303101;m. Złotów;17944;14771
+303102;gm. Jastrowie;11582;9171
+303103;gm. Krajenka;7521;5957
+303104;gm. Lipka;5654;4397
+303105;gm. Okonek;8824;7042
+303106;gm. Tarnówka;3152;2480
+303107;gm. Zakrzewo;4974;3945
+303108;gm. Złotów;9457;7340
+306101;m. Kalisz;98634;81983
+306201;m. Konin;73873;62046
+306301;m. Leszno;61860;50506
+306401;m. Poznań;496887;411160
+320101;m. Białogard;23170;19076
+320102;gm. Białogard;7727;6218
+320103;gm. Karlino;9035;7193
+320104;gm. Tychowo;6900;5491
+320201;gm. Bierzwnik;4870;3960
+320202;gm. Choszczno;21434;17474
+320203;gm. Drawno;5173;4272
+320204;gm. Krzęcin;3753;3053
+320205;gm. Pełczyce;7900;6297
+320206;gm. Recz;5572;4528
+320301;gm. Czaplinek;11911;9626
+320302;gm. Drawsko Pomorskie;16562;13471
+320303;gm. Kalisz Pomorski;7333;5824
+320304;gm. Ostrowice;2610;2058
+320305;gm. Wierzchowo;4429;3585
+320306;gm. Złocieniec;15140;12392
+320402;gm. Goleniów;34442;27630
+320403;gm. Maszewo;8552;6841
+320404;gm. Nowogard;23940;19377
+320405;gm. Osina;2971;2337
+320406;gm. Przybiernów;5049;4058
+320407;gm. Stepnica;4824;3898
+320501;gm. Brojce;3851;2977
+320502;gm. Gryfice;23369;19163
+320503;gm. Karnice;4105;3343
+320504;gm. Płoty;9053;7230
+320507;gm. Rewal;3700;3147
+320508;gm. Trzebiatów;16211;13081
+320601;gm. Banie;6407;5125
+320602;gm. Cedynia;4440;3597
+320603;gm. Chojna;13728;11101
+320604;gm. Gryfino;30742;25148
+320605;gm. Mieszkowice;7291;5860
+320606;gm. Moryń;4375;3490
+320607;gm. Stare Czarnowo;3835;3125
+320608;gm. Trzcińsko-Zdrój;5590;4553
+320609;gm. Widuchowa;5470;4376
+320701;gm. Dziwnów;3916;3349
+320702;gm. Golczewo;5870;4879
+320703;gm. Kamień Pomorski;14097;11853
+320704;gm. Międzyzdroje;6388;5419
+320705;gm. Świerzno;4260;3427
+320706;gm. Wolin;12042;9944
+320801;m. Kołobrzeg;43679;36776
+320802;gm. Dygowo;5572;4434
+320803;gm. Gościno;5219;4110
+320804;gm. Kołobrzeg;10511;8406
+320805;gm. Rymań;4148;3333
+320806;gm. Siemyśl;3715;2947
+320807;gm. Ustronie Morskie;3611;3057
+320901;gm. Będzino;8487;6872
+320902;gm. Biesiekierz;6401;5021
+320903;gm. Bobolice;9342;7499
+320904;gm. Manowo;6598;5283
+320905;gm. Mielno;4952;4159
+320906;gm. Polanów;8856;7065
+320907;gm. Sianów;13580;10970
+320908;gm. Świeszyno;6806;5467
+321001;gm. Barlinek;19032;15549
+321002;gm. Boleszkowice;2901;2336
+321003;gm. Dębno;20325;16416
+321004;gm. Myślibórz;19815;16367
+321005;gm. Nowogródek Pomorski;3451;2713
+321101;gm. Dobra (Szczecińska);19376;15023
+321102;gm. Kołbaskowo;11259;8778
+321103;gm. Nowe Warpno;1559;1332
+321104;gm. Police;38965;32085
+321201;gm. Bielice;3125;2467
+321202;gm. Kozielice;2627;2102
+321203;gm. Lipiany;5937;4851
+321204;gm. Przelewice;5232;4237
+321205;gm. Pyrzyce;18930;15572
+321206;gm. Warnice;3517;2849
+321301;m. Darłowo;13497;11353
+321302;m. Sławno;12308;10134
+321303;gm. Darłowo;7967;6399
+321304;gm. Malechowo;6602;5242
+321305;gm. Postomino;7108;5585
+321306;gm. Sławno;8906;7014
+321401;m. Stargard Szczeciński;65194;53972
+321402;gm. Chociwel;5932;4811
+321403;gm. Dobrzany;5028;4146
+321404;gm. Dolice;7990;6368
+321405;gm. Ińsko;3567;3006
+321406;gm. Kobylanka;4899;4048
+321408;gm. Marianowo;3130;2507
+321409;gm. Stara Dąbrowa;3731;2930
+321410;gm. Stargard Szczeciński;12618;9928
+321411;gm. Suchań;4255;3478
+321501;m. Szczecinek;38515;31987
+321502;gm. Barwice;8717;7004
+321503;gm. Biały Bór;5255;4310
+321504;gm. Borne Sulinowo;9486;7704
+321505;gm. Grzmiąca;5111;4099
+321506;gm. Szczecinek;9375;7374
+321601;m. Świdwin;15118;12421
+321602;gm. Brzeżno;2853;2292
+321603;gm. Połczyn-Zdrój;15377;12856
+321604;gm. Rąbino;3874;3066
+321605;gm. Sławoborze;4152;3375
+321606;gm. Świdwin;6146;4956
+321701;m. Wałcz;24676;20451
+321702;gm. Człopa;5128;4112
+321703;gm. Mirosławiec;5312;4235
+321704;gm. Tuczno;4974;4034
+321705;gm. Wałcz;12504;9977
+321801;gm. Dobra;4392;3575
+321802;gm. Łobez;13706;11285
+321803;gm. Radowo Małe;3721;3014
+321804;gm. Resko;7955;6368
+321805;gm. Węgorzyno;7065;5751
+326101;m. Koszalin;102338;85160
+326201;m. Szczecin;370274;308814
+326301;m. Świnoujście;38573;32924
