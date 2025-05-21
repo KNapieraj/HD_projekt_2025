@@ -45,8 +45,8 @@ jobs:
         run: |
           . "${{ github.workspace }}/New-AzureResources.ps1"
           New-AzureResources `
-          -administratorLogin ${{ env.AdministratorLogin }}
-          -administratorLoginPassword ${{ secrets.SQL_ADMIN_PASSWORD }}
+          -administratorLogin ${{ env.AdministratorLogin }} `
+          -administratorLoginPassword ${{ secrets.SQL_ADMIN_PASSWORD }} `
           -location ${{ env.Location }} `
           -ProductOwner ${{ env.ProductOwner }} `
           -resourceGroupName ${{ env.ResourceGroupName }} `
