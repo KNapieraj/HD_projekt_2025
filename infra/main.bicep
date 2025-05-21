@@ -1,7 +1,7 @@
 targetScope = 'subscription'
 
 @description('Nazwa grupy zasobów.')
-param resourceGroupName string = 'ProjektHD'
+param resourceGroupName string
 
 @description('Resource Naming convention')
 param resourceGroupConventionName string = '${resourceGroupName}-rg'
@@ -10,10 +10,10 @@ param resourceGroupConventionName string = '${resourceGroupName}-rg'
 param resourceGroupProductOwner string
 
 @description('Nazwa serwera SQL.')
-param serverName string = 'my-sql-server'
+param serverName string
 
 @description('Login administratora SQL.')
-param administratorLogin string = 'sqladmin'
+param administratorLogin string
 
 @description('Hasło administratora SQL.')
 @secure()
@@ -23,7 +23,7 @@ param administratorLoginPassword string
 param location string = 'westeurope'
 
 @description('Nazwa bazy danych.')
-param sqlDBName string = 'my-database'
+param sqlDBName string
 
 @description('SKU - warstwa cenowa.')
 param skuTier string = 'Basic'
