@@ -9,7 +9,7 @@ function New-AzureResources {
         # administratorLoginPassword
         [Parameter(Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
-        [securestring]
+        [string]
         $administratorLoginPassword,
 
         # location
@@ -53,12 +53,14 @@ function New-AzureResources {
         $sqlDBName
     )
 
+    $securePassword = ConvertTo-SecureString $administratorLoginPassword -AsPlainText -Force
+
     New-AzDeployment `
         -Location $location `
         -TemplateFile "./main.bicep" `
         -TemplateParameterObject @{
             administratorLogin = $administratorLogin
-            administratorLoginPassword = $administratorLoginPassword
+            administratorLoginPassword = $securePassword
             location = $location
             resourceGroupName = $resourceGroupName
             resourceGroupProductOwner = $ProductOwner
