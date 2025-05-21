@@ -57,7 +57,7 @@ function New-AzureResources {
 
     New-AzDeployment `
         -Location $location `
-        -TemplateFile "./main.bicep" `
+        -TemplateFile "./infra/main.bicep" `
         -TemplateParameterObject @{
             administratorLogin = $administratorLogin
             administratorLoginPassword = $securePassword
