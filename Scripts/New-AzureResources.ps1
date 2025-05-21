@@ -53,13 +53,12 @@ function New-AzureResources {
         $sqlDBName
     )
 
-    $securePassword = ConvertTo-SecureString $administratorLoginPassword -AsPlainText -Force
     New-AzDeployment `
         -Location $location `
         -TemplateFile "./infra/main.bicep" `
         -TemplateParameterObject @{
             administratorLogin = $administratorLogin
-            administratorLoginPassword = $securePassword
+            administratorLoginPassword = $administratorLoginPassword
             location = $location
             resourceGroupName = $resourceGroupName
             resourceGroupProductOwner = $ProductOwner
