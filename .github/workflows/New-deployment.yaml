@@ -22,6 +22,11 @@ jobs:
     runs-on:
       - ubuntu-latest
     steps:
+      - name: Install Az.Resources module
+        shell: pwsh
+        run: |
+            Install-Module -Name Az.Resources -Force -Scope CurrentUser
+
       - name: Checkout code
         uses: actions/checkout@v2
 
