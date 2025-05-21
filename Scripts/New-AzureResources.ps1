@@ -53,37 +53,20 @@ function New-AzureResources {
         $sqlDBName
     )
 
-    # # PowerShell
-    # $securePassword = ConvertTo-SecureString $administratorLoginPassword -AsPlainText -Force
-    # New-AzDeployment `
-    #     -Location $location `
-    #     -TemplateFile "./infra/main.bicep" `
-    #     -TemplateParameterObject @{
-    #         administratorLogin = $administratorLogin
-    #         administratorLoginPassword = $securePassword
-    #         location = $location
-    #         resourceGroupName = $resourceGroupName
-    #         resourceGroupProductOwner = $ProductOwner
-    #         serverName = $serverName
-    #         skuTier = $skuTier
-    #         skuName = $skuName
-    #         sqlDBName = $sqlDBName
-    #     }
-
-    # CLI
-    az deployment sub create \
-        --location "$location" \
-        --template-file "./infra/main.bicep" \
-        --parameters \
-            administratorLogin="$administratorLogin" \
-            administratorLoginPassword="$administratorLoginPassword" \
-            location="$location" \
-            resourceGroupName="$resourceGroupName" \
-            resourceGroupProductOwner="$ProductOwner" \
-            serverName="$serverName" \
-            skuTier="$skuTier" \
-            skuName="$skuName" \
-            sqlDBName="$sqlDBName"
-
+    $securePassword = ConvertTo-SecureString $administratorLoginPassword -AsPlainText -Force
+    New-AzDeployment `
+        -Location $location `
+        -TemplateFile "./infra/main.bicep" `
+        -TemplateParameterObject @{
+            administratorLogin = $administratorLogin
+            administratorLoginPassword = $securePassword
+            location = $location
+            resourceGroupName = $resourceGroupName
+            resourceGroupProductOwner = $ProductOwner
+            serverName = $serverName
+            skuTier = $skuTier
+            skuName = $skuName
+            sqlDBName = $sqlDBName
+        }
 
 }
