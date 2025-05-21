@@ -46,7 +46,6 @@ CREATE TABLE Wymiar_Obwod (
     przystosowany_dla_niepelnosprawnych BOOLEAN,
     typ_obwodu VARCHAR(255),
     typ_obszaru VARCHAR(255),
-    opis_granic TEXT,
     FOREIGN KEY (id_gminy) REFERENCES Wymiar_Gmina(id_gminy)
 );
 
