@@ -32,7 +32,7 @@ param skuTier string = 'Basic'
 param skuName string = 'Basic'
 
 // Moduł: Resource Group (opcjonalnie, jeśli nie tworzysz RG osobno)
-module rgModule './Modules/resourceGroup.bicep' = {
+module rgModule './Modules/ResourceGroup.bicep' = {
   name: 'deployResourceGroup'
   scope: subscription()
   params: {
