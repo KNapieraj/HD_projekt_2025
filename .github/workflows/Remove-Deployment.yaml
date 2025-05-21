@@ -1,0 +1,40 @@
+name: Deploy HD Project
+
+on:
+  workflow_dispatch:
+#   push:
+#     branches:
+#       - dev
+
+env:
+  ResourceGroupName: 'ProjektHD-rg'
+  serverName: 'HD-sql-server'
+  sqlDBName: 'HD-sql-database'
+
+jobs:
+  new-action:
+    name: Run New action script
+    runs-on:
+      - ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.ARM_PROJEKTHD_SP }}
+
+      - name: Import Az.Resources Module
+        shell: pwsh
+        run: |
+          Import-Module -Name Az.Resources
+
+      - name: Run New action script
+        shell: pwsh
+        run: |
+          . "${{ github.workspace }}/Remove-AzureResources.ps1"
+          Remove-AzureResources `
+          -resourceGroupName ${{ env.ResourceGroupName }} `
+          -serverName ${{ env.serverName }} `
+          -sqlDBName ${{ env.sqlDBName }}
