@@ -20,7 +20,7 @@ function Remove-serverName {
         $serverName
     )
 
-    Write-Host "INFO -- Usuwanie serwera SQL '$serverName'..."
+    Write-Host "INFO -- Usuwanie SQL Server '$serverName'..."
     Remove-AzSqlServer -ResourceGroupName $resourceGroupName -ServerName $serverName -Force
 }
 
@@ -39,6 +39,6 @@ function Remove-sqlDBName {
         $serverName
     )
 
-    Write-Host "INFO -- grupy '$serverName'..."
+    Write-Host "INFO -- Usuwanie SQL Database '$sqlDBName'..."
     Remove-AzSqlDatabase -ResourceGroupName $resourceGroupName -ServerName $serverName -DatabaseName $sqlDBName -Force
 }
