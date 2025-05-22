@@ -21,7 +21,7 @@ resource firewallRule 'Microsoft.Sql/servers/firewallRules@2022-05-01-preview' =
   name: 'AllowClientIP'
   parent: sqlServer
   properties: {
-    startIpAddress: '80.253.213.10'
-    endIpAddress: '80.253.213.10'
+    startIpAddress: '80.253.213.1'
+    endIpAddress: '80.253.213.254'
   }
 }
