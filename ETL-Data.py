@@ -89,7 +89,7 @@ def main():
     """
 
     with engine.begin() as conn:
-        conn.execute(text(merge_sql))  # ← to jest kluczowa zmiana
+        conn.execute(text(merge_sql))
         conn.execute(text("DROP TABLE Wymiar_Obwod_TMP"))
         print("INFO --- Wykonano MERGE i usunięto tabelę tymczasową.")
 
