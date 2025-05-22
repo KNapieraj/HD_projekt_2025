@@ -6,6 +6,10 @@ on:
   #   branches:
   #     - dev
   #     - test
+  pull_request:
+    branches:
+      - test
+      - master
 
 env:
   ResourceGroupName: 'ProjektHD-rg'

@@ -6,6 +6,10 @@ on:
   #   branches:
   #     - test
   #     - dev
+  pull_request:
+    branches:
+      - test
+      - master
 
 env:
   AdministratorLogin: 'sqladminuser'
