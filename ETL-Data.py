@@ -100,7 +100,7 @@ def loadDataObwody(df_obwody, engine):
 
 
 def main():
-    csv_files = [
+    obwody_csv_files = [
         "obwody_glosowania_2015.csv",
         "obwody_glosowania_2019.csv",
         "obwody_glosowania_2023.csv"
@@ -108,7 +108,7 @@ def main():
 
     engine = createEngine()
 
-    for csv_file in csv_files:
+    for csv_file in obwody_csv_files:
         df_obwody = extractDataObwody(csv_file)
         loadDataObwody(df_obwody, engine)
 
