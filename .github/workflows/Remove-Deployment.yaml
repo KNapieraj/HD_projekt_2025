@@ -2,9 +2,10 @@ name: Deploy HD Project
 
 on:
   workflow_dispatch:
-#   push:
-#     branches:
-#       - dev
+  push:
+    branches:
+      - dev
+      - test
 
 env:
   ResourceGroupName: 'ProjektHD-rg'
