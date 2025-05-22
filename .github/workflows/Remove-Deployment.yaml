@@ -1,4 +1,4 @@
-name: Deploy HD Project
+name: Remove - Deploy HD Project
 
 on:
   workflow_dispatch:

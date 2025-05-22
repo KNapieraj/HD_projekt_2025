@@ -1,4 +1,4 @@
-name: Deploy HD Project
+name: New - Deploy HD Project
 
 on:
   workflow_dispatch:
