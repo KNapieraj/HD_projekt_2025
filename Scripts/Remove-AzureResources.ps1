@@ -1,4 +1,4 @@
-function resourceGroupName {
+function Remove-resourceGroup {
     param (
         [Parameter(Mandatory = $true)]
         [string]
