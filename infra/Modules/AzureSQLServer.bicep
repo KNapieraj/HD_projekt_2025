@@ -24,3 +24,4 @@ resource firewallRule 'Microsoft.Sql/servers/firewallRules@2022-05-01-preview' =
     startIpAddress: '80.253.213.10'
     endIpAddress: '80.253.213.10'
   }
+}
