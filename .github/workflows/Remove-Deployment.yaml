@@ -58,7 +58,11 @@ jobs:
             Install-Module -Name Az.Sql -Force -Scope CurrentUser
       - name: Checkout code
         uses: actions/checkout@v2
-
+      - name: Login to Azure using PowerShell script
+        shell: pwsh
+        run: |
+            . "${{ github.workspace }}/Scripts/Login-AzServicePrincipal.ps1" `
+            -ServicePrincipalJson '${{ secrets.ARM_PROJEKTHD_SP }}'
       - name: Import Az.Resources Module
         shell: pwsh
         run: |
@@ -84,7 +88,11 @@ jobs:
             Install-Module -Name Az.Resources -Force -Scope CurrentUser
       - name: Checkout code
         uses: actions/checkout@v2
-
+      - name: Login to Azure using PowerShell script
+        shell: pwsh
+        run: |
+            . "${{ github.workspace }}/Scripts/Login-AzServicePrincipal.ps1" `
+            -ServicePrincipalJson '${{ secrets.ARM_PROJEKTHD_SP }}'
       - name: Login to Azure using PowerShell script
         shell: pwsh
         run: |
