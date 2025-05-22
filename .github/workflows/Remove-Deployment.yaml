@@ -43,6 +43,7 @@ jobs:
 
   Remove-serverName:
     name: Run New action script
+    needs: remove-resourceGroup
     runs-on:
       - ubuntu-latest
     steps:
@@ -71,6 +72,7 @@ jobs:
 
   Remove-sqlDBName:
     name: Run New action script
+    needs: Remove-serverName
     runs-on:
       - ubuntu-latest
     steps:
