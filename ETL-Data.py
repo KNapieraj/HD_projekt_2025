@@ -159,18 +159,75 @@ def loadDataGminy(df_gminy, engine):
 
     print("INFO --- Wykonano MERGE i usunięto tabelę tymczasową.")
 
+def extractDataStatystykiObwodu(csv_file):
+    df = readAndLoadDataFromCSV(csv_file)
+
+    # Rok i id_czasu z nazwy pliku
+    rok = int(csv_file.split('_')[-1].split('.')[0])
+    id_czasu = {
+        2015: 20151025,
+        2019: 20191013,
+        2023: 20231015
+    }.get(rok)
+
+    df['id_obwodu'] = df.apply(lambda row: f"{int(row['KOD TERYTORIALNY'])}{int(row['Numer obwodu'])}" if pd.notnull(row['KOD TERYTORIALNY']) else None, axis=1)
+
+    df_stat = pd.DataFrame({
+        'id_obwodu': df['id_obwodu'],
+        'rok': rok,
+        'id_czasu': id_czasu,
+        'liczba_wyborcow': df['Liczba wyborców'],
+        'karty_wydane': df['Wydane karty'],
+        'karty_niewykorzystane': df['Niewykorzystane karty'],
+        'glosy_wazne': df['Głosy ważne'],
+        'glosy_niewazne': df['Głosy nieważne'],
+        'glosy_pelnomocnik': df['Liczba wyborców głosujących przez pełnomocnika'],
+        'glosy_zaswiadczenie': df['Liczba wyborców głosujących na podstawie zaświadczenia o prawie do głosowania']
+    })
+
+    df_stat = df_stat.dropna(subset=['id_obwodu'])
+
+    return df_stat
+
+def loadDataStatystykiObwodu(df_stat, engine):
+    df_stat.to_sql('Fakt_Statystyki_Obwodu_TMP', con=engine, if_exists='replace', index=False)
+    print("INFO --- Dane tymczasowe zapisane do Fakt_Statystyki_Obwodu_TMP.")
+
+    merge_sql = """
+        MERGE INTO Fakt_Statystyki_Obwodu AS target
+        USING Fakt_Statystyki_Obwodu_TMP AS source
+        ON target.id_obwodu = source.id_obwodu AND target.rok = source.rok
+        WHEN MATCHED THEN
+            UPDATE SET
+                target.id_czasu = source.id_czasu,
+                target.liczba_wyborcow = source.liczba_wyborcow,
+                target.karty_wydane = source.karty_wydane,
+                target.karty_niewykorzystane = source.karty_niewykorzystane,
+                target.glosy_wazne = source.glosy_wazne,
+                target.glosy_niewazne = source.glosy_niewazne,
+                target.glosy_pelnomocnik = source.glosy_pelnomocnik,
+                target.glosy_zaswiadczenie = source.glosy_zaswiadczenie
+        WHEN NOT MATCHED THEN
+            INSERT (id_obwodu, rok, id_czasu, liczba_wyborcow, karty_wydane, karty_niewykorzystane, glosy_wazne, glosy_niewazne, glosy_pelnomocnik, glosy_zaswiadczenie)
+            VALUES (source.id_obwodu, source.rok, source.id_czasu, source.liczba_wyborcow, source.karty_wydane, source.karty_niewykorzystane, source.glosy_wazne, source.glosy_niewazne, source.glosy_pelnomocnik, source.glosy_zaswiadczenie);
+    """
+
+    with engine.begin() as conn:
+        conn.execute(text(merge_sql))
+        conn.execute(text("DROP TABLE Fakt_Statystyki_Obwodu_TMP"))
+
+    print("INFO --- Wykonano MERGE i usunięto tabelę tymczasową.")
 
 
 def main():
+    engine = createEngine()
+
     # Przetwarzanie danych obwodow
     obwody_csv_files = [
         "obwody_glosowania_2015.csv",
         "obwody_glosowania_2019.csv",
         "obwody_glosowania_2023.csv"
         ]
-
-    engine = createEngine()
-
     for csv_file in obwody_csv_files:
         df_obwody = extractDataObwody(csv_file)
         loadDataObwody(df_obwody, engine)
@@ -181,10 +238,19 @@ def main():
         "rejestr_wyborcow_2019.csv",
         "rejestr_wyborcow_2023.csv"
     ]
-
     for csv_file in gmina_csv_files:
         df_gminy = extractDataGminy(csv_file)
         loadDataGminy(df_gminy, engine)
+
+    # Przetwarzanie danych wyniki
+    stat_files = [
+        "wyniki_gl_na_listy_po_obwodach_sejm_2015.csv",
+        "wyniki_gl_na_listy_po_obwodach_sejm_2019.csv",
+        "wyniki_gl_na_listy_po_obwodach_sejm_2023.csv"
+    ]
+    for csv_file in stat_files:
+        df_stat = extractDataStatystykiObwodu(csv_file)
+        loadDataStatystykiObwodu(df_stat, engine)
 
 
     # # Wstawienie danych do tabeli Wymiar_Obwod
