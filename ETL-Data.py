@@ -68,7 +68,6 @@ def extractDataObwody(csv_file):
 
     return df_obwody
 
-
 def loadDataObwody(df_obwody, engine):
     # temporary table
     df_obwody.to_sql('Wymiar_Obwod_TMP', con=engine, if_exists='replace', index=False)
@@ -98,8 +97,72 @@ def loadDataObwody(df_obwody, engine):
 
     return print("INFO --- Wykonano MERGE i usunięto tabelę tymczasową.")
 
+def extractDataGminy(csv_file):
+    df = readAndLoadDataFromCSV(csv_file)
+
+    # Dopasowanie nazw kolumn (różne w zależności od roku)
+    if 'KOD TERYTORIALNY' in df.columns:
+        kod_col = 'KOD TERYTORIALNY'
+    elif 'Kod TERYT' in df.columns:
+        kod_col = 'Kod TERYT'
+    else:
+        raise ValueError("Nie znaleziono kolumny z kodem TERYT w pliku.")
+
+    if 'Nazwa jednostki' in df.columns:
+        nazwa_col = 'Nazwa jednostki'
+    elif 'Gmina' in df.columns:
+        nazwa_col = 'Gmina'
+    else:
+        raise ValueError("Nie znaleziono kolumny z nazwą gminy w pliku.")
+
+    powiat_col = 'Powiat' if 'Powiat' in df.columns else None
+    woj_col = 'Województwo' if 'Województwo' in df.columns else None
+
+    df_gminy = pd.DataFrame({
+        'kod_teryt': df[kod_col],
+        'nazwa_gminy': df[nazwa_col],
+        'typ_gminy': df[nazwa_col].apply(lambda x: x.split()[0] if isinstance(x, str) else None),
+        'powiat': df[powiat_col] if powiat_col else None,
+        'wojewodztwo': df[woj_col] if woj_col else None
+    })
+
+    # Usunięcie duplikatów i nadanie ID
+    df_gminy = df_gminy.drop_duplicates().reset_index(drop=True)
+    df_gminy.insert(0, 'id_gminy', df_gminy.index + 1)
+
+    return df_gminy
+
+def loadDataGminy(df_gminy, engine):
+    # Zapis do tymczasowej tabeli
+    df_gminy.to_sql('Wymiar_Gmina_TMP', con=engine, if_exists='replace', index=False)
+    print("INFO --- Dane tymczasowe zapisane do Wymiar_Gmina_TMP.")
+
+    merge_sql = """
+        MERGE INTO Wymiar_Gmina AS target
+        USING Wymiar_Gmina_TMP AS source
+        ON target.id_gminy = source.id_gminy
+        WHEN MATCHED THEN
+            UPDATE SET
+                target.kod_teryt = source.kod_teryt,
+                target.nazwa_gminy = source.nazwa_gminy,
+                target.typ_gminy = source.typ_gminy,
+                target.powiat = source.powiat,
+                target.wojewodztwo = source.wojewodztwo
+        WHEN NOT MATCHED THEN
+            INSERT (id_gminy, kod_teryt, nazwa_gminy, typ_gminy, powiat, wojewodztwo)
+            VALUES (source.id_gminy, source.kod_teryt, source.nazwa_gminy, source.typ_gminy, source.powiat, source.wojewodztwo);
+    """
+
+    with engine.begin() as conn:
+        conn.execute(text(merge_sql))
+        conn.execute(text("DROP TABLE Wymiar_Gmina_TMP"))
+
+    print("INFO --- Wykonano MERGE i usunięto tabelę tymczasową.")
+
+
 
 def main():
+    # Przetwarzanie danych obwodow
     obwody_csv_files = [
         "obwody_glosowania_2015.csv",
         "obwody_glosowania_2019.csv",
@@ -111,6 +174,18 @@ def main():
     for csv_file in obwody_csv_files:
         df_obwody = extractDataObwody(csv_file)
         loadDataObwody(df_obwody, engine)
+
+    # Przetwarzanie danych gmin
+    gmina_csv_files = [
+        "rejestr_wyborcow_2015.csv",
+        "rejestr_wyborcow_2019.csv",
+        "rejestr_wyborcow_2023.csv"
+    ]
+
+    for csv_file in gmina_csv_files:
+        df_gminy = extractDataGminy(csv_file)
+        loadDataGminy(df_gminy, engine)
+
 
     # # Wstawienie danych do tabeli Wymiar_Obwod
     # df_obwody.to_sql('Wymiar_Obwod', con=engine, if_exists='append', index=False)
