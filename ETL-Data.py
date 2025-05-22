@@ -170,8 +170,28 @@ def extractDataStatystykiObwodu(csv_file):
         2023: 20231015
     }.get(rok)
 
-    df['id_obwodu'] = df.apply(lambda row: f"{int(row['KOD TERYTORIALNY'])}{int(row['Numer obwodu'])}" if pd.notnull(row['KOD TERYTORIALNY']) else None, axis=1)
+    # Czyszczenie kolumn liczbowych z niepożądanych spacji i konwersja do int
+    numeric_columns = [
+        'Liczba wyborców',
+        'Wydane karty',
+        'Niewykorzystane karty',
+        'Głosy ważne',
+        'Głosy nieważne',
+        'Liczba wyborców głosujących przez pełnomocnika',
+        'Liczba wyborców głosujących na podstawie zaświadczenia o prawie do głosowania'
+    ]
 
+    for col in numeric_columns:
+        df[col] = df[col].astype(str).str.replace(' ', '').str.replace(',', '').replace('nan', '0')
+        df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0).astype(int)
+
+    # Tworzenie id_obwodu
+    df['id_obwodu'] = df.apply(
+        lambda row: f"{int(row['KOD TERYTORIALNY'])}{int(row['Numer obwodu'])}" if pd.notnull(row['KOD TERYTORIALNY']) else None,
+        axis=1
+    )
+
+    # Budowa DataFrame z oczyszczonymi danymi
     df_stat = pd.DataFrame({
         'id_obwodu': df['id_obwodu'],
         'rok': rok,
