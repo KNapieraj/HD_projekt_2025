@@ -12,10 +12,10 @@ env:
   Location: 'westeurope'
   ProductOwner: "Kamil_Napieraj"
   ResourceGroupName: 'ProjektHD'
-  serverName: 'HD-sql-server'
+  serverName: 'hd-sql-server'
   SkuTier: 'Basic'
   SkuName: 'Basic'
-  sqlDBName: 'HD-sql-database'
+  sqlDBName: 'hd-sql-database'
 
 jobs:
   new-action:

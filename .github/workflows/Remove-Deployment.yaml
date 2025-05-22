@@ -9,8 +9,8 @@ on:
 
 env:
   ResourceGroupName: 'ProjektHD-rg'
-  serverName: 'HD-sql-server'
-  sqlDBName: 'HD-sql-database'
+  serverName: 'hd-sql-server'
+  sqlDBName: 'hd-sql-database'
 
 jobs:
   Remove-sqlDBName:
