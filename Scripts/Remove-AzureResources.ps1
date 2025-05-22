@@ -13,7 +13,7 @@ function Remove-ResourceGroup {
     }
     else {
         Write-Host "INFO -- Usuwanie grupy zasobów '$resourceGroupName'..."
-        Remove-AzResourceGroup -Name $resourceGroupName -Force -AsJob
+        Remove-AzResourceGroup -Name $resourceGroupName -Force
     }
 }
 
