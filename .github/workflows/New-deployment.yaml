@@ -19,7 +19,7 @@ env:
 
 jobs:
   new-action:
-    name: Run New action script
+    name: Create resource group > SQL Server > SQL Database
     runs-on:
       - ubuntu-latest
     steps:
