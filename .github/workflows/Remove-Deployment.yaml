@@ -37,7 +37,7 @@ jobs:
       - name: Run Remove action script
         shell: pwsh
         run: |
-          . "${{ github.workspace }}/Remove-AzureResources.ps1"
+          . "${{ github.workspace }}/Scripts/Remove-AzureResources.ps1"
           Remove-ResourceGroupName `
           -resourceGroupName ${{ env.ResourceGroupName }}
 
@@ -66,7 +66,7 @@ jobs:
       - name: Run Remove action script
         shell: pwsh
         run: |
-          . "${{ github.workspace }}/Remove-AzureResources.ps1"
+          . "${{ github.workspace }}/Scripts/Remove-AzureResources.ps1"
           Remove-serverName `
           -serverName ${{ env.serverName }}
 
@@ -95,6 +95,6 @@ jobs:
       - name: Run Remove action script
         shell: pwsh
         run: |
-          . "${{ github.workspace }}/Remove-AzureResources.ps1"
+          . "${{ github.workspace }}/Scripts/Remove-AzureResources.ps1"
           Remove-sqlDBName `
           -sqlDBName ${{ env.sqlDBName }}
