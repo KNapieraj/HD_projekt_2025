@@ -13,7 +13,7 @@ env:
   sqlDBName: 'HD-sql-database'
 
 jobs:
-  new-action:
+  remove-resourceGroup:
     name: Run New action script
     runs-on:
       - ubuntu-latest
@@ -34,12 +34,65 @@ jobs:
         shell: pwsh
         run: |
           Import-Module -Name Az.Resources
-
       - name: Run Remove action script
         shell: pwsh
         run: |
           . "${{ github.workspace }}/Remove-AzureResources.ps1"
-          Remove-AzureResources `
-          -resourceGroupName ${{ env.ResourceGroupName }} `
-          -serverName ${{ env.serverName }} `
+          Remove-ResourceGroupName `
+          -resourceGroupName ${{ env.ResourceGroupName }}
+
+  Remove-serverName:
+    name: Run New action script
+    runs-on:
+      - ubuntu-latest
+    steps:
+      - name: Install Az.Resources module
+        shell: pwsh
+        run: |
+            Install-Module -Name Az.Resources -Force -Scope CurrentUser
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Login to Azure using PowerShell script
+        shell: pwsh
+        run: |
+            . "${{ github.workspace }}/Scripts/Login-AzServicePrincipal.ps1" `
+            -ServicePrincipalJson '${{ secrets.ARM_PROJEKTHD_SP }}'
+      - name: Import Az.Resources Module
+        shell: pwsh
+        run: |
+          Import-Module -Name Az.Resources
+      - name: Run Remove action script
+        shell: pwsh
+        run: |
+          . "${{ github.workspace }}/Remove-AzureResources.ps1"
+          Remove-serverName `
+          -serverName ${{ env.serverName }}
+
+  Remove-sqlDBName:
+    name: Run New action script
+    runs-on:
+      - ubuntu-latest
+    steps:
+      - name: Install Az.Resources module
+        shell: pwsh
+        run: |
+            Install-Module -Name Az.Resources -Force -Scope CurrentUser
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Login to Azure using PowerShell script
+        shell: pwsh
+        run: |
+            . "${{ github.workspace }}/Scripts/Login-AzServicePrincipal.ps1" `
+            -ServicePrincipalJson '${{ secrets.ARM_PROJEKTHD_SP }}'
+      - name: Import Az.Resources Module
+        shell: pwsh
+        run: |
+          Import-Module -Name Az.Resources
+      - name: Run Remove action script
+        shell: pwsh
+        run: |
+          . "${{ github.workspace }}/Remove-AzureResources.ps1"
+          Remove-sqlDBName `
           -sqlDBName ${{ env.sqlDBName }}
