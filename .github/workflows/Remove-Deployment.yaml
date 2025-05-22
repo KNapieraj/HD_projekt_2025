@@ -38,7 +38,7 @@ jobs:
         shell: pwsh
         run: |
           . "${{ github.workspace }}/Scripts/Remove-AzureResources.ps1"
-          Remove-ResourceGroupName `
+          Remove-resourceGroup `
           -resourceGroupName ${{ env.ResourceGroupName }}
 
   Remove-serverName:
