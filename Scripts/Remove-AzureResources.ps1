@@ -5,12 +5,16 @@ function Remove-resourceGroup {
         $resourceGroupName
     )
 
-    Write-Host "INFO -- Usuwanie bazy danych '$sqlDBName' z serwera '$serverName'..."
-    Remove-AzSqlDatabase -ResourceGroupName $resourceGroupName -ServerName $serverName -DatabaseName $sqlDBName -Force
+    Write-Host "INFO -- Usuwanie grupy zasobów '$resourceGroupName'..."
+    Remove-AzResourceGroup -Name $resourceGroupName -Force -AsJob
 }
 
 function Remove-serverName {
     param (
+        [Parameter(Mandatory = $true)]
+        [string]
+        $resourceGroupName,
+
         [Parameter(Mandatory = $true)]
         [string]
         $serverName
@@ -24,9 +28,17 @@ function Remove-sqlDBName {
     param (
         [Parameter(Mandatory = $true)]
         [string]
-        $sqlDBName
+        $resourceGroupName,
+
+        [Parameter(Mandatory = $true)]
+        [string]
+        $sqlDBName,
+
+        [Parameter(Mandatory = $true)]
+        [string]
+        $serverName
     )
 
-    Write-Host "INFO -- Usuwanie grupy zasobów '$resourceGroupName'..."
-    Remove-AzResourceGroup -Name $resourceGroupName -Force -AsJob
+    Write-Host "INFO -- grupy '$serverName'..."
+    Remove-AzSqlDatabase -ResourceGroupName $resourceGroupName -ServerName $serverName -DatabaseName $sqlDBName -Force
 }
