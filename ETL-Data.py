@@ -1,4 +1,5 @@
 import os
+import hashlib
 import pandas as pd
 from sqlalchemy import create_engine, text
 from sqlalchemy.engine import URL
@@ -36,7 +37,7 @@ def readAndLoadDataFromCSV(csv_file):
         raise FileNotFoundError(f"INFO --- Folder '{folder_path}' nie istnieje.")
     file_path = os.path.join(folder_path, csv_file)
     print(f"INFO --- {csv_file}")
-    return pd.read_csv(file_path, on_bad_lines='skip', sep=';')
+    return pd.read_csv(file_path, on_bad_lines='skip', sep=';', low_memory=False)
 
 def extractDataObwody(csv_file):
     df = readAndLoadDataFromCSV(csv_file)
@@ -170,7 +171,7 @@ def extractDataStatystykiObwodu(csv_file):
         2023: 20231015
     }.get(rok)
 
-    # Czyszczenie kolumn liczbowych z niepożądanych spacji i konwersja do int
+    # Czyszczenie kolumn liczbowych
     numeric_columns = [
         'Liczba wyborców',
         'Wydane karty',
@@ -185,13 +186,13 @@ def extractDataStatystykiObwodu(csv_file):
         df[col] = df[col].astype(str).str.replace(' ', '').str.replace(',', '').replace('nan', '0')
         df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0).astype(int)
 
-    # Tworzenie id_obwodu
+    # Generowanie ID obwodu (ID KOMISJI)
     df['id_obwodu'] = df.apply(
         lambda row: f"{int(row['KOD TERYTORIALNY'])}{int(row['Numer obwodu'])}" if pd.notnull(row['KOD TERYTORIALNY']) else None,
         axis=1
     )
 
-    # Budowa DataFrame z oczyszczonymi danymi
+    # Budowa końcowego DataFrame
     df_stat = pd.DataFrame({
         'id_obwodu': df['id_obwodu'],
         'rok': rok,
@@ -205,7 +206,8 @@ def extractDataStatystykiObwodu(csv_file):
         'glosy_zaswiadczenie': df['Liczba wyborców głosujących na podstawie zaświadczenia o prawie do głosowania']
     })
 
-    df_stat = df_stat.dropna(subset=['id_obwodu'])
+    # Usunięcie wierszy bez ID obwodu
+    df_stat = df_stat.dropna(subset=['id_obwodu']).reset_index(drop=True)
 
     return df_stat
 
@@ -237,6 +239,8 @@ def loadDataStatystykiObwodu(df_stat, engine):
         conn.execute(text("DROP TABLE Fakt_Statystyki_Obwodu_TMP"))
 
     print("INFO --- Wykonano MERGE i usunięto tabelę tymczasową.")
+
+
 
 
 def main():
