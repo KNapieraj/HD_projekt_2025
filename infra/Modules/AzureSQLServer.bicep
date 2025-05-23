@@ -18,7 +18,7 @@ resource sqlServer 'Microsoft.Sql/servers@2022-05-01-preview' = {
 }
 
 resource firewallRule 'Microsoft.Sql/servers/firewallRules@2022-05-01-preview' = {
-  name: 'AllowClientIP'
+  name: 'Laptop'
   parent: sqlServer
   properties: {
     startIpAddress: '80.253.213.1'
@@ -27,7 +27,7 @@ resource firewallRule 'Microsoft.Sql/servers/firewallRules@2022-05-01-preview' =
 }
 
 resource firewallRule 'Microsoft.Sql/servers/firewallRules@2022-05-01-preview' = {
-  name: 'AllowClientIP'
+  name: 'SQL-ALchemy-agent'
   parent: sqlServer
   properties: {
     startIpAddress: '147.161.251.1'
