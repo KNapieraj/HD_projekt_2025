@@ -1,0 +1,136 @@
+{
+	"name": "obwody2019",
+	"properties": {
+		"folder": {
+			"name": "ETL"
+		},
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"linkedService": {
+						"referenceName": "plikicsv",
+						"type": "LinkedServiceReference"
+					},
+					"name": "obwody2019"
+				}
+			],
+			"sinks": [
+				{
+					"linkedService": {
+						"referenceName": "SQLDatabase",
+						"type": "LinkedServiceReference"
+					},
+					"name": "LoadObwody2019",
+					"description": "LoadObwody2019"
+				}
+			],
+			"transformations": [
+				{
+					"name": "IDandROK2019",
+					"description": "Added \n-ID KOMISJI \n-ROK 2019"
+				},
+				{
+					"name": "RemoveColumnsObwody2019",
+					"description": "Remove:\nPelna siedziba,\nOpis granic\nPowiat"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          {KOD TERYTORIALNY} as short,",
+				"          Gmina as string,",
+				"          Powiat as string,",
+				"          {Numer obwodu} as short,",
+				"          {Mieszkańcy} as short,",
+				"          Wyborcy as short,",
+				"          Siedziba as string,",
+				"          {Miejscowość} as string,",
+				"          Ulica as string,",
+				"          {Numer posesji} as string,",
+				"          {Numer lokalu} as string,",
+				"          {Kod pocztowy} as string,",
+				"          Poczta as string,",
+				"          {Typ obwodu} as string,",
+				"          {Przystosowany dla niepełnosprawnych} as string,",
+				"          {Typ obszaru} as string,",
+				"          {Pełna siedziba} as string,",
+				"          {Opis granic} as string,",
+				"          {Numer okręgu do Sejmu} as short,",
+				"          {Numer okręgu do Senatu} as short",
+				"     ),",
+				"     useSchema: false,",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     format: 'delimited',",
+				"     container: 'hdprojektplikicsv',",
+				"     columnDelimiter: ';',",
+				"     escapeChar: '\\\\',",
+				"     quoteChar: '\\\"',",
+				"     columnNamesAsHeader: true) ~> obwody2019",
+				"RemoveColumnsObwody2019 derive({ID KOMISJI} = concat(toString({KOD TERYTORIALNY}), toString({Numer obwodu})),",
+				"          ROK = 2019,",
+				"          {Przystosowany dla niepełnosprawnych} = case(\r",
+				"    {Przystosowany dla niepełnosprawnych string} == 'Tak', 'T',\r",
+				"    'N'\r",
+				")) ~> IDandROK2019",
+				"obwody2019 select(mapColumn(",
+				"          {KOD TERYTORIALNY},",
+				"          Gmina,",
+				"          {Numer obwodu},",
+				"          {Mieszkańcy},",
+				"          Wyborcy,",
+				"          Siedziba,",
+				"          {Miejscowość},",
+				"          Ulica,",
+				"          {Numer posesji},",
+				"          {Numer lokalu},",
+				"          {Kod pocztowy},",
+				"          Poczta,",
+				"          {Typ obwodu},",
+				"          {Przystosowany dla niepełnosprawnych string} = {Przystosowany dla niepełnosprawnych},",
+				"          {Typ obszaru},",
+				"          {Numer okręgu do Sejmu},",
+				"          {Numer okręgu do Senatu}",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> RemoveColumnsObwody2019",
+				"IDandROK2019 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'table',",
+				"     store: 'sqlserver',",
+				"     schemaName: 'dbo',",
+				"     tableName: 'Wymiar_Obwody_2019',",
+				"     insertable: true,",
+				"     updateable: false,",
+				"     deletable: false,",
+				"     upsertable: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          {KOD TERYTORIALNY},",
+				"          Gmina,",
+				"          {Numer obwodu},",
+				"          {Mieszkańcy},",
+				"          Wyborcy,",
+				"          Siedziba,",
+				"          {Miejscowość},",
+				"          Ulica,",
+				"          {Numer posesji},",
+				"          {Numer lokalu},",
+				"          {Kod pocztowy},",
+				"          Poczta,",
+				"          {Typ obwodu},",
+				"          {Przystosowany dla niepełnosprawnych string},",
+				"          {Typ obszaru},",
+				"          {Numer okręgu do Sejmu},",
+				"          {Numer okręgu do Senatu},",
+				"          {ID KOMISJI},",
+				"          ROK,",
+				"          {Przystosowany dla niepełnosprawnych}",
+				"     )) ~> LoadObwody2019"
+			]
+		}
+	}
+}

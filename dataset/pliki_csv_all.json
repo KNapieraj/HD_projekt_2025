@@ -1,0 +1,28 @@
+{
+	"name": "pliki_csv_all",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "plikicsv",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "hdprojektplikicsv"
+			},
+			"columnDelimiter": ";",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "KOD TERYTORIALNY;Gmina;Numer obwodu;Numer okręgu do Sejmu;Numer okręgu do Senatu;Mieszkańcy;Wyborcy;Siedziba;Ulica;Numer posesji;Numer lokalu;Miejscowość;Kod pocztowy;Poczta;Przystosowany dla niepełnosprawnych;Opis granic;Typ obszaru;Typ obwodu;Pełna siedziba",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
