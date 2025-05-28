@@ -9,18 +9,22 @@ param administratorLoginPassword string
 param resourceGroupConventionName string
 
 @description('Resource lock name')
-param resourceLockName = '${serverName}-lock'
+param resourceLockName = '${sqlServerName}-lock'
 
 @description('Tags for resource')
 param resourceProductOwner string
 
 @description('Nazwa serwera SQL.')
-param serverName string
+param sqlServerName string
+
+resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' existing = {
+  name: resourceGroupConventionName
+}
 
 resource sqlServer 'Microsoft.Sql/servers@2022-05-01-preview' = {
-  name: serverName
-  scope: resourceGroup(resourceGroupConventionName)
-  location: resourceGroup(resourceGroupConventionName).location
+  name: sqlServerName
+  scope: resourceGroup
+  location: resourceGroup.location
   properties: {
     administratorLogin: administratorLogin
     administratorLoginPassword: administratorLoginPassword

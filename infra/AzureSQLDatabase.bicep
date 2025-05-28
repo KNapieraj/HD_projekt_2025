@@ -4,6 +4,9 @@ param resourceGroupConventionName string
 @description('Tags for resource')
 param resourceProductOwner string
 
+@description('Resource lock name')
+param resourceLockName = '${sqlDBName}-lock'
+
 @description('Pełna nazwa zasobu serwera SQL, np. format: my-sql-server')
 param sqlServerName string
 
@@ -21,15 +24,27 @@ param skuTier string
 ])
 param skuName string
 
+resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' existing = {
+  name: resourceGroupName
+}
+
 resource sqlDB 'Microsoft.Sql/servers/databases@2022-05-01-preview' = {
   name: '${sqlServerName}/${sqlDBName}'
-  scope: resourceGroup(resourceGroupConventionName)
-  location: resourceGroup(resourceGroupConventionName).location
+  scope: resourceGroup
+  location: resourceGroup.location
   sku: {
     name: skuName
     tier: skuTier
   }
   tags:{
     Product_Owner: resourceProductOwner
+  }
+}
+
+resource lock 'Microsoft.Authorization/locks@2022-09-01' = {
+  name: resourceLockName
+  scope: sqlDB
+  properties: {
+    level: 'CanNotDelete'
   }
 }
