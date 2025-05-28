@@ -1,0 +1,33 @@
+targetScope = 'subscription'
+
+@description('Resource Naming convention')
+param resourceGroupConventionName string = '${resourceGroupName}-rg'
+
+@description('Allowed locations')
+@allowed([
+  'westeurope'
+  'polandcentral'
+])
+param location string = 'westeurope'
+
+@description('Tags for resource')
+param resourceGroupProductOwner string
+
+@description('Resource lock name')
+param resourceLockName = '${resourceGroupConventionName}-lock'
+
+resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' = {
+  name: resourceGroupConventionName
+  location: location
+  tags:{
+    Product_Owner: resourceGroupProductOwner
+  }
+}
+
+resource lock 'Microsoft.Authorization/locks@2022-09-01' = {
+  name: resourceLockName
+  scope: resourceGroup
+  properties: {
+    level: 'CanNotDelete'
+  }
+}

@@ -1,6 +1,3 @@
-@description('Nazwa serwera SQL.')
-param serverName string
-
 @description('Login administratora serwera SQL.')
 param administratorLogin string
 
@@ -8,12 +5,28 @@ param administratorLogin string
 @secure()
 param administratorLoginPassword string
 
+@description('Resource group full name')
+param resourceGroupConventionName string
+
+@description('Resource lock name')
+param resourceLockName = '${serverName}-lock'
+
+@description('Tags for resource')
+param resourceProductOwner string
+
+@description('Nazwa serwera SQL.')
+param serverName string
+
 resource sqlServer 'Microsoft.Sql/servers@2022-05-01-preview' = {
   name: serverName
-  location: resourceGroup().location
+  scope: resourceGroup(resourceGroupConventionName)
+  location: resourceGroup(resourceGroupConventionName).location
   properties: {
     administratorLogin: administratorLogin
     administratorLoginPassword: administratorLoginPassword
+  }
+  tags:{
+    Product_Owner: resourceProductOwner
   }
 }
 
@@ -26,11 +39,10 @@ resource firewallRule 'Microsoft.Sql/servers/firewallRules@2022-05-01-preview' =
   }
 }
 
-resource firewallRule 'Microsoft.Sql/servers/firewallRules@2022-05-01-preview' = {
-  name: 'SQL-ALchemy-agent'
-  parent: sqlServer
+resource lock 'Microsoft.Authorization/locks@2022-09-01' = {
+  name: resourceLockName
+  scope: sqlServer
   properties: {
-    startIpAddress: '147.161.251.1'
-    endIpAddress: '147.161.251.254'
+    level: 'CanNotDelete'
   }
 }
