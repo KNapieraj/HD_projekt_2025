@@ -18,7 +18,7 @@ env:
   ProductOwner: "Kamil_Napieraj"
   ResourceGroupName: 'ProjektHD2'
   resourceGroupConventionName: 'ProjektHD2-rg'
-  serverName: 'hd-sql-server2'
+  sqlServerName: 'hd-sql-server2'
   SkuTier: 'Basic'
   SkuName: 'Basic'
   sqlDBName: 'hd-sql-database2'
@@ -89,7 +89,7 @@ jobs:
           -administratorLoginPassword ${{ secrets.SQL_ADMIN_PASSWORD }} `
           -ProductOwner ${{ env.ProductOwner }} `
           -resourceGroupConventionName ${{ env.resourceGroupConventionName }} `
-          -serverName ${{ env.serverName }}
+          -sqlServerName ${{ env.sqlServerName }}
 
   new-azureDatabaseSQL:
     name: Create Azure SQL Database
@@ -122,7 +122,7 @@ jobs:
           New-AzureDatabaseSQL `
           -ProductOwner ${{ env.ProductOwner }} `
           -resourceGroupConventionName ${{ env.resourceGroupConventionName }} `
-          -serverName ${{ env.serverName }} `
+          -sqlServerName ${{ env.sqlServerName }} `
           -SkuTier ${{ env.SkuTier }} `
           -SkuName ${{ env.SkuName }} `
           -sqlDBName ${{ env.sqlDBName }}
