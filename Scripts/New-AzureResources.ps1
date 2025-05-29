@@ -29,6 +29,10 @@ function New-ResourceGroup {
 
 function New-AzureServerSQL {
     param (
+        [Parameter(Mandatory = $false)]
+        [string]
+        $location = "westeurope",
+
         # administratorLogin
         [Parameter(Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
@@ -48,9 +52,9 @@ function New-AzureServerSQL {
 
         # RG name
         [Parameter(Mandatory = $true)]
-        [ValidatePattern('^$|^[-\w\.\(\)]{1,90}$')]
+        [ValidatePattern('^$|^[-\w\.\(\)-]{1,90}$')]
         [string]
-        $resourceGroupConvetionName,
+        $resourceGroupConventionName,
 
         # SQL server name
         [Parameter(Mandatory = $true)]
@@ -65,7 +69,7 @@ function New-AzureServerSQL {
         -TemplateParameterObject @{
             administratorLogin = $administratorLogin
             administratorLoginPassword = $administratorLoginPassword
-            resourceGroupConvetionName = $resourceGroupConvetionName
+            resourceGroupConventionName = $resourceGroupConventionName
             resourceGroupProductOwner = $ProductOwner
             sqlServerName = $sqlServerName
         }
@@ -74,6 +78,10 @@ function New-AzureServerSQL {
 
 function New-AzureDatabaseSQL {
     param (
+        [Parameter(Mandatory = $false)]
+        [string]
+        $location = "westeurope",
+
         # Set TAG - owner name
         [Parameter(Mandatory = $true)]
         [string]
@@ -81,9 +89,9 @@ function New-AzureDatabaseSQL {
 
         # RG name
         [Parameter(Mandatory = $true)]
-        [ValidatePattern('^$|^[-\w\.\(\)]{1,90}$')]
+        [ValidatePattern('^$|^[-\w\.\(\)-]{1,90}$')]
         [string]
-        $resourceGroupConvetionName,
+        $resourceGroupConventionName,
 
         # SKUname
         [Parameter(Mandatory = $true)]
@@ -114,7 +122,7 @@ function New-AzureDatabaseSQL {
         -Location $location `
         -TemplateFile "./infra/main.bicep" `
         -TemplateParameterObject @{
-            resourceGroupConventionName = $resourceGroupConvetionName
+            resourceGroupConventionName = $resourceGroupConventionName
             resourceProductOwner = $ProductOwner
             skuTier = $skuTier
             skuName = $skuName
@@ -125,6 +133,10 @@ function New-AzureDatabaseSQL {
 
 function New-AzureDataFactory {
     param (
+        [Parameter(Mandatory = $false)]
+        [string]
+        $location = "westeurope",
+
         [Parameter(Mandatory = $true)]
         [string]
         $dataFactoryName,
@@ -136,7 +148,7 @@ function New-AzureDataFactory {
 
         # RG name
         [Parameter(Mandatory = $true)]
-        [ValidatePattern('^$|^[-\w\.\(\)]{1,90}$')]
+        [ValidatePattern('^$|^[-\w\.\(\)-]{1,90}$')]
         [string]
         $resourceGroupName
     )

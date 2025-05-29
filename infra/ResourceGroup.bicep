@@ -17,20 +17,12 @@ param location string = 'westeurope'
 param resourceGroupProductOwner string
 
 @description('Resource lock name')
-param resourceLockName = '${resourceGroupConventionName}-lock'
+param resourceLockName string = '${resourceGroupConventionName}-lock'
 
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' = {
   name: resourceGroupConventionName
   location: location
   tags:{
     Product_Owner: resourceGroupProductOwner
-  }
-}
-
-resource lock 'Microsoft.Authorization/locks@2022-09-01' = {
-  name: resourceLockName
-  scope: resourceGroup
-  properties: {
-    level: 'CanNotDelete'
   }
 }

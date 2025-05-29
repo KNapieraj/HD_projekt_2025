@@ -9,7 +9,7 @@ param administratorLoginPassword string
 param resourceGroupConventionName string
 
 @description('Resource lock name')
-param resourceLockName = '${sqlServerName}-lock'
+param resourceLockName string = '${sqlServerName}-lock'
 
 @description('Tags for resource')
 param resourceProductOwner string
