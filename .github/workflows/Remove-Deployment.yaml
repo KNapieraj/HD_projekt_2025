@@ -12,13 +12,46 @@ on:
       - master
 
 env:
-  ResourceGroupName: 'ProjektHD-rg'
-  serverName: 'hd-sql-server'
-  sqlDBName: 'hd-sql-database'
+  azureDataFacAzureDataFactoryNametoryName: 'projekt-hd-df'
+  ResourceGroupName: 'ProjektHD2-rg'
+  serverName: 'hd-sql-server2'
+  sqlDBName: 'hd-sql-database2'
 
 jobs:
+  Remove-DataFactory:
+    name: Remove SQL Database
+    runs-on:
+      - ubuntu-latest
+    steps:
+      - name: Install Az.Resources module
+        shell: pwsh
+        run: |
+            Install-Module -Name Az.Resources -Force -Scope CurrentUser
+            Install-Module -Name Az.Sql -Force -Scope CurrentUser
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Login to Azure using PowerShell script
+        shell: pwsh
+        run: |
+            . "${{ github.workspace }}/Scripts/Login-AzServicePrincipal.ps1" `
+            -ServicePrincipalJson '${{ secrets.ARM_PROJEKTHD_SP }}'
+      - name: Import Az.Resources Module
+        shell: pwsh
+        run: |
+          Import-Module -Name Az.Resources
+          Import-Module -Name Az.Sql
+      - name: Run Remove action script
+        shell: pwsh
+        run: |
+          . "${{ github.workspace }}/Scripts/Remove-AzureResources.ps1"
+          Remove-DataFactory `
+          -azureDataFactoryName ${{ env.ResourceGroupName }} `
+          -resourceGroupName ${{ env.serverName }}
+
   Remove-sqlDBName:
     name: Remove SQL Database
+    needs: Remove-DataFactory
     runs-on:
       - ubuntu-latest
     steps:

@@ -121,4 +121,32 @@ function New-AzureDatabaseSQL {
             sqlDBName = $sqlDBName
             sqlServerName = $serverName
         }
+
+
+function New-AzureDataFactory {
+    param (
+        [Parameter(Mandatory = $true)]
+        [string]
+        $dataFactoryName,
+
+        # Set TAG - owner name
+        [Parameter(Mandatory = $true)]
+        [string]
+        $ProductOwner,
+
+        # RG name
+        [Parameter(Mandatory = $true)]
+        [ValidatePattern('^$|^[-\w\.\(\)]{1,90}$')]
+        [string]
+        $resourceGroupName
+    )
+
+    New-AzDeployment `
+        -Location $location `
+        -TemplateFile "./infra/ResourceGroup.bicep" `
+        -TemplateParameterObject @{
+            dataFactoryName = $dataFactoryName
+            resourceGroupConventionName = $resourceGroupName
+            resourceProductOwner = $ProductOwner
+        }
 }

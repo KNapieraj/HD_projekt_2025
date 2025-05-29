@@ -1,11 +1,8 @@
 @description('Nazwa dla Azure Data Factory')
 param dataFactoryName string
 
-@description('Lokalizacja wdrożenia')
-param location string = 'westeurope'
-
 @description('Tagi dla zasobu')
-param productOwner string
+param resourceProductOwner string
 
 @description('Nazwa grupy zasobów')
 param resourceGroupConventionName string
@@ -21,7 +18,7 @@ resource dataFactory 'Microsoft.DataFactory/factories@2022-09-01' = {
   name: dataFactoryName
   location: resourceGroup.location
   tags: {
-    Product_Owner: productOwner
+    Product_Owner: resourceProductOwner
   }
 }
 
