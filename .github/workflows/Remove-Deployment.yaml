@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - dev
-      - test
+      # - test
   pull_request:
     branches:
       - test
