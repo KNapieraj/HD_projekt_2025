@@ -121,7 +121,7 @@ function New-AzureDatabaseSQL {
             sqlDBName = $sqlDBName
             sqlServerName = $serverName
         }
-
+    }
 
 function New-AzureDataFactory {
     param (
