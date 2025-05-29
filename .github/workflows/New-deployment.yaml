@@ -58,6 +58,7 @@ jobs:
 
   new-azureServerSQL:
     name: Create Azure SQL Server
+    needs: new-resourceGroup
     runs-on:
       - ubuntu-latest
     steps:
@@ -92,6 +93,7 @@ jobs:
 
   new-azureDatabaseSQL:
     name: Create Azure SQL Database
+    needs: new-azureServerSQL
     runs-on:
       - ubuntu-latest
     steps:
@@ -127,6 +129,7 @@ jobs:
 
   new-azureDataFactory:
     name: Create Azure Data Factory
+    needs: new-azureDatabaseSQL
     runs-on:
       - ubuntu-latest
     steps:
