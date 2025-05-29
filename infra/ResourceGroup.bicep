@@ -17,7 +17,7 @@ param location string = 'westeurope'
 param resourceGroupProductOwner string
 
 @description('Resource lock name')
-param resourceLockName = '${resourceGroupConventionName}-lock'
+param resourceLockName string = '${resourceGroupConventionName}-lock'
 
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' = {
   name: resourceGroupConventionName
