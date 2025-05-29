@@ -43,10 +43,10 @@ resource firewallRule 'Microsoft.Sql/servers/firewallRules@2022-05-01-preview' =
   }
 }
 
-resource lock 'Microsoft.Authorization/locks@2022-09-01' = {
-  name: resourceLockName
-  scope: sqlServer
-  properties: {
-    level: 'CanNotDelete'
-  }
-}
+// resource lock 'Microsoft.Authorization/locks@2022-09-01' = {
+//   name: resourceLockName
+//   scope: sqlServer
+//   properties: {
+//     level: 'CanNotDelete'
+//   }
+// }

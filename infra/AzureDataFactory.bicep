@@ -22,12 +22,12 @@ resource dataFactory 'Microsoft.DataFactory/factories@2022-09-01' = {
   }
 }
 
-resource lock 'Microsoft.Authorization/locks@2022-09-01' = {
-  name: resourceLockName
-  scope: dataFactory
-  properties: {
-    level: 'CanNotDelete'
-  }
-}
+// resource lock 'Microsoft.Authorization/locks@2022-09-01' = {
+//   name: resourceLockName
+//   scope: dataFactory
+//   properties: {
+//     level: 'CanNotDelete'
+//   }
+// }
 
-output dataFactoryId string = dataFactory.id
+// output dataFactoryId string = dataFactory.id
