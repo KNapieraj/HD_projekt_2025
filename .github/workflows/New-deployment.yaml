@@ -84,7 +84,7 @@ jobs:
         shell: pwsh
         run: |
           . "${{ github.workspace }}/Scripts/New-AzureResources.ps1"
-          New-AzureResources `
+          New-AzureServerSQL `
           -administratorLogin ${{ env.AdministratorLogin }} `
           -administratorLoginPassword ${{ secrets.SQL_ADMIN_PASSWORD }} `
           -ProductOwner ${{ env.ProductOwner }} `
