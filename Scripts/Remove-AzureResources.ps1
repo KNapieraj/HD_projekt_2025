@@ -5,14 +5,14 @@ function Remove-ResourceGroup {
         $resourceGroupName
     )
 
-    $resourceLockName = Get-AzResourceLock -ResourceGroupName $resourceGroupName
-    if ($null -eq $resourceLockName) {
-        Write-Host "WARN -- Lock nie istnieje."
-    }
-    else {
-        Write-Host "INFO -- Usuwanie lock`a '$resourceLockName'..."
-        Remove-AzResourceLock -LockName $resourceLockName -ResourceGroupName $resourceGroupName -Force
-    }
+    # $resourceLockName = Get-AzResourceLock -ResourceGroupName $resourceGroupName
+    # if ($null -eq $resourceLockName) {
+    #     Write-Host "WARN -- Lock nie istnieje."
+    # }
+    # else {
+    #     Write-Host "INFO -- Usuwanie lock`a '$resourceLockName'..."
+    #     Remove-AzResourceLock -LockName $resourceLockName -ResourceGroupName $resourceGroupName -Force
+    # }
 
     # Sprawdzenie, czy grupa zasobów istnieje
     $resourceGroup = Get-AzResourceGroup -Name $resourceGroupName -ErrorAction SilentlyContinue
