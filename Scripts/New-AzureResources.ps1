@@ -50,7 +50,7 @@ function New-AzureServerSQL {
         [Parameter(Mandatory = $true)]
         [ValidatePattern('^$|^[-\w\.\(\)-]{1,90}$')]
         [string]
-        $resourceGroupConvetionName,
+        $resourceGroupConventionName,
 
         # SQL server name
         [Parameter(Mandatory = $true)]
@@ -65,7 +65,7 @@ function New-AzureServerSQL {
         -TemplateParameterObject @{
             administratorLogin = $administratorLogin
             administratorLoginPassword = $administratorLoginPassword
-            resourceGroupConvetionName = $resourceGroupConvetionName
+            resourceGroupConventionName = $resourceGroupConventionName
             resourceGroupProductOwner = $ProductOwner
             sqlServerName = $sqlServerName
         }
@@ -83,7 +83,7 @@ function New-AzureDatabaseSQL {
         [Parameter(Mandatory = $true)]
         [ValidatePattern('^$|^[-\w\.\(\)-]{1,90}$')]
         [string]
-        $resourceGroupConvetionName,
+        $resourceGroupConventionName,
 
         # SKUname
         [Parameter(Mandatory = $true)]
@@ -114,7 +114,7 @@ function New-AzureDatabaseSQL {
         -Location $location `
         -TemplateFile "./infra/main.bicep" `
         -TemplateParameterObject @{
-            resourceGroupConventionName = $resourceGroupConvetionName
+            resourceGroupConventionName = $resourceGroupConventionName
             resourceProductOwner = $ProductOwner
             skuTier = $skuTier
             skuName = $skuName
