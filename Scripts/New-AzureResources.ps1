@@ -48,7 +48,7 @@ function New-AzureServerSQL {
 
         # RG name
         [Parameter(Mandatory = $true)]
-        [ValidatePattern('^$|^[-\w\.\(\)]{1,90}$')]
+        [ValidatePattern('^$|^[-\w\.\(\)-]{1,90}$')]
         [string]
         $resourceGroupConvetionName,
 
@@ -81,7 +81,7 @@ function New-AzureDatabaseSQL {
 
         # RG name
         [Parameter(Mandatory = $true)]
-        [ValidatePattern('^$|^[-\w\.\(\)]{1,90}$')]
+        [ValidatePattern('^$|^[-\w\.\(\)-]{1,90}$')]
         [string]
         $resourceGroupConvetionName,
 
@@ -136,7 +136,7 @@ function New-AzureDataFactory {
 
         # RG name
         [Parameter(Mandatory = $true)]
-        [ValidatePattern('^$|^[-\w\.\(\)]{1,90}$')]
+        [ValidatePattern('^$|^[-\w\.\(\)-]{1,90}$')]
         [string]
         $resourceGroupName
     )
