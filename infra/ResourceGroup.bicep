@@ -1,5 +1,8 @@
 targetScope = 'subscription'
 
+@description('Nazwa grupy zasobów.')
+param resourceGroupName string
+
 @description('Resource Naming convention')
 param resourceGroupConventionName string = '${resourceGroupName}-rg'
 
