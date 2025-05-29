@@ -29,6 +29,10 @@ function New-ResourceGroup {
 
 function New-AzureServerSQL {
     param (
+        [Parameter(Mandatory = $false)]
+        [string]
+        $location = "westeurope",
+
         # administratorLogin
         [Parameter(Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
@@ -74,6 +78,10 @@ function New-AzureServerSQL {
 
 function New-AzureDatabaseSQL {
     param (
+        [Parameter(Mandatory = $false)]
+        [string]
+        $location = "westeurope",
+
         # Set TAG - owner name
         [Parameter(Mandatory = $true)]
         [string]
@@ -125,6 +133,10 @@ function New-AzureDatabaseSQL {
 
 function New-AzureDataFactory {
     param (
+        [Parameter(Mandatory = $false)]
+        [string]
+        $location = "westeurope",
+
         [Parameter(Mandatory = $true)]
         [string]
         $dataFactoryName,
