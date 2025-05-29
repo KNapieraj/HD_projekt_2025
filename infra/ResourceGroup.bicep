@@ -29,7 +29,7 @@ resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' = {
 
 resource lock 'Microsoft.Authorization/locks@2022-09-01' = {
   name: resourceLockName
-  scope: resourceGroup
+  scope: resourceGroup(resourceGroupes)
   properties: {
     level: 'CanNotDelete'
   }
