@@ -67,6 +67,7 @@ module sqlDatabaseModule './Modules/AzureSQLDatabase.bicep' = {
   params: {
     resourceProductOwner: ProductOwner
     sqlDBName: sqlDBName
+    sqlServerName: serverName
     skuTier: skuTier
     skuName: skuName
   }

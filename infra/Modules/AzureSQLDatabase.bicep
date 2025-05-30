@@ -5,6 +5,9 @@ param resourceProductOwner string
 // param resourceLockName string = '${sqlDBName}-lock'
 
 @description('Nazwa bazy danych SQL.')
+param sqlServerName string
+
+@description('Nazwa bazy danych SQL.')
 param sqlDBName string
 
 @description('SKU - nazwa warstwy cenowej, np. Basic, Standard, Premium.')
