@@ -5,17 +5,9 @@ function Remove-ResourceGroup {
         $resourceGroupName
     )
 
-    $resourceLockName = Get-AzResourceLock -ResourceGroupName $resourceGroupName
-    if ($null -eq $resourceLockName) {
-        Write-Host "WARN -- Lock nie istnieje."
-    }
-    else {
-        Write-Host "INFO -- Usuwanie lock`a '$resourceLockName'..."
-        Remove-AzResourceLock -LockName $resourceLockName -ResourceGroupName $resourceGroupName -Force
-    }
-
     # Sprawdzenie, czy grupa zasobów istnieje
     $resourceGroup = Get-AzResourceGroup -Name $resourceGroupName -ErrorAction SilentlyContinue
+
     if ($null -eq $resourceGroup) {
         Write-Host "WARN -- Grupa zasobów '$resourceGroupName' nie istnieje."
     }
@@ -35,16 +27,6 @@ function Remove-ServerName {
         [string]
         $serverName
     )
-
-    $resourceType = (Get-AzResource -ResourceName $serverName -ResourceGroupName $resourceGroupName).ResourceType
-    $resourceLockName = Get-AzResourceLock -ResourceGroupName $resourceGroupName -ResourceName $serverName -ResourceType $resourceType
-    if ($null -eq $resourceLockName) {
-        Write-Host "WARN -- Lock nie istnieje."
-    }
-    else {
-        Write-Host "INFO -- Usuwanie lock`a '$resourceLockName'..."
-        Remove-AzResourceLock -LockName $resourceLockName -ResourceGroupName $resourceGroupName -Force
-    }
 
     # Sprawdzenie, czy serwer SQL istnieje
     $sqlServer = Get-AzSqlServer -ResourceGroupName $resourceGroupName -ServerName $serverName -ErrorAction SilentlyContinue
@@ -72,16 +54,6 @@ function Remove-SqlDBName {
         [string]
         $serverName
     )
-
-    $resourceType = (Get-AzResource -ResourceName $sqlDBName -ResourceGroupName $resourceGroupName).ResourceType
-    $resourceLockName = Get-AzResourceLock -ResourceGroupName $resourceGroupName -ResourceName $sqlDBName -ResourceType $resourceType
-    if ($null -eq $resourceLockName) {
-        Write-Host "WARN -- Lock nie istnieje."
-    }
-    else {
-        Write-Host "INFO -- Usuwanie lock`a '$resourceLockName'..."
-        Remove-AzResourceLock -LockName $resourceLockName -ResourceGroupName $resourceGroupName -Force
-    }
 
     # Sprawdzenie, czy baza danych istnieje
     $sqlDatabase = Get-AzSqlDatabase -ResourceGroupName $resourceGroupName -ServerName $serverName -DatabaseName $sqlDBName -ErrorAction SilentlyContinue
