@@ -5,9 +5,6 @@ param administratorLogin string
 @secure()
 param administratorLoginPassword string
 
-@description('Resource group full name')
-param resourceGroupConventionName string
-
 // @description('Resource lock name')
 // param resourceLockName string = '${sqlServerName}-lock'
 

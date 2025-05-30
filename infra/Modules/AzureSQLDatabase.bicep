@@ -1,6 +1,3 @@
-@description('Resource group full name')
-param resourceGroupConventionName string
-
 @description('Tags for resource')
 param resourceProductOwner string
 

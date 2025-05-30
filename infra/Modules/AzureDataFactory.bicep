@@ -4,9 +4,6 @@ param dataFactoryName string
 @description('Tagi dla zasobu')
 param resourceProductOwner string
 
-@description('Nazwa grupy zasobów')
-param resourceGroupConventionName string
-
 // @description('Nazwa dla resource locka')
 // param resourceLockName string = '${dataFactoryName}-lock'
 
