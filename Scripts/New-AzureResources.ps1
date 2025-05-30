@@ -62,12 +62,12 @@ function New-AzureResources {
         -Location $location `
         -TemplateFile "./infra/main.bicep" `
         -TemplateParameterObject @{
-            $azureDataFactoryName = $azureDataFactoryName
+            azureDataFactoryName = $azureDataFactoryName
             administratorLogin = $administratorLogin
             administratorLoginPassword = $administratorLoginPassword
             location = $location
             resourceGroupName = $resourceGroupName
-            resourceGroupProductOwner = $ProductOwner
+            ProductOwner = $ProductOwner
             serverName = $serverName
             skuTier = $skuTier
             skuName = $skuName
