@@ -50,7 +50,7 @@ module sqlServerModule './Modules/AzureSQLServer.bicep' = {
   name: 'deploySqlServer'
   scope: resourceGroup(resourceGroupConventionName)
   params: {
-    serverName: serverName
+    sqlServerName: serverName
     administratorLogin: administratorLogin
     administratorLoginPassword: administratorLoginPassword
     resourceProductOwner:ProductOwner
