@@ -19,7 +19,7 @@ env:
 
 jobs:
   Remove-DataFactory:
-    name: Remove SQL Database
+    name: Remove Azure Data Factory
     runs-on:
       - ubuntu-latest
     steps:
