@@ -356,7 +356,7 @@
 				"          Ulica,",
 				"          Numer_posesji = {Numer posesji},",
 				"          Numer_lokalu = {Numer lokalu},",
-				"          Miejscowosc = {Mieszkańcy},",
+				"          Miejscowosc = {Miejscowość},",
 				"          Kod_pocztowy = {Kod pocztowy},",
 				"          Poczta,",
 				"          Przystosowany_dla_niepelnosprawnych = {Przystosowany dla niepełnosprawnych string},",
