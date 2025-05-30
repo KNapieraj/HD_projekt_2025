@@ -171,7 +171,7 @@
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false,",
 				"     format: 'delimited',",
-				"     container: 'hdprojektplikicsv',",
+				"     container: 'plikicsv',",
 				"     fileName: 'obwody_glosowania_2015.csv',",
 				"     columnDelimiter: ';',",
 				"     escapeChar: '\\\\',",
