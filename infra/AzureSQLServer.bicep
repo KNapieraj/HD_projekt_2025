@@ -1,5 +1,3 @@
-targetScope = 'resourceGroup'
-
 @description('Login administratora serwera SQL.')
 param administratorLogin string
 
