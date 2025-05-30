@@ -13,13 +13,6 @@ param sqlDBName string
 @description('SKU - nazwa warstwy cenowej, np. Basic, Standard, Premium.')
 param skuTier string
 
-@description('Allowed locations')
-@allowed([
-  'westeurope'
-  'polandcentral'
-])
-param location string = 'westeurope'
-
 @description('SKU - nazwa SKU')
 @allowed([
   'Basic'

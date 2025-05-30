@@ -11,13 +11,6 @@ param administratorLoginPassword string
 @description('Tags for resource')
 param resourceProductOwner string
 
-@description('Allowed locations')
-@allowed([
-  'westeurope'
-  'polandcentral'
-])
-param location string = 'westeurope'
-
 @description('Nazwa serwera SQL.')
 param sqlServerName string
 
