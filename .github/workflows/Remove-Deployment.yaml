@@ -27,6 +27,7 @@ jobs:
         shell: pwsh
         run: |
             Install-Module -Name Az.Resources -Force -Scope CurrentUser
+            Install-Module -Name Az.DataFactory -Scope CurrentUser
             Install-Module -Name Az.Sql -Force -Scope CurrentUser
       - name: Checkout code
         uses: actions/checkout@v2
@@ -40,6 +41,7 @@ jobs:
         shell: pwsh
         run: |
           Import-Module -Name Az.Resources
+          Import-Module Az.DataFactory
           Import-Module -Name Az.Sql
       - name: Run Remove action script
         shell: pwsh
