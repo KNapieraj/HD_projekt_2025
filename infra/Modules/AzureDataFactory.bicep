@@ -4,14 +4,6 @@ param dataFactoryName string
 @description('Tagi dla zasobu')
 param resourceProductOwner string
 
-// @description('Nazwa dla resource locka')
-// param resourceLockName string = '${dataFactoryName}-lock'
-
-resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' existing = {
-  name: resourceGroupConventionName
-}
-
-
 resource dataFactory 'Microsoft.DataFactory/factories@2022-09-01' = {
   name: dataFactoryName
   location: resourceGroup().location
@@ -19,13 +11,3 @@ resource dataFactory 'Microsoft.DataFactory/factories@2022-09-01' = {
     Product_Owner: resourceProductOwner
   }
 }
-
-// resource lock 'Microsoft.Authorization/locks@2022-09-01' = {
-//   name: resourceLockName
-//   scope: dataFactory
-//   properties: {
-//     level: 'CanNotDelete'
-//   }
-// }
-
-// output dataFactoryId string = dataFactory.id

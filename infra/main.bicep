@@ -82,8 +82,7 @@ module azureDataFactoryModule './Modules/AzureDataFactory.bicep' = {
   scope: resourceGroup(resourceGroupConventionName)
   params: {
     dataFactoryName: azureDataFactoryName
-    resourceGroupConventionName: ProductOwner
-    resourceProductOwner: skuTier
+    resourceProductOwner: ProductOwner
   }
   dependsOn: [
     sqlDatabaseModule
