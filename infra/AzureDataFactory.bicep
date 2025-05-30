@@ -1,3 +1,5 @@
+targetScope = 'resourceGroup'
+
 @description('Nazwa dla Azure Data Factory')
 param dataFactoryName string
 
