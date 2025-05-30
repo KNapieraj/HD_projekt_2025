@@ -78,7 +78,7 @@ function Remove-DataFactory {
         $azureDataFactoryName
     )
 
-    $resourceType = (Get-AzResource -ResourceName $azureDataFactoryName -ResourceGroupName $resourceGroupName).ResourceType
+    $resourceType = (Get-AzResource -ResourceName $azureDataFactoryName -ResourceGroupName $resourceGroupName -ErrorAction SilentlyContinue).ResourceType
     $resourceLockName = Get-AzResourceLock -ResourceGroupName $resourceGroupName -ResourceName $sqlDazureDataFactoryNameBName -ResourceType $resourceType
     if ($null -eq $resourceLockName) {
         Write-Host "WARN -- Lock nie istnieje."
