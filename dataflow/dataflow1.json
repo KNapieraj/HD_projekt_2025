@@ -46,6 +46,13 @@
 						"type": "LinkedServiceReference"
 					},
 					"name": "wyniki2023"
+				},
+				{
+					"linkedService": {
+						"referenceName": "SQLDatabase",
+						"type": "LinkedServiceReference"
+					},
+					"name": "komitety2015"
 				}
 			],
 			"sinks": [
@@ -142,6 +149,9 @@
 				{
 					"name": "IDandROKwyniki2023",
 					"description": "Added \n-ID KOMISJI \n-ROK 2015\n\nstring to integer:\nLiczba wyborcow\nKomisja otrzymała kart do głosowania"
+				},
+				{
+					"name": "filterKomitet"
 				}
 			],
 			"scriptLines": [
@@ -405,6 +415,59 @@
 				"     escapeChar: '\\\\',",
 				"     quoteChar: '\\\"',",
 				"     columnNamesAsHeader: true) ~> wyniki2023",
+				"source(output(",
+				"          ID_KOMISJI as string,",
+				"          Numer_Okregu_Sejm as integer,",
+				"          Kod_Terytorialny as integer,",
+				"          Numer_Obwodu as integer,",
+				"          Gmina as string,",
+				"          Liczba_Wyborcow as integer,",
+				"          Komisja_Otrzymala_Karty as integer,",
+				"          Niewykorzystane_Karty as integer,",
+				"          Wydane_Karty as integer,",
+				"          Liczba_Wyborcow_Pelnomocnik as integer,",
+				"          Liczba_Wyborcow_Zaswiadczenie as integer,",
+				"          Liczba_Otrzymanych_Kopert as integer,",
+				"          Koperty_Brak_Oswiadczenia as integer,",
+				"          Koperty_Brak_Podpisu as integer,",
+				"          Koperty_Brak_Karty as integer,",
+				"          Niezaklejona_Koperta as integer,",
+				"          Koperty_Do_Urny as integer,",
+				"          Karty_Z_Urny as integer,",
+				"          Karty_Z_Kopert as integer,",
+				"          Karty_Niewazne as integer,",
+				"          Karty_Wazne as integer,",
+				"          Glosy_Niewazne as integer,",
+				"          Glosy_X_Wielu_Kandydatow as integer,",
+				"          Glosy_Brak_X as integer,",
+				"          Glosy_X_Uniewazniona_Lista as integer,",
+				"          Glosy_Wazne as integer,",
+				"          KW_PiS as integer,",
+				"          KW_KOALICJA_OBYWATELSKA as integer,",
+				"          KW_Razem as integer,",
+				"          KW_Korwin as integer,",
+				"          KW_PSL as integer,",
+				"          KW_Zjednoczona_Lewica as integer,",
+				"          KW_Kukiz as integer,",
+				"          KW_Nowoczesna as integer,",
+				"          KW_JOW as integer,",
+				"          KW_Stonoga as integer,",
+				"          KW_Ruch_Spoleczny as integer,",
+				"          KW_Zjednoczeni_Slask as integer,",
+				"          KW_Samoobrona as integer,",
+				"          KW_Braun_Szczesc_Boze as integer,",
+				"          KW_Kongres_Prawicy as integer,",
+				"          KW_Mniejszosc_Niemiecka as integer,",
+				"          KW_Obywatele_Do_Parlamentu as integer,",
+				"          Data as date",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'table',",
+				"     store: 'sqlserver',",
+				"     schemaName: 'dbo',",
+				"     tableName: 'Fakt_Wyniki_2015',",
+				"     isolationLevel: 'READ_UNCOMMITTED') ~> komitety2015",
 				"obwody2015 select(mapColumn(",
 				"          {KOD TERYTORIALNY},",
 				"          Gmina,",
@@ -614,6 +677,7 @@
 				"     skipDuplicateMapOutputs: true) ~> RemoveColumnsWyniki2023",
 				"RemoveColumnsWyniki2023 derive(ROK = toDate('15-10-2023', 'dd-MM-yyyy'),",
 				"          {ID KOMISJI} = toInteger(concat(toString({KOD TERYTORIALNY}), toString({Numer obwodu})))) ~> IDandROKwyniki2023",
+				"komitety2015 filter(KW_) ~> filterKomitet",
 				"IDandROKobwody2015 sink(allowSchemaDrift: true,",
 				"     validateSchema: true,",
 				"     input(",
