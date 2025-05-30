@@ -4,8 +4,8 @@ param resourceGroupConventionName string
 @description('Tags for resource')
 param resourceProductOwner string
 
-@description('Resource lock name')
-param resourceLockName string = '${sqlDBName}-lock'
+// @description('Resource lock name')
+// param resourceLockName string = '${sqlDBName}-lock'
 
 @description('Pełna nazwa zasobu serwera SQL, np. format: my-sql-server')
 param sqlServerName string

@@ -7,8 +7,8 @@ param resourceProductOwner string
 @description('Nazwa grupy zasobów')
 param resourceGroupConventionName string
 
-@description('Nazwa dla resource locka')
-param resourceLockName string = '${dataFactoryName}-lock'
+// @description('Nazwa dla resource locka')
+// param resourceLockName string = '${dataFactoryName}-lock'
 
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' existing = {
   name: resourceGroupConventionName

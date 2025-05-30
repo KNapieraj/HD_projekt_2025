@@ -8,8 +8,8 @@ param administratorLoginPassword string
 @description('Resource group full name')
 param resourceGroupConventionName string
 
-@description('Resource lock name')
-param resourceLockName string = '${sqlServerName}-lock'
+// @description('Resource lock name')
+// param resourceLockName string = '${sqlServerName}-lock'
 
 @description('Tags for resource')
 param resourceProductOwner string
