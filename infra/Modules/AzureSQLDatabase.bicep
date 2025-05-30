@@ -19,7 +19,7 @@ param skuTier string
 param skuName string
 
 resource sqlDB 'Microsoft.Sql/servers/databases@2022-05-01-preview' = {
-  name: sqlDBName
+  name: '${sqlServerName}/${sqlDBName}'
   location: resourceGroup().location
   sku: {
     name: skuName
