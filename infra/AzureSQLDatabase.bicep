@@ -18,6 +18,13 @@ param sqlDBName string
 @description('SKU - nazwa warstwy cenowej, np. Basic, Standard, Premium.')
 param skuTier string
 
+@description('Allowed locations')
+@allowed([
+  'westeurope'
+  'polandcentral'
+])
+param location string = 'westeurope'
+
 @description('SKU - nazwa SKU')
 @allowed([
   'Basic'
@@ -32,7 +39,7 @@ resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' existing 
 
 resource sqlDB 'Microsoft.Sql/servers/databases@2022-05-01-preview' = {
   name: '${sqlServerName}/${sqlDBName}'
-  location: resourceGroup.location
+  location: location
   sku: {
     name: skuName
     tier: skuTier

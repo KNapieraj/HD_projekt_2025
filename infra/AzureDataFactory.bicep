@@ -16,9 +16,16 @@ resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' existing 
   name: resourceGroupConventionName
 }
 
+@description('Allowed locations')
+@allowed([
+  'westeurope'
+  'polandcentral'
+])
+param location string = 'westeurope'
+
 resource dataFactory 'Microsoft.DataFactory/factories@2022-09-01' = {
   name: dataFactoryName
-  location: resourceGroup.location
+  location: location
   tags: {
     Product_Owner: resourceProductOwner
   }

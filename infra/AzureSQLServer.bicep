@@ -16,6 +16,13 @@ param resourceGroupConventionName string
 @description('Tags for resource')
 param resourceProductOwner string
 
+@description('Allowed locations')
+@allowed([
+  'westeurope'
+  'polandcentral'
+])
+param location string = 'westeurope'
+
 @description('Nazwa serwera SQL.')
 param sqlServerName string
 
@@ -25,7 +32,7 @@ resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' existing 
 
 resource sqlServer 'Microsoft.Sql/servers@2022-05-01-preview' = {
   name: sqlServerName
-  location: resourceGroup.location
+  location: location
   properties: {
     administratorLogin: administratorLogin
     administratorLoginPassword: administratorLoginPassword
