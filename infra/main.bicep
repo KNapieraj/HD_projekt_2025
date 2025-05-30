@@ -1,5 +1,8 @@
 targetScope = 'subscription'
 
+@description('Nazwa dla Azure Data Factory')
+param azureDataFactoryName string
+
 @description('Nazwa grupy zasobów.')
 param resourceGroupName string
 
@@ -7,7 +10,7 @@ param resourceGroupName string
 param resourceGroupConventionName string = '${resourceGroupName}-rg'
 
 @description('Właściciel zasobu')
-param resourceGroupProductOwner string
+param ProductOwner string
 
 @description('Nazwa serwera SQL.')
 param serverName string
@@ -38,7 +41,7 @@ module rgModule './Modules/ResourceGroup.bicep' = {
   params: {
     resourceGroupLocation: location
     resourceGroupConventionName: resourceGroupConventionName
-    resourceGroupProductOwner: resourceGroupProductOwner
+    resourceGroupProductOwner: ProductOwner
   }
 }
 
@@ -50,6 +53,7 @@ module sqlServerModule './Modules/AzureSQLServer.bicep' = {
     serverName: serverName
     administratorLogin: administratorLogin
     administratorLoginPassword: administratorLoginPassword
+    resourceProductOwner:ProductOwner
   }
   dependsOn: [
     rgModule
@@ -61,6 +65,7 @@ module sqlDatabaseModule './Modules/AzureSQLDatabase.bicep' = {
   name: 'deploySqlDatabase'
   scope: resourceGroup(resourceGroupConventionName)
   params: {
+    resourceProductOwner: ProductOwner
     sqlServerName: serverName
     sqlDBName: sqlDBName
     skuTier: skuTier
@@ -68,5 +73,19 @@ module sqlDatabaseModule './Modules/AzureSQLDatabase.bicep' = {
   }
   dependsOn: [
     sqlServerModule
+  ]
+}
+
+// Moduł: Azure Data Factory
+module azureDataFactoryModule './Modules/AzureDataFactory.bicep' = {
+  name: 'deployAzureDataFactory'
+  scope: resourceGroup(resourceGroupConventionName)
+  params: {
+    dataFactoryName: azureDataFactoryName
+    resourceGroupConventionName: ProductOwner
+    resourceProductOwner: skuTier
+  }
+  dependsOn: [
+    sqlDatabaseModule
   ]
 }

@@ -31,14 +31,9 @@ param location string = 'westeurope'
 ])
 param skuName string
 
-resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' existing = {
-  name: resourceGroupName
-}
-
 resource sqlDB 'Microsoft.Sql/servers/databases@2022-05-01-preview' = {
-  name: '${sqlServerName}/${sqlDBName}'
-  scope: resourceGroup
-  location: location
+  name: sqlDBName
+  location: resourceGroup().location
   sku: {
     name: skuName
     tier: skuTier

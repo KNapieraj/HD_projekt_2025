@@ -24,14 +24,9 @@ param location string = 'westeurope'
 @description('Nazwa serwera SQL.')
 param sqlServerName string
 
-resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' existing = {
-  name: resourceGroupConventionName
-}
-
 resource sqlServer 'Microsoft.Sql/servers@2022-05-01-preview' = {
-  name: sqlServerName
-  scope: resourceGroup
-  location: location
+  name: serverName
+  location: resourceGroup().location
   properties: {
     administratorLogin: administratorLogin
     administratorLoginPassword: administratorLoginPassword
