@@ -78,6 +78,9 @@
 				{
 					"name": "IDandROKobwody2023",
 					"description": "Added \n-ID KOMISJI \n-ROK 2023\n"
+				},
+				{
+					"name": "filter1"
 				}
 			],
 			"scriptLines": [
@@ -203,7 +206,7 @@
 				"     skipDuplicateMapOutputs: true) ~> RemoveColumnsObwody2015",
 				"RemoveColumnsObwody2015 derive({ID KOMISJI} = concat(toString({KOD TERYTORIALNY}), toString({Numer obwodu})),",
 				"          ROK = toDate('25-10-2015', 'dd-MM-yyyy')) ~> IDandROKobwody2015",
-				"RemoveColumnsObwody2019 derive({ID KOMISJI} = iif(isNull({KOD TERYTORIALNY}) || isNull({Numer obwodu}), 'Brak_ID', concat(toString({KOD TERYTORIALNY}), toString({Numer obwodu}))),",
+				"RemoveColumnsObwody2019 derive({ID KOMISJI} = concat(toString({KOD TERYTORIALNY}), toString({Numer obwodu})),",
 				"          ROK = toDate('13-10-2019', 'dd-MM-yyyy'),",
 				"          {Przystosowany dla niepełnosprawnych} = case(\r",
 				"    {Przystosowany dla niepełnosprawnych string} == 'Tak', 'T',\r",
@@ -254,6 +257,7 @@
 				"RemoveColumnsObwody2023 derive({ID KOMISJI} = concat(toString({KOD TERYTORIALNY}), toString({Numer obwodu})),",
 				"          ROK = toDate('15-10-2023', 'dd-MM-yyyy'),",
 				"          {Przystosowany dla niepełnosprawnych} = case(    {Przystosowany dla niepełnosprawnych string} == 'Tak', 'T',    'N')) ~> IDandROKobwody2023",
+				"IDandROKobwody2019 filter(isNull({ID KOMISJI})) ~> filter1",
 				"IDandROKobwody2015 sink(allowSchemaDrift: true,",
 				"     validateSchema: true,",
 				"     input(",
