@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "ETL-obwody2015",
+				"name": "ETL-obwody",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
@@ -16,14 +16,14 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "obwody2015",
+						"referenceName": "obwody",
 						"type": "DataFlowReference"
 					},
 					"compute": {
 						"coreCount": 8,
 						"computeType": "General"
 					},
-					"traceLevel": "Coarse"
+					"traceLevel": "Fine"
 				}
 			}
 		],
