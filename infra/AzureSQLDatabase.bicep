@@ -37,6 +37,7 @@ resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' existing 
 
 resource sqlDB 'Microsoft.Sql/servers/databases@2022-05-01-preview' = {
   name: '${sqlServerName}/${sqlDBName}'
+  scope: resourceGroup
   location: location
   sku: {
     name: skuName

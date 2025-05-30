@@ -23,6 +23,7 @@ param location string = 'westeurope'
 
 resource dataFactory 'Microsoft.DataFactory/factories@2022-09-01' = {
   name: dataFactoryName
+  scope: resourceGroup
   location: location
   tags: {
     Product_Owner: resourceProductOwner

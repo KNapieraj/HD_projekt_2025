@@ -30,6 +30,7 @@ resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' existing 
 
 resource sqlServer 'Microsoft.Sql/servers@2022-05-01-preview' = {
   name: sqlServerName
+  scope: resourceGroup
   location: location
   properties: {
     administratorLogin: administratorLogin
