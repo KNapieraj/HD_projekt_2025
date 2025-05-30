@@ -13,7 +13,7 @@ function Remove-ResourceGroup {
     }
     else {
         Write-Host "INFO -- Usuwanie grupy zasobów '$resourceGroupName'..."
-        Remove-AzResourceGroup -Name $resourceGroupName -Force
+        Remove-AzResourceGroup -Name $resourceGroupName -Force -ErrorAction SilentlyContinue
     }
 }
 
@@ -85,6 +85,6 @@ function Remove-DataFactory {
     }
     else {
         Write-Host "INFO -- Usuwanie SQL Database '$azureDataFactoryName'..."
-        Remove-AzDataFactoryV2 -ResourceGroupName $resourceGroupName -Name $azureDataFactoryName -Force
+        Remove-AzDataFactoryV2 -ResourceGroupName $resourceGroupName -Name $azureDataFactoryName -Force -ErrorAction SilentlyContinue
     }
 }
