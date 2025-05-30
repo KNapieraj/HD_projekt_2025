@@ -2,14 +2,14 @@ name: New - Deploy HD Project
 
 on:
   workflow_dispatch:
-  # push:
-  #   branches:
-  #     - test
-  #     - dev
-  pull_request:
+  push:
     branches:
       - test
-      - master
+      - dev
+  # pull_request:
+  #   branches:
+  #     - test
+  #     - master
 
 env:
   AdministratorLogin: 'sqladminuser'
