@@ -12,10 +12,10 @@ on:
       - master
 
 env:
-  azureDataFacAzureDataFactoryNametoryName: 'projekt-hd-df'
-  ResourceGroupName: 'ProjektHD2-rg'
-  serverName: 'hd-sql-server2'
-  sqlDBName: 'hd-sql-database2'
+  AzureDataFactoryName: 'hd-projekt-df'
+  ResourceGroupName: 'ProjektHD-rg'
+  serverName: 'hd-sql-server'
+  sqlDBName: 'hd-sql-database'
 
 jobs:
   Remove-DataFactory:
@@ -46,8 +46,8 @@ jobs:
         run: |
           . "${{ github.workspace }}/Scripts/Remove-AzureResources.ps1"
           Remove-DataFactory `
-          -azureDataFactoryName ${{ env.ResourceGroupName }} `
-          -resourceGroupName ${{ env.serverName }}
+          -azureDataFactoryName ${{ env.AzureDataFactoryName }} `
+          -resourceGroupName ${{ env.ResourceGroupName }}
 
   Remove-sqlDBName:
     name: Remove SQL Database
