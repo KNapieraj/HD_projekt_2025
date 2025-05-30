@@ -14,7 +14,6 @@ resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' existing 
 
 resource dataFactory 'Microsoft.DataFactory/factories@2022-09-01' = {
   name: dataFactoryName
-  scope: resourceGroup
   location: resourceGroup().location
   tags: {
     Product_Owner: resourceProductOwner
