@@ -203,7 +203,7 @@
 				"     skipDuplicateMapOutputs: true) ~> RemoveColumnsObwody2015",
 				"RemoveColumnsObwody2015 derive({ID KOMISJI} = concat(toString({KOD TERYTORIALNY}), toString({Numer obwodu})),",
 				"          ROK = toDate('25-10-2015', 'dd-MM-yyyy')) ~> IDandROKobwody2015",
-				"RemoveColumnsObwody2019 derive({ID KOMISJI} = concat(toString({KOD TERYTORIALNY}), toString({Numer obwodu})),",
+				"RemoveColumnsObwody2019 derive({ID KOMISJI} = iif(isNull({KOD TERYTORIALNY}) || isNull({Numer obwodu}), 'Brak_ID', concat(toString({KOD TERYTORIALNY}), toString({Numer obwodu}))),",
 				"          ROK = toDate('13-10-2019', 'dd-MM-yyyy'),",
 				"          {Przystosowany dla niepełnosprawnych} = case(\r",
 				"    {Przystosowany dla niepełnosprawnych string} == 'Tak', 'T',\r",
