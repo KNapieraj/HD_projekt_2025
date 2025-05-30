@@ -66,7 +66,6 @@ module sqlDatabaseModule './Modules/AzureSQLDatabase.bicep' = {
   scope: resourceGroup(resourceGroupConventionName)
   params: {
     resourceProductOwner: ProductOwner
-    sqlServerName: serverName
     sqlDBName: sqlDBName
     skuTier: skuTier
     skuName: skuName
