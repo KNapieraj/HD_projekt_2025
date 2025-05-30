@@ -78,17 +78,6 @@ function Remove-DataFactory {
         $azureDataFactoryName
     )
 
-    $resource = Get-AzResource -ResourceName $azureDataFactoryName -ResourceGroupName $resourceGroupName -ErrorAction SilentlyContinue
-    if ($null -eq $resource) {
-        Write-Host "WARN -- Lock nie istnieje."
-    }
-    else {
-        $resourceType = $resource.ResourceType
-        $resourceLockName = Get-AzResourceLock -ResourceGroupName $resourceGroupName -ResourceName $sqlDazureDataFactoryNameBName -ResourceType $resourceType
-        Write-Host "INFO -- Usuwanie lock`a '$resourceLockName'..."
-        Remove-AzResourceLock -LockName $resourceLockName -ResourceGroupName $resourceGroupName -Force
-    }
-
     # Sprawdzenie, czy zasob istnieje
     $azureDataFactory = Get-AzDataFactoryV2 -Name $azureDataFactoryName -ResourceGroupName $resourceGroupName -ErrorAction SilentlyContinue
     if ($null -eq $azureDataFactory) {
