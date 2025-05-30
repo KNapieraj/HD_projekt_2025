@@ -39,7 +39,7 @@ module rgModule './Modules/ResourceGroup.bicep' = {
   name: 'deployResourceGroup'
   scope: subscription()
   params: {
-    resourceGroupLocation: location
+    location: location
     resourceGroupConventionName: resourceGroupConventionName
     resourceGroupProductOwner: ProductOwner
   }
