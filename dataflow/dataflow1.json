@@ -154,13 +154,7 @@
 					"name": "select1"
 				},
 				{
-					"name": "derivedColumn1"
-				},
-				{
 					"name": "aggregate1"
-				},
-				{
-					"name": "compose1"
 				}
 			],
 			"scriptLines": [
@@ -477,7 +471,6 @@
 				"     schemaName: 'dbo',",
 				"     tableName: 'Fakt_Wyniki_2015',",
 				"     isolationLevel: 'READ_UNCOMMITTED') ~> komitety2015",
-				"compose(composition: 'undefined') ~> compose1@(temporary)",
 				"obwody2015 select(mapColumn(",
 				"          {KOD TERYTORIALNY},",
 				"          Gmina,",
@@ -710,7 +703,6 @@
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> select1",
-				"select1 derive() ~> derivedColumn1",
 				"select1 aggregate(groupBy(KW_PiS)) ~> aggregate1",
 				"IDandROKobwody2015 sink(allowSchemaDrift: true,",
 				"     validateSchema: true,",
