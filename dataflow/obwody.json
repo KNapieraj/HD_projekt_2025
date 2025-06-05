@@ -78,6 +78,9 @@
 				{
 					"name": "IDandROKobwody2023",
 					"description": "Added \n-ID KOMISJI \n-ROK 2023\n"
+				},
+				{
+					"name": "AlterRow1"
 				}
 			],
 			"scriptLines": [
@@ -254,7 +257,8 @@
 				"RemoveColumnsObwody2023 derive({ID KOMISJI} = concat(toString({KOD TERYTORIALNY}), toString({Numer obwodu})),",
 				"          ROK = toDate('15-10-2023', 'dd-MM-yyyy'),",
 				"          {Przystosowany dla niepełnosprawnych} = case(    {Przystosowany dla niepełnosprawnych string} == 'Tak', 'T',    'N')) ~> IDandROKobwody2023",
-				"IDandROKobwody2015 sink(allowSchemaDrift: true,",
+				"IDandROKobwody2015 alterRow(upsertIf(true())) ~> AlterRow1",
+				"AlterRow1 sink(allowSchemaDrift: true,",
 				"     validateSchema: true,",
 				"     input(",
 				"          ID_KOMISJI as string,",
@@ -281,7 +285,7 @@
 				"     store: 'sqlserver',",
 				"     schemaName: 'dbo',",
 				"     tableName: 'Wymiar_Obwody_2015',",
-				"     insertable: true,",
+				"     insertable: false,",
 				"     updateable: false,",
 				"     deletable: false,",
 				"     upsertable: true,",
