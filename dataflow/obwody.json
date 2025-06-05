@@ -87,6 +87,9 @@
 				},
 				{
 					"name": "AlterRow3"
+				},
+				{
+					"name": "filter1"
 				}
 			],
 			"scriptLines": [
@@ -262,10 +265,12 @@
 				"     skipDuplicateMapOutputs: true) ~> RemoveColumnsObwody2023",
 				"RemoveColumnsObwody2023 derive({ID KOMISJI} = concat(toString({KOD TERYTORIALNY}), toString({Numer obwodu})),",
 				"          ROK = toDate('15-10-2023', 'dd-MM-yyyy'),",
-				"          {Przystosowany dla niepełnosprawnych} = case(    {Przystosowany dla niepełnosprawnych string} == 'Tak', 'T',    'N')) ~> IDandROKobwody2023",
+				"          {Przystosowany dla niepełnosprawnych} = case(    {Przystosowany dla niepełnosprawnych string} == 'Tak', 'T',    'N'),",
+				"          {ID KOMISJI NULL} = iif(isNull({Numer obwodu}), 'BRAK', toString({Numer obwodu}))) ~> IDandROKobwody2023",
 				"IDandROKobwody2015 alterRow(upsertIf(true())) ~> AlterRow1",
 				"IDandROKobwody2019 alterRow(upsertIf(true())) ~> AlterRow2",
-				"IDandROKobwody2023 alterRow(upsertIf(true())) ~> AlterRow3",
+				"filter1 alterRow(upsertIf(true())) ~> AlterRow3",
+				"IDandROKobwody2023 filter(isNull({ID KOMISJI})) ~> filter1",
 				"AlterRow1 sink(allowSchemaDrift: true,",
 				"     validateSchema: true,",
 				"     input(",
