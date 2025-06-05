@@ -81,6 +81,12 @@
 				},
 				{
 					"name": "AlterRow1"
+				},
+				{
+					"name": "AlterRow2"
+				},
+				{
+					"name": "AlterRow3"
 				}
 			],
 			"scriptLines": [
@@ -258,6 +264,8 @@
 				"          ROK = toDate('15-10-2023', 'dd-MM-yyyy'),",
 				"          {Przystosowany dla niepełnosprawnych} = case(    {Przystosowany dla niepełnosprawnych string} == 'Tak', 'T',    'N')) ~> IDandROKobwody2023",
 				"IDandROKobwody2015 alterRow(upsertIf(true())) ~> AlterRow1",
+				"IDandROKobwody2019 alterRow(upsertIf(true())) ~> AlterRow2",
+				"IDandROKobwody2023 alterRow(upsertIf(true())) ~> AlterRow3",
 				"AlterRow1 sink(allowSchemaDrift: true,",
 				"     validateSchema: true,",
 				"     input(",
@@ -314,7 +322,7 @@
 				"          Typ_obwodu = {Typ obwodu},",
 				"          Data = ROK",
 				"     )) ~> LoadObwody2015",
-				"IDandROKobwody2019 sink(allowSchemaDrift: true,",
+				"AlterRow2 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
 				"          ID_KOMISJI as string,",
@@ -370,7 +378,7 @@
 				"          Typ_obwodu = {Typ obwodu},",
 				"          Data = ROK",
 				"     )) ~> LoadObwody2019",
-				"IDandROKobwody2023 sink(allowSchemaDrift: true,",
+				"AlterRow3 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
 				"          ID_KOMISJI as string,",
