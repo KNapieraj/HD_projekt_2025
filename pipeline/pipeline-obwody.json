@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "pipeline-obwody",
 	"properties": {
 		"activities": [
 			{
@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "dataflow1_copy1",
+						"referenceName": "obwody",
 						"type": "DataFlowReference"
 					},
 					"compute": {
