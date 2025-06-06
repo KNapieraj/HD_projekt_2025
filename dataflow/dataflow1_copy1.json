@@ -311,7 +311,7 @@
 				"          Data = ROK",
 				"     )) ~> LoadObwody2015",
 				"IDandROKobwody2019 sink(allowSchemaDrift: true,",
-				"     validateSchema: false,",
+				"     validateSchema: true,",
 				"     format: 'table',",
 				"     store: 'sqlserver',",
 				"     schemaName: 'dbo',",
