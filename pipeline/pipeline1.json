@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "obwody",
+						"referenceName": "dataflow1_copy1",
 						"type": "DataFlowReference"
 					},
 					"compute": {
