@@ -182,7 +182,7 @@
 				"          {KOMITET WYBORCZY PRAWO I SPRAWIEDLIWOŚĆ} as short,",
 				"          {KOMITET WYBORCZY SKUTECZNI PIOTRA LIROYA-MARCA} as string,",
 				"          {KOMITET WYBORCZY SOJUSZ LEWICY DEMOKRATYCZNEJ} as short,",
-				"          {KOMITET WYBORCZY WYBORCÓW KOALICJA BEZPARTYJNI I SAMORZĄDOWCY} as short,",
+				"          {KOMITET WYBORCZY WYBORCÓW KOALICJA BEZPARTYJNI I SAMORZĄDOWCY} as integer,",
 				"          {KOMITET WYBORCZY WYBORCÓW OBYWATELE DO PARLAMENTU} as string",
 				"     ),",
 				"     useSchema: false,",
