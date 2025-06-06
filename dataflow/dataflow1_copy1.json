@@ -78,6 +78,15 @@
 				{
 					"name": "IDandROKobwody2023",
 					"description": "Added \n-ID KOMISJI \n-ROK 2023\n"
+				},
+				{
+					"name": "AlterRow1"
+				},
+				{
+					"name": "AlterRow2"
+				},
+				{
+					"name": "AlterRow3"
 				}
 			],
 			"scriptLines": [
@@ -254,7 +263,10 @@
 				"RemoveColumnsObwody2023 derive({ID KOMISJI} = toInteger(concat(toString({KOD TERYTORIALNY}), toString({Numer obwodu}))),",
 				"          ROK = toDate('15-10-2023', 'dd-MM-yyyy'),",
 				"          {Przystosowany dla niepełnosprawnych} = case(    {Przystosowany dla niepełnosprawnych string} == 'Tak', 'T',    'N')) ~> IDandROKobwody2023",
-				"IDandROKobwody2015 sink(allowSchemaDrift: true,",
+				"IDandROKobwody2015 alterRow(upsertIf(true())) ~> AlterRow1",
+				"IDandROKobwody2019 alterRow(upsertIf(true())) ~> AlterRow2",
+				"IDandROKobwody2023 alterRow(upsertIf(true())) ~> AlterRow3",
+				"AlterRow1 sink(allowSchemaDrift: true,",
 				"     validateSchema: true,",
 				"     input(",
 				"          ID_KOMISJI as integer,",
@@ -284,7 +296,7 @@
 				"     insertable: true,",
 				"     updateable: false,",
 				"     deletable: false,",
-				"     upsertable: (true()),",
+				"     upsertable: true,",
 				"     keys:['ID_KOMISJI'],",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
@@ -310,7 +322,7 @@
 				"          ID_KOMISJI = {ID KOMISJI},",
 				"          Data = ROK",
 				"     )) ~> LoadObwody2015",
-				"IDandROKobwody2019 sink(allowSchemaDrift: true,",
+				"AlterRow2 sink(allowSchemaDrift: true,",
 				"     validateSchema: true,",
 				"     input(",
 				"          ID_KOMISJI as integer,",
@@ -340,7 +352,7 @@
 				"     insertable: true,",
 				"     updateable: false,",
 				"     deletable: false,",
-				"     upsertable: (true()),",
+				"     upsertable: true,",
 				"     keys:['ID_KOMISJI'],",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
@@ -366,7 +378,7 @@
 				"          Typ_obwodu = {Typ obwodu},",
 				"          Data = ROK",
 				"     )) ~> LoadObwody2019",
-				"IDandROKobwody2023 sink(allowSchemaDrift: true,",
+				"AlterRow3 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
 				"          ID_KOMISJI as integer,",
@@ -396,8 +408,8 @@
 				"     insertable: true,",
 				"     updateable: false,",
 				"     deletable: false,",
-				"     upsertable: false,",
-				"     recreate: true,",
+				"     upsertable: true,",
+				"     keys:['ID_KOMISJI'],",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
 				"     errorHandlingOption: 'stopOnFirstError',",
