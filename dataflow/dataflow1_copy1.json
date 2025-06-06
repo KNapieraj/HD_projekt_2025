@@ -320,7 +320,7 @@
 				"     updateable: false,",
 				"     deletable: false,",
 				"     upsertable: false,",
-				"     recreate: true,",
+				"     truncate: true,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
 				"     errorHandlingOption: 'stopOnFirstError',",
