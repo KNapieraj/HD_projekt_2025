@@ -1,5 +1,5 @@
 {
-	"name": "wyborcy_2015",
+	"name": "wyniki_2015",
 	"properties": {
 		"folder": {
 			"name": "agregacja"
@@ -16,7 +16,11 @@
 				}
 			],
 			"sinks": [],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "aggregate1"
+				}
+			],
 			"scriptLines": [
 				"source(output(",
 				"          ID_KOMISJI as integer,",
@@ -70,7 +74,10 @@
 				"     store: 'sqlserver',",
 				"     schemaName: 'dbo',",
 				"     tableName: 'Fakt_Wyniki_2015',",
-				"     isolationLevel: 'READ_UNCOMMITTED') ~> Wyniki2015"
+				"     isolationLevel: 'READ_UNCOMMITTED') ~> Wyniki2015",
+				"Wyniki2015 aggregate(Liczba_Wyborcow = sum(Liczba_Wyborcow),",
+				"          Komisja_Otrzymala_Karty = sum(Komisja_Otrzymala_Karty),",
+				"          Niewykorzystane_Karty = sum(Niewykorzystane_Karty)) ~> aggregate1"
 			]
 		}
 	}
