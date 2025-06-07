@@ -75,7 +75,7 @@
 					"description": "Removed\nSiedziba\nPowiat\nWojewodztwo"
 				},
 				{
-					"name": "IDandROKwyniki2023",
+					"name": "RokAndKod",
 					"description": "Added \n-ID KOMISJI \n-ROK 2015\n\nstring to integer:\nLiczba wyborcow\nKomisja otrzymała kart do głosowania"
 				},
 				{
@@ -88,7 +88,7 @@
 					"name": "AlterRow3"
 				},
 				{
-					"name": "derivedColumn1"
+					"name": "IdKomisji"
 				}
 			],
 			"scriptLines": [
@@ -388,11 +388,11 @@
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> RemoveColumnsWyniki2023",
 				"RemoveColumnsWyniki2023 derive(ROK = toDate('15-10-2023', 'dd-MM-yyyy'),",
-				"          {KOD TERYTORIALNY} = replace(ltrim(replace({KOD TERYTORIALNY STRING}, \"'0\", ' ')), ' ', '0')) ~> IDandROKwyniki2023",
+				"          {KOD TERYTORIALNY} = replace(ltrim(replace({KOD TERYTORIALNY STRING}, \"'0\", ' ')), ' ', '0')) ~> RokAndKod",
 				"IDandROKwyniki2015 alterRow(upsertIf(true())) ~> AlterRow1",
 				"IDandROKwyniki2019 alterRow(upsertIf(true())) ~> AlterRow2",
-				"derivedColumn1 alterRow(upsertIf(true())) ~> AlterRow3",
-				"IDandROKwyniki2023 derive({ID KOMISJI} = toInteger(concat(toString({KOD TERYTORIALNY STRING}), toString({Numer obwodu})))) ~> derivedColumn1",
+				"IdKomisji alterRow(upsertIf(true())) ~> AlterRow3",
+				"RokAndKod derive({ID KOMISJI} = toInteger(concat(toString({KOD TERYTORIALNY STRING}), toString({Numer obwodu})))) ~> IdKomisji",
 				"AlterRow1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
