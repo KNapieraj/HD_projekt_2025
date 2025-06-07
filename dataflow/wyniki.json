@@ -86,6 +86,9 @@
 				},
 				{
 					"name": "AlterRow3"
+				},
+				{
+					"name": "derivedColumn1"
 				}
 			],
 			"scriptLines": [
@@ -385,11 +388,11 @@
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> RemoveColumnsWyniki2023",
 				"RemoveColumnsWyniki2023 derive(ROK = toDate('15-10-2023', 'dd-MM-yyyy'),",
-				"          {ID KOMISJI} = toInteger(concat(toString({KOD TERYTORIALNY STRING}), toString({Numer obwodu}))),",
 				"          {KOD TERYTORIALNY} = replace(ltrim(replace({KOD TERYTORIALNY STRING}, \"'0\", ' ')), ' ', '0')) ~> IDandROKwyniki2023",
 				"IDandROKwyniki2015 alterRow(upsertIf(true())) ~> AlterRow1",
 				"IDandROKwyniki2019 alterRow(upsertIf(true())) ~> AlterRow2",
-				"IDandROKwyniki2023 alterRow(upsertIf(true())) ~> AlterRow3",
+				"derivedColumn1 alterRow(upsertIf(true())) ~> AlterRow3",
+				"IDandROKwyniki2023 derive({ID KOMISJI} = toInteger(concat(toString({KOD TERYTORIALNY STRING}), toString({Numer obwodu})))) ~> derivedColumn1",
 				"AlterRow1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
