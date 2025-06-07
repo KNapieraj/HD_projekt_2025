@@ -86,9 +86,6 @@
 				},
 				{
 					"name": "AlterRow3"
-				},
-				{
-					"name": "filter1"
 				}
 			],
 			"scriptLines": [
@@ -389,9 +386,8 @@
 				"RemoveColumnsWyniki2023 derive(ROK = toDate('15-10-2023', 'dd-MM-yyyy'),",
 				"          {ID KOMISJI} = toInteger(concat(toString({KOD TERYTORIALNY}), toString({Numer obwodu})))) ~> IDandROKwyniki2023",
 				"IDandROKwyniki2015 alterRow(upsertIf(true())) ~> AlterRow1",
-				"filter1 alterRow(upsertIf(true())) ~> AlterRow2",
+				"IDandROKwyniki2019 alterRow(upsertIf(true())) ~> AlterRow2",
 				"IDandROKwyniki2023 alterRow(upsertIf(true())) ~> AlterRow3",
-				"IDandROKwyniki2019 filter(isNull({ID KOMISJI})) ~> filter1",
 				"AlterRow1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
