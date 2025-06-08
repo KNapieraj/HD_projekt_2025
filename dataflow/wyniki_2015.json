@@ -75,8 +75,7 @@
 				"     schemaName: 'dbo',",
 				"     tableName: 'Fakt_Wyniki_2015',",
 				"     isolationLevel: 'READ_UNCOMMITTED') ~> Wyniki2015",
-				"Wyniki2015 aggregate(groupBy(Gmina),",
-				"     ID_KOMISJI = count(ID_KOMISJI),",
+				"Wyniki2015 aggregate(ID_KOMISJI = count(ID_KOMISJI),",
 				"          Liczba_Wyborcow = sum(Liczba_Wyborcow),",
 				"          Komisja_Otrzymala_Karty = sum(Komisja_Otrzymala_Karty),",
 				"          Niewykorzystane_Karty = sum(Niewykorzystane_Karty),",
@@ -84,7 +83,22 @@
 				"          Liczba_Wyborcow_Pelnomocnik = sum(Liczba_Wyborcow_Pelnomocnik),",
 				"          Liczba_Wyborcow_Zaswiadczenie = sum(Liczba_Wyborcow_Zaswiadczenie),",
 				"          Liczba_Otrzymanych_Kopert = sum(Liczba_Otrzymanych_Kopert),",
-				"          Koperty_Brak_Oswiadczenia = sum(Koperty_Brak_Oswiadczenia)) ~> aggregate1"
+				"          Koperty_Brak_Oswiadczenia = sum(Koperty_Brak_Oswiadczenia),",
+				"          Koperty_Brak_Podpisu = sum(Koperty_Brak_Podpisu),",
+				"          Koperty_Brak_Karty = sum(Koperty_Brak_Karty),",
+				"          Niezaklejona_Koperta = sum(Niezaklejona_Koperta),",
+				"          Koperty_Do_Urny = sum(Koperty_Do_Urny),",
+				"          Karty_Z_Urny = sum(Karty_Z_Urny),",
+				"          Karty_Z_Kopert = sum(Karty_Z_Kopert),",
+				"          Karty_Niewazne = sum(Karty_Niewazne),",
+				"          Karty_Wazne = sum(Karty_Wazne),",
+				"          Glosy_Niewazne = sum(Glosy_Niewazne),",
+				"          Glosy_X_Wielu_Kandydatow = sum(Glosy_X_Wielu_Kandydatow),",
+				"          Glosy_Brak_X = sum(Glosy_Brak_X),",
+				"          Glosy_X_Uniewazniona_Lista = sum(Glosy_X_Uniewazniona_Lista),",
+				"          Glosy_Wazne = sum(Glosy_Wazne),",
+				"          column5 = ERROR_FUNCTION(''),",
+				"          column6 = ERROR_FUNCTION('')) ~> aggregate1"
 			]
 		}
 	}
