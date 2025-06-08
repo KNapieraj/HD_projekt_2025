@@ -75,11 +75,16 @@
 				"     schemaName: 'dbo',",
 				"     tableName: 'Fakt_Wyniki_2015',",
 				"     isolationLevel: 'READ_UNCOMMITTED') ~> Wyniki2015",
-				"Wyniki2015 aggregate(ID_KOMISJI = count(ID_KOMISJI),",
+				"Wyniki2015 aggregate(groupBy(Gmina),",
+				"     ID_KOMISJI = count(ID_KOMISJI),",
 				"          Liczba_Wyborcow = sum(Liczba_Wyborcow),",
 				"          Komisja_Otrzymala_Karty = sum(Komisja_Otrzymala_Karty),",
 				"          Niewykorzystane_Karty = sum(Niewykorzystane_Karty),",
-				"          column2 = ERROR_FUNCTION('')) ~> aggregate1"
+				"          Wydane_Karty = sum(Wydane_Karty),",
+				"          Liczba_Wyborcow_Pelnomocnik = sum(Liczba_Wyborcow_Pelnomocnik),",
+				"          Liczba_Wyborcow_Zaswiadczenie = sum(Liczba_Wyborcow_Zaswiadczenie),",
+				"          Liczba_Otrzymanych_Kopert = sum(Liczba_Otrzymanych_Kopert),",
+				"          Koperty_Brak_Oswiadczenia = sum(Koperty_Brak_Oswiadczenia)) ~> aggregate1"
 			]
 		}
 	}
