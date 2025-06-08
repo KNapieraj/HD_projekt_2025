@@ -75,9 +75,11 @@
 				"     schemaName: 'dbo',",
 				"     tableName: 'Fakt_Wyniki_2015',",
 				"     isolationLevel: 'READ_UNCOMMITTED') ~> Wyniki2015",
-				"Wyniki2015 aggregate(Liczba_Wyborcow = sum(Liczba_Wyborcow),",
+				"Wyniki2015 aggregate(ID_KOMISJI = count(ID_KOMISJI),",
+				"          Liczba_Wyborcow = sum(Liczba_Wyborcow),",
 				"          Komisja_Otrzymala_Karty = sum(Komisja_Otrzymala_Karty),",
-				"          Niewykorzystane_Karty = sum(Niewykorzystane_Karty)) ~> aggregate1"
+				"          Niewykorzystane_Karty = sum(Niewykorzystane_Karty),",
+				"          column2 = ERROR_FUNCTION('')) ~> aggregate1"
 			]
 		}
 	}
