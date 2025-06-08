@@ -96,9 +96,7 @@
 				"          Glosy_X_Wielu_Kandydatow = sum(Glosy_X_Wielu_Kandydatow),",
 				"          Glosy_Brak_X = sum(Glosy_Brak_X),",
 				"          Glosy_X_Uniewazniona_Lista = sum(Glosy_X_Uniewazniona_Lista),",
-				"          Glosy_Wazne = sum(Glosy_Wazne),",
-				"          column5 = ERROR_FUNCTION(''),",
-				"          column6 = ERROR_FUNCTION('')) ~> aggregate1"
+				"          Glosy_Wazne = sum(Glosy_Wazne)) ~> aggregate1"
 			]
 		}
 	}
