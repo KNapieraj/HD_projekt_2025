@@ -76,7 +76,8 @@
 				"     tableName: 'Fakt_Wyniki_2015',",
 				"     isolationLevel: 'READ_UNCOMMITTED') ~> WynikiKomitety2015",
 				"WynikiKomitety2015 aggregate(KW_PIS = sum(KW_PIS),",
-				"          KW_KOALICJA_OBYWATELSKA = sum(KW_KOALICJA_OBYWATELSKA)) ~> aggregate1"
+				"          KW_KOALICJA_OBYWATELSKA = sum(KW_KOALICJA_OBYWATELSKA),",
+				"          column1 = ERROR_FUNCTION('')) ~> aggregate1"
 			]
 		}
 	}
