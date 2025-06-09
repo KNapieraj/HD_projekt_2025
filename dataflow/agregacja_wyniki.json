@@ -54,6 +54,9 @@
 				},
 				{
 					"name": "aggregate2019"
+				},
+				{
+					"name": "derivedColumn1"
 				}
 			],
 			"scriptLines": [
@@ -205,6 +208,7 @@
 				"aggregate2015 derive(Data = toDate('25-10-2015', 'dd-MM-yyyy')) ~> derived2015",
 				"ReadWyniki2019 aggregate(ID_KOMISJI = count(ID_KOMISJI),",
 				"          Wydane_Karty = sum(Liczba_Wyborcow)) ~> aggregate2019",
+				"aggregate2019 derive() ~> derivedColumn1",
 				"AlterRow2015 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
