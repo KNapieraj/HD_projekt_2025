@@ -96,7 +96,24 @@
 				"          Glosy_X_Wielu_Kandydatow = sum(Glosy_X_Wielu_Kandydatow),",
 				"          Glosy_Brak_X = sum(Glosy_Brak_X),",
 				"          Glosy_X_Uniewazniona_Lista = sum(Glosy_X_Uniewazniona_Lista),",
-				"          Glosy_Wazne = sum(Glosy_Wazne)) ~> aggregate1"
+				"          Glosy_Wazne = sum(Glosy_Wazne),",
+				"          KW_PIS = sum(KW_PIS),",
+				"          KW_KOALICJA_OBYWATELSKA = sum(KW_KOALICJA_OBYWATELSKA),",
+				"          KW_Razem = sum(KW_Razem),",
+				"          KW_Korwin = sum(KW_Korwin),",
+				"          KW_PSL = sum(KW_PSL),",
+				"          KW_Zjednoczona_Lewica = sum(KW_Zjednoczona_Lewica),",
+				"          KW_Kukiz = sum(KW_Kukiz),",
+				"          KW_Nowoczesna = sum(KW_Nowoczesna),",
+				"          KW_JOW = sum(KW_JOW),",
+				"          KW_Stonoga = sum(KW_Stonoga),",
+				"          KW_Ruch_Spoleczny = sum(KW_Ruch_Spoleczny),",
+				"          KW_Zjednoczeni_Slask = sum(KW_Zjednoczeni_Slask),",
+				"          KW_Samoobrona = sum(KW_Samoobrona),",
+				"          KW_Braun_Szczesc_Boze = sum(KW_Braun_Szczesc_Boze),",
+				"          KW_Kongres_Prawicy = sum(KW_Kongres_Prawicy),",
+				"          KW_Mniejszosc_Niemiecka = sum(KW_Mniejszosc_Niemiecka),",
+				"          KW_Obywatele_Do_Parlamentu = sum(KW_Obywatele_Do_Parlamentu)) ~> aggregate1"
 			]
 		}
 	}
