@@ -554,7 +554,7 @@
 				"          Numer_Okregu_Sejm = {Numer okręgu do Sejmu},",
 				"          Numer_Obwodu = {Numer obwodu},",
 				"          Gmina,",
-				"          Komisja_Otrzymala_Karty = {Liczba wyborców},",
+				"          Komisja_Otrzymala_Karty = {Komisja otrzymała kart do głosowania},",
 				"          Liczba_Wyborcow = {Liczba wyborców},",
 				"          Niewykorzystane_Karty = {Niewykorzystane karty},",
 				"          Wydane_Karty = {Wydane karty},",
