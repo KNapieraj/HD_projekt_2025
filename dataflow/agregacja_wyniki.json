@@ -1,5 +1,5 @@
 {
-	"name": "wyniki_2015",
+	"name": "agregacja_wyniki",
 	"properties": {
 		"folder": {
 			"name": "agregacja"
@@ -21,7 +21,7 @@
 						"referenceName": "SQLDatabase",
 						"type": "LinkedServiceReference"
 					},
-					"name": "sink1"
+					"name": "loadAgregacjaWyniki2015"
 				}
 			],
 			"transformations": [
@@ -225,7 +225,7 @@
 				"          KW_Kongres_Prawicy_Suma = KW_Kongres_Prawicy,",
 				"          KW_Mniejszosc_Niemiecka_Suma = KW_Mniejszosc_Niemiecka,",
 				"          KW_Obywatele_Do_Parlamentu_Suma = KW_Obywatele_Do_Parlamentu",
-				"     )) ~> sink1"
+				"     )) ~> loadAgregacjaWyniki2015"
 			]
 		}
 	}
