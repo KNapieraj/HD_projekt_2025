@@ -12,7 +12,23 @@
 						"referenceName": "SQLDatabase",
 						"type": "LinkedServiceReference"
 					},
-					"name": "Wyniki2015"
+					"name": "ReadWyniki2015"
+				},
+				{
+					"linkedService": {
+						"referenceName": "SQLDatabase",
+						"type": "LinkedServiceReference"
+					},
+					"name": "ReadWyniki2019",
+					"description": "Import data from SQLDatabase"
+				},
+				{
+					"linkedService": {
+						"referenceName": "SQLDatabase",
+						"type": "LinkedServiceReference"
+					},
+					"name": "ReadWyniki2023",
+					"description": "Import data from SQLDatabase"
 				}
 			],
 			"sinks": [
@@ -26,13 +42,18 @@
 			],
 			"transformations": [
 				{
-					"name": "aggregate1"
+					"name": "aggregate2015",
+					"description": "Aggregating data"
 				},
 				{
-					"name": "AlterRow1"
+					"name": "AlterRow2015"
 				},
 				{
-					"name": "derivedColumn1"
+					"name": "derived2015",
+					"description": "Creating\nData"
+				},
+				{
+					"name": "aggregate2019"
 				}
 			],
 			"scriptLines": [
@@ -88,8 +109,22 @@
 				"     store: 'sqlserver',",
 				"     schemaName: 'dbo',",
 				"     tableName: 'Fakt_Wyniki_2015',",
-				"     isolationLevel: 'READ_UNCOMMITTED') ~> Wyniki2015",
-				"Wyniki2015 aggregate(ID_KOMISJI = count(ID_KOMISJI),",
+				"     isolationLevel: 'READ_UNCOMMITTED') ~> ReadWyniki2015",
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'table',",
+				"     store: 'sqlserver',",
+				"     schemaName: 'dbo',",
+				"     tableName: 'Fakt_Wyniki_2019',",
+				"     isolationLevel: 'READ_UNCOMMITTED') ~> ReadWyniki2019",
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'table',",
+				"     store: 'sqlserver',",
+				"     schemaName: 'dbo',",
+				"     tableName: 'Fakt_Wyniki_2023',",
+				"     isolationLevel: 'READ_UNCOMMITTED') ~> ReadWyniki2023",
+				"ReadWyniki2015 aggregate(ID_KOMISJI = count(ID_KOMISJI),",
 				"          Liczba_Wyborcow = sum(Liczba_Wyborcow),",
 				"          Komisja_Otrzymala_Karty = sum(Komisja_Otrzymala_Karty),",
 				"          Niewykorzystane_Karty = sum(Niewykorzystane_Karty),",
@@ -127,10 +162,11 @@
 				"          KW_Braun_Szczesc_Boze = sum(KW_Braun_Szczesc_Boze),",
 				"          KW_Kongres_Prawicy = sum(KW_Kongres_Prawicy),",
 				"          KW_Mniejszosc_Niemiecka = sum(KW_Mniejszosc_Niemiecka),",
-				"          KW_Obywatele_Do_Parlamentu = sum(KW_Obywatele_Do_Parlamentu)) ~> aggregate1",
-				"derivedColumn1 alterRow(upsertIf(true())) ~> AlterRow1",
-				"aggregate1 derive(Data = toDate('25-10-2015', 'dd-MM-yyyy')) ~> derivedColumn1",
-				"AlterRow1 sink(allowSchemaDrift: true,",
+				"          KW_Obywatele_Do_Parlamentu = sum(KW_Obywatele_Do_Parlamentu)) ~> aggregate2015",
+				"derived2015 alterRow(upsertIf(true())) ~> AlterRow2015",
+				"aggregate2015 derive(Data = toDate('25-10-2015', 'dd-MM-yyyy')) ~> derived2015",
+				"ReadWyniki2019 aggregate() ~> aggregate2019",
+				"AlterRow2015 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
 				"          Data as date,",
