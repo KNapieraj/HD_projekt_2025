@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "obwody",
+						"referenceName": "etl_obwody",
 						"type": "DataFlowReference"
 					},
 					"compute": {

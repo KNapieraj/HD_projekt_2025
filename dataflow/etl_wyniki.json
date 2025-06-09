@@ -1,5 +1,5 @@
 {
-	"name": "wyniki",
+	"name": "etl_wyniki",
 	"properties": {
 		"folder": {
 			"name": "ETL"
