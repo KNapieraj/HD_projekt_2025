@@ -80,6 +80,13 @@
 						"type": "LinkedServiceReference"
 					},
 					"name": "LoadWymiarCzas2015"
+				},
+				{
+					"linkedService": {
+						"referenceName": "SQLDatabase",
+						"type": "LinkedServiceReference"
+					},
+					"name": "LoadWymiarCzas2019"
 				}
 			],
 			"transformations": [
@@ -153,7 +160,13 @@
 					"name": "AlterRow1"
 				},
 				{
-					"name": "aggregate2"
+					"name": "aggregateWymiarCzas2019"
+				},
+				{
+					"name": "derivedColumn2"
+				},
+				{
+					"name": "AlterRow2"
 				}
 			],
 			"scriptLines": [
@@ -360,7 +373,11 @@
 				"derivedColumn1 alterRow(upsertIf(true())) ~> AlterRow1",
 				"IDandROKobwody2019 aggregate(groupBy(ROK),",
 				"     {Mieszkańcy} = sum({Mieszkańcy}),",
-				"          Wyborcy = sum({Wyborcy})) ~> aggregate2",
+				"          Wyborcy = sum({Wyborcy})) ~> aggregateWymiarCzas2019",
+				"aggregateWymiarCzas2019 derive(Dzien = toInteger(13),",
+				"          Miesiac = toInteger(10),",
+				"          Rok = toInteger(2019)) ~> derivedColumn2",
+				"derivedColumn2 alterRow(upsertIf(true())) ~> AlterRow2",
 				"alterRowWymiarObwody2015 sink(allowSchemaDrift: true,",
 				"     validateSchema: true,",
 				"     input(",
@@ -601,7 +618,20 @@
 				"     upsertable: true,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     errorHandlingOption: 'stopOnFirstError') ~> LoadWymiarCzas2015"
+				"     errorHandlingOption: 'stopOnFirstError') ~> LoadWymiarCzas2015",
+				"AlterRow2 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'table',",
+				"     store: 'sqlserver',",
+				"     schemaName: 'dbo',",
+				"     tableName: 'Wymiar_Czas',",
+				"     insertable: true,",
+				"     updateable: false,",
+				"     deletable: false,",
+				"     upsertable: true,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError') ~> LoadWymiarCzas2019"
 			]
 		}
 	}
