@@ -71,6 +71,10 @@
 				},
 				{
 					"name": "aggregate2020"
+				},
+				{
+					"name": "derived2023",
+					"description": "Creating\nData"
 				}
 			],
 			"scriptLines": [
@@ -330,6 +334,7 @@
 				"          KW_Antypartia = sum(KW_Antypartia),",
 				"          KW_Ruch_Naprawy_Polski = sum(KW_Ruch_Naprawy_Polski),",
 				"          KW_Mniejszosc_Niemiecka = sum(KW_Mniejszosc_Niemiecka)) ~> aggregate2020",
+				"aggregate2020 derive(Data = toDate('15-10-2023', 'dd-MM-yyyy')) ~> derived2023",
 				"AlterRow2015 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
