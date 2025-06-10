@@ -379,7 +379,7 @@
 				"AddedRokWymiarGmina2023 alterRow(upsertIf(true())) ~> alterRowWymiarGmina2023",
 				"AgregateWymiarGmina2019 derive(ROK = toDate('13-10-2019', 'dd-MM-yyyy')) ~> AddedRokWymiarGmina2019",
 				"AgregateWymiarGmina2015 derive(ROK = toDate('25-10-2015', 'dd-MM-yyyy')) ~> AddedRokWymiarGmina2015",
-				"AgregateWymiarGmina2023 derive({} = ERROR_FUNCTION('')) ~> AddedRokWymiarGmina2023",
+				"AgregateWymiarGmina2023 derive(ROK = toDate('15-10-2023', 'dd-MM-yyyy')) ~> AddedRokWymiarGmina2023",
 				"IDandROKobwody2015 aggregate(groupBy(ROK),",
 				"     {Mieszkańcy} = sum({Mieszkańcy}),",
 				"          Wyborcy = sum({Wyborcy})) ~> aggregateWymiarCzas2015",
