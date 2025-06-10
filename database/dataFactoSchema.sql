@@ -17,13 +17,13 @@ CREATE TABLE Wymiar_Komitet_Wyborczy (
 
 CREATE TABLE Wymiar_Obwody_2015 (
     ID_KOMISJI INTEGER PRIMARY KEY,
-    KOD_TERYTORIALNY SMALLINT,
+    KOD_TERYTORIALNY INTEGER,
     Gmina VARCHAR(350),
-    Numer_obwodu SMALLINT,
-    Numer_okregu_do_Sejmu SMALLINT,
-    Numer_okregu_do_Senatu SMALLINT,
-    Mieszkancy SMALLINT,
-    Wyborcy SMALLINT,
+    Numer_obwodu INTEGER,
+    Numer_okregu_do_Sejmu INTEGER,
+    Numer_okregu_do_Senatu INTEGER,
+    Mieszkancy INTEGER,
+    Wyborcy INTEGER,
     Siedziba VARCHAR(350),
     Ulica VARCHAR(350),
     Numer_posesji VARCHAR(255),
@@ -39,13 +39,13 @@ CREATE TABLE Wymiar_Obwody_2015 (
 
 CREATE TABLE Wymiar_Obwody_2019 (
     ID_KOMISJI INTEGER PRIMARY KEY,
-    KOD_TERYTORIALNY SMALLINT,
+    KOD_TERYTORIALNY INTEGER,
     Gmina VARCHAR(350),
-    Numer_obwodu SMALLINT,
-    Numer_okregu_do_Sejmu SMALLINT,
-    Numer_okregu_do_Senatu SMALLINT,
-    Mieszkancy SMALLINT,
-    Wyborcy SMALLINT,
+    Numer_obwodu INTEGER,
+    Numer_okregu_do_Sejmu INTEGER,
+    Numer_okregu_do_Senatu INTEGER,
+    Mieszkancy INTEGER,
+    Wyborcy INTEGER,
     Siedziba VARCHAR(350),
     Ulica VARCHAR(350),
     Numer_posesji VARCHAR(255),
@@ -61,13 +61,13 @@ CREATE TABLE Wymiar_Obwody_2019 (
 
 CREATE TABLE Wymiar_Obwody_2023 (
     ID_KOMISJI INTEGER PRIMARY KEY,
-    KOD_TERYTORIALNY SMALLINT,
+    KOD_TERYTORIALNY INTEGER,
     Gmina VARCHAR(350),
-    Numer_obwodu SMALLINT,
-    Numer_okregu_do_Sejmu SMALLINT,
-    Numer_okregu_do_Senatu SMALLINT,
-    Mieszkancy SMALLINT,
-    Wyborcy SMALLINT,
+    Numer_obwodu INTEGER,
+    Numer_okregu_do_Sejmu INTEGER,
+    Numer_okregu_do_Senatu INTEGER,
+    Mieszkancy INTEGER,
+    Wyborcy INTEGER,
     Siedziba VARCHAR(350),
     Ulica VARCHAR(350),
     Numer_posesji VARCHAR(255),
@@ -214,8 +214,7 @@ CREATE TABLE Fakt_Wyniki_2023 (
 );
 
 CREATE TABLE Fakt_Agregowane_Wyniki_2015 (
-    ID_AGREGACJI INTEGER PRIMARY KEY,
-    Data DATE,
+    Data DATE PRIMARY KEY,
     Liczba_Wyborcow_Suma INTEGER,
     Komisja_Otrzymala_Karty_Suma INTEGER,
     Niewykorzystane_Karty_Suma INTEGER,
@@ -258,8 +257,7 @@ CREATE TABLE Fakt_Agregowane_Wyniki_2015 (
 );
 
 CREATE TABLE Fakt_Agregowane_Wyniki_2019 (
-    ID_AGREGACJI INTEGER PRIMARY KEY,
-    Data DATE,
+    Data DATE PRIMARY KEY,
     Liczba_Wyborcow_Suma INTEGER,
     Komisja_Otrzymala_Karty_Suma INTEGER,
     Niewykorzystane_Karty_Suma INTEGER,
@@ -294,9 +292,8 @@ CREATE TABLE Fakt_Agregowane_Wyniki_2019 (
     FOREIGN KEY (Data) REFERENCES Wymiar_Czas(Data)
 );
 
-CREATE TABLE Agregowane_Wyniki_2023 (
-    ID_AGREGACJI INTEGER PRIMARY KEY,
-    Data DATE,
+CREATE TABLE Fakt_Agregowane_Wyniki_2023 (
+    Data DATE PRIMARY KEY,
     Liczba_Wyborcow_Suma INTEGER,
     Komisja_Otrzymala_Karty_Suma INTEGER,
     Niewykorzystane_Karty_Suma INTEGER,
