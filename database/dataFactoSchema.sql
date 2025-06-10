@@ -19,7 +19,7 @@ CREATE TABLE Wymiar_Gmina_2015 (
     Nazwa VARCHAR(350) PRIMARY KEY,
     Mieszkańcy INTEGER,
     Wyborcy INTEGER,
-    Liczba_KOmisji INTEGER,
+    Liczba_Komisji INTEGER,
     Data DATE,
     FOREIGN KEY (Data) REFERENCES Wymiar_Czas(Data)
 );
@@ -28,7 +28,7 @@ CREATE TABLE Wymiar_Gmina_2019 (
     Nazwa VARCHAR(350) PRIMARY KEY,
     Mieszkańcy INTEGER,
     Wyborcy INTEGER,
-    Liczba_KOmisji INTEGER,
+    Liczba_Komisji INTEGER,
     Data DATE,
     FOREIGN KEY (Data) REFERENCES Wymiar_Czas(Data)
 );
@@ -37,7 +37,7 @@ CREATE TABLE Wymiar_Gmina_2023 (
     Nazwa VARCHAR(350) PRIMARY KEY,
     Mieszkańcy INTEGER,
     Wyborcy INTEGER,
-    Liczba_KOmisji INTEGER,
+    Liczba_Komisji INTEGER,
     Data DATE,
     FOREIGN KEY (Data) REFERENCES Wymiar_Czas(Data)
 );
