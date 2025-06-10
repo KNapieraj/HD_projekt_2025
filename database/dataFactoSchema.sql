@@ -4,7 +4,7 @@ CREATE TABLE Wymiar_Czas (
     Dzien INTEGER,
     Miesiac INTEGER,
     Rok INTEGER,
-    Mieszkacy INTEGER,
+    Mieszkancy INTEGER,
     Wyborcy INTEGER,
     Liczba_Komisji INTEGER
 );
