@@ -87,6 +87,13 @@
 						"type": "LinkedServiceReference"
 					},
 					"name": "LoadWymiarCzas2019"
+				},
+				{
+					"linkedService": {
+						"referenceName": "SQLDatabase",
+						"type": "LinkedServiceReference"
+					},
+					"name": "LoadWymiarCzas2023"
 				}
 			],
 			"transformations": [
@@ -157,7 +164,7 @@
 					"name": "derivedColumn1"
 				},
 				{
-					"name": "AlterRow1"
+					"name": "alterRowWymiarCzas2015"
 				},
 				{
 					"name": "aggregateWymiarCzas2019"
@@ -166,7 +173,16 @@
 					"name": "derivedColumn2"
 				},
 				{
-					"name": "AlterRow2"
+					"name": "alterRowWymiarCzas2019"
+				},
+				{
+					"name": "aggregateWymiarCzas2023"
+				},
+				{
+					"name": "derivedColumn3"
+				},
+				{
+					"name": "alterRowWymiarCzas2023"
 				}
 			],
 			"scriptLines": [
@@ -370,14 +386,22 @@
 				"aggregateWymiarCzas2015 derive(Dzien = toInteger(25),",
 				"          Miesiac = toInteger(10),",
 				"          Rok = toInteger(2015)) ~> derivedColumn1",
-				"derivedColumn1 alterRow(upsertIf(true())) ~> AlterRow1",
+				"derivedColumn1 alterRow(upsertIf(true())) ~> alterRowWymiarCzas2015",
 				"IDandROKobwody2019 aggregate(groupBy(ROK),",
 				"     {Mieszkańcy} = sum({Mieszkańcy}),",
 				"          Wyborcy = sum({Wyborcy})) ~> aggregateWymiarCzas2019",
 				"aggregateWymiarCzas2019 derive(Dzien = toInteger(13),",
 				"          Miesiac = toInteger(10),",
 				"          Rok = toInteger(2019)) ~> derivedColumn2",
-				"derivedColumn2 alterRow(upsertIf(true())) ~> AlterRow2",
+				"derivedColumn2 alterRow(upsertIf(true())) ~> alterRowWymiarCzas2019",
+				"IDandROKobwody2023 aggregate(groupBy(ROK),",
+				"     {Mieszkańcy} = sum({Mieszkańcy}),",
+				"          Wyborcy = sum({Wyborcy}),",
+				"          {Liczba Komisji} = count({ID KOMISJI})) ~> aggregateWymiarCzas2023",
+				"aggregateWymiarCzas2023 derive(Dzien = toInteger(15),",
+				"          Miesiac = toInteger(10),",
+				"          Rok = toInteger(2023)) ~> derivedColumn3",
+				"derivedColumn3 alterRow(upsertIf(true())) ~> alterRowWymiarCzas2023",
 				"alterRowWymiarObwody2015 sink(allowSchemaDrift: true,",
 				"     validateSchema: true,",
 				"     input(",
@@ -606,7 +630,7 @@
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
 				"     errorHandlingOption: 'stopOnFirstError') ~> LoadWymiarGmina2023",
-				"AlterRow1 sink(allowSchemaDrift: true,",
+				"alterRowWymiarCzas2015 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     format: 'table',",
 				"     store: 'sqlserver',",
@@ -619,7 +643,7 @@
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
 				"     errorHandlingOption: 'stopOnFirstError') ~> LoadWymiarCzas2015",
-				"AlterRow2 sink(allowSchemaDrift: true,",
+				"alterRowWymiarCzas2019 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     format: 'table',",
 				"     store: 'sqlserver',",
@@ -631,7 +655,20 @@
 				"     upsertable: true,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     errorHandlingOption: 'stopOnFirstError') ~> LoadWymiarCzas2019"
+				"     errorHandlingOption: 'stopOnFirstError') ~> LoadWymiarCzas2019",
+				"alterRowWymiarCzas2023 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'table',",
+				"     store: 'sqlserver',",
+				"     schemaName: 'dbo',",
+				"     tableName: 'Wymiar_Czas',",
+				"     insertable: true,",
+				"     updateable: false,",
+				"     deletable: false,",
+				"     upsertable: true,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError') ~> LoadWymiarCzas2023"
 			]
 		}
 	}
