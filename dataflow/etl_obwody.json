@@ -58,7 +58,21 @@
 						"referenceName": "SQLDatabase",
 						"type": "LinkedServiceReference"
 					},
-					"name": "sink1"
+					"name": "LoadWymiarGmina2015"
+				},
+				{
+					"linkedService": {
+						"referenceName": "SQLDatabase",
+						"type": "LinkedServiceReference"
+					},
+					"name": "LoadWymiarGmina2019"
+				},
+				{
+					"linkedService": {
+						"referenceName": "SQLDatabase",
+						"type": "LinkedServiceReference"
+					},
+					"name": "LoadWymiarGmina2023"
 				}
 			],
 			"transformations": [
@@ -87,19 +101,31 @@
 					"description": "Added \n-ID KOMISJI \n-ROK 2023\n"
 				},
 				{
-					"name": "AlterRow1"
+					"name": "alterRowWymiarObwody2015"
 				},
 				{
-					"name": "AlterRow2"
+					"name": "alterRowWymiarObwody2019"
 				},
 				{
-					"name": "AlterRow3"
+					"name": "alterRowWymiarObwody2023"
 				},
 				{
-					"name": "aggregate1"
+					"name": "AgregateWymiarGmina2015"
 				},
 				{
-					"name": "AlterRow4"
+					"name": "alterRowWymiarGmina2017"
+				},
+				{
+					"name": "AgregateWymiarGmina2019"
+				},
+				{
+					"name": "alterRowWymiarGmina2019"
+				},
+				{
+					"name": "AgregateWymiarGmina2023"
+				},
+				{
+					"name": "alterRowWymiarGmina2023"
 				}
 			],
 			"scriptLines": [
@@ -276,15 +302,25 @@
 				"RemoveColumnsObwody2023 derive({ID KOMISJI} = toInteger(concat(toString({KOD TERYTORIALNY}), toString({Numer obwodu}))),",
 				"          ROK = toDate('15-10-2023', 'dd-MM-yyyy'),",
 				"          {Przystosowany dla niepełnosprawnych} = case(    {Przystosowany dla niepełnosprawnych string} == 'Tak', 'T',    'N')) ~> IDandROKobwody2023",
-				"IDandROKobwody2015 alterRow(upsertIf(true())) ~> AlterRow1",
-				"IDandROKobwody2019 alterRow(upsertIf(true())) ~> AlterRow2",
-				"IDandROKobwody2023 alterRow(upsertIf(true())) ~> AlterRow3",
+				"IDandROKobwody2015 alterRow(upsertIf(true())) ~> alterRowWymiarObwody2015",
+				"IDandROKobwody2019 alterRow(upsertIf(true())) ~> alterRowWymiarObwody2019",
+				"IDandROKobwody2023 alterRow(upsertIf(true())) ~> alterRowWymiarObwody2023",
 				"IDandROKobwody2015 aggregate(groupBy(Gmina),",
 				"     {Mieszkańcy} = sum({Mieszkańcy}),",
 				"          Wyborcy = sum(Wyborcy),",
-				"          {Liczba Komisji} = count({ID KOMISJI})) ~> aggregate1",
-				"aggregate1 alterRow(upsertIf(true())) ~> AlterRow4",
-				"AlterRow1 sink(allowSchemaDrift: true,",
+				"          {Liczba Komisji} = count({ID KOMISJI})) ~> AgregateWymiarGmina2015",
+				"AgregateWymiarGmina2015 alterRow(upsertIf(true())) ~> alterRowWymiarGmina2017",
+				"IDandROKobwody2019 aggregate(groupBy(Gmina),",
+				"     {Mieszkańcy} = sum({Mieszkańcy}),",
+				"          Wyborcy = sum(Wyborcy),",
+				"          {Liczba Komisji} = count({ID KOMISJI})) ~> AgregateWymiarGmina2019",
+				"AgregateWymiarGmina2019 alterRow(upsertIf(true())) ~> alterRowWymiarGmina2019",
+				"IDandROKobwody2023 aggregate(groupBy(Gmina),",
+				"     {Mieszkańcy} = sum({Mieszkańcy}),",
+				"          Wyborcy = sum(Wyborcy),",
+				"          {Liczba Komisji} = count({ID KOMISJI})) ~> AgregateWymiarGmina2023",
+				"AgregateWymiarGmina2023 alterRow(upsertIf(true())) ~> alterRowWymiarGmina2023",
+				"alterRowWymiarObwody2015 sink(allowSchemaDrift: true,",
 				"     validateSchema: true,",
 				"     input(",
 				"          ID_KOMISJI as integer,",
@@ -340,7 +376,7 @@
 				"          ID_KOMISJI = {ID KOMISJI},",
 				"          Data = ROK",
 				"     )) ~> LoadWymiarObwody2015",
-				"AlterRow2 sink(allowSchemaDrift: true,",
+				"alterRowWymiarObwody2019 sink(allowSchemaDrift: true,",
 				"     validateSchema: true,",
 				"     input(",
 				"          ID_KOMISJI as integer,",
@@ -396,7 +432,7 @@
 				"          Typ_obwodu = {Typ obwodu},",
 				"          Data = ROK",
 				"     )) ~> LoadWymiarObwody2019",
-				"AlterRow3 sink(allowSchemaDrift: true,",
+				"alterRowWymiarObwody2023 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
 				"          ID_KOMISJI as integer,",
@@ -452,7 +488,7 @@
 				"          Typ_obwodu = {Typ obwodu},",
 				"          Data = ROK",
 				"     )) ~> LoadWymiarObwody2023",
-				"AlterRow4 sink(allowSchemaDrift: true,",
+				"alterRowWymiarGmina2017 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     format: 'table',",
 				"     store: 'sqlserver',",
@@ -471,7 +507,47 @@
 				"          {Mieszkańcy},",
 				"          Wyborcy,",
 				"          {Liczba Komisji}",
-				"     )) ~> sink1"
+				"     )) ~> LoadWymiarGmina2015",
+				"alterRowWymiarGmina2019 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          Nazwa as string,",
+				"          {Mieszkańcy} as integer,",
+				"          Wyborcy as integer,",
+				"          Liczba_KOmisji as integer,",
+				"          Data as date",
+				"     ),",
+				"     format: 'table',",
+				"     store: 'sqlserver',",
+				"     schemaName: 'dbo',",
+				"     tableName: 'Wymiar_Gmina_2019',",
+				"     insertable: true,",
+				"     updateable: false,",
+				"     deletable: false,",
+				"     upsertable: true,",
+				"     keys:['Gmina'],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          Nazwa = Gmina,",
+				"          {Mieszkańcy},",
+				"          Wyborcy,",
+				"          Liczba_KOmisji = {Liczba Komisji}",
+				"     )) ~> LoadWymiarGmina2019",
+				"alterRowWymiarGmina2023 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'table',",
+				"     store: 'sqlserver',",
+				"     schemaName: '',",
+				"     tableName: '',",
+				"     insertable: true,",
+				"     updateable: false,",
+				"     deletable: false,",
+				"     upsertable: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError') ~> LoadWymiarGmina2023"
 			]
 		}
 	}
