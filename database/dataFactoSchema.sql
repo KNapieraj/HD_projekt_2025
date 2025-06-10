@@ -1,15 +1,16 @@
 
 CREATE TABLE Wymiar_Czas (
-    ID_Czasu INT IDENTITY(1,1) PRIMARY KEY,
-    Data DATE UNIQUE,
-    Dzien INT,
-    Miesiac INT,
-    Rok INT
+    Data DATE PRIMARY KEY,
+    Dzien INTEGER,
+    Miesiac INTEGER,
+    Rok INTEGER,
+    Mieszkacy INTEGER,
+    Wyborcy INTEGER,
+    Liczba_Komisji INTEGER
 );
 
 CREATE TABLE Wymiar_Komitet_Wyborczy (
-    ID_Komitetu INT IDENTITY(1,1) PRIMARY KEY,
-    Nazwa VARCHAR(255) UNIQUE,
+    Nazwa VARCHAR(255) PRIMARY KEY,
     Wyniki_2015 INTEGER DEFAULT 0,
     Wyniki_2019 INTEGER DEFAULT 0,
     Wyniki_2023 INTEGER DEFAULT 0
@@ -280,8 +281,7 @@ CREATE TABLE Fakt_Agregowane_Wyniki_2015 (
     KW_Braun_Szczesc_Boze_Suma INTEGER,
     KW_Kongres_Prawicy_Suma INTEGER,
     KW_Mniejszosc_Niemiecka_Suma INTEGER,
-    KW_Obywatele_Do_Parlamentu_Suma INTEGER,
-    FOREIGN KEY (Data) REFERENCES Wymiar_Czas(Data)
+    KW_Obywatele_Do_Parlamentu_Suma INTEGER
 );
 
 CREATE TABLE Fakt_Agregowane_Wyniki_2019 (
@@ -317,8 +317,7 @@ CREATE TABLE Fakt_Agregowane_Wyniki_2019 (
     KW_Skuteczni_Liroy_Suma INTEGER,
     KW_SLD_Suma INTEGER,
     KW_Bezpartyjni_Samorzadowcy_Suma INTEGER,
-    KW_Obywatele_Do_Parlamentu_Suma INTEGER,
-    FOREIGN KEY (Data) REFERENCES Wymiar_Czas(Data)
+    KW_Obywatele_Do_Parlamentu_Suma INTEGER
 );
 
 CREATE TABLE Fakt_Agregowane_Wyniki_2023 (
@@ -356,8 +355,7 @@ CREATE TABLE Fakt_Agregowane_Wyniki_2023 (
     KW_Normalny_Kraj_Suma INTEGER,
     KW_Antypartia_Suma INTEGER,
     KW_Ruch_Naprawy_Polski_Suma INTEGER,
-    KW_Mniejszosc_Niemiecka_Suma INTEGER,
-    FOREIGN KEY (Data) REFERENCES Wymiar_Czas(Data)
+    KW_Mniejszosc_Niemiecka_Suma INTEGER
 );
 
 CREATE TABLE Fakt_Agregowane_Gmina_2015 (
@@ -401,7 +399,7 @@ CREATE TABLE Fakt_Agregowane_Gmina_2015 (
     KW_Kongres_Prawicy_Suma INTEGER,
     KW_Mniejszosc_Niemiecka_Suma INTEGER,
     KW_Obywatele_Do_Parlamentu_Suma INTEGER,
-    FOREIGN KEY (Data) REFERENCES Wymiar_Czas(Data)
+    FOREIGN KEY (Gmina) REFERENCES Wymiar_Gmina_2015(Nazwa)
 );
 
 CREATE TABLE Fakt_Agregowane_Gmina_2019 (
