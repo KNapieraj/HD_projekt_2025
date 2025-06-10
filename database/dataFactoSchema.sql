@@ -15,6 +15,33 @@ CREATE TABLE Wymiar_Komitet_Wyborczy (
     Wyniki_2023 INTEGER DEFAULT 0
 );
 
+CREATE TABLE Wymiar_Gmina_2015 (
+    Nazwa VARCHAR(350) PRIMARY KEY,
+    Mieszkańcy INTEGER,
+    Wyborcy INTEGER,
+    Liczba_KOmisji INTEGER,
+    Data DATE,
+    FOREIGN KEY (Data) REFERENCES Wymiar_Czas(Data)
+);
+
+CREATE TABLE Wymiar_Gmina_2019 (
+    Nazwa VARCHAR(350) PRIMARY KEY,
+    Mieszkańcy INTEGER,
+    Wyborcy INTEGER,
+    Liczba_KOmisji INTEGER,
+    Data DATE,
+    FOREIGN KEY (Data) REFERENCES Wymiar_Czas(Data)
+);
+
+CREATE TABLE Wymiar_Gmina_2023 (
+    Nazwa VARCHAR(350) PRIMARY KEY,
+    Mieszkańcy INTEGER,
+    Wyborcy INTEGER,
+    Liczba_KOmisji INTEGER,
+    Data DATE,
+    FOREIGN KEY (Data) REFERENCES Wymiar_Czas(Data)
+);
+
 CREATE TABLE Wymiar_Obwody_2015 (
     ID_KOMISJI INTEGER PRIMARY KEY,
     KOD_TERYTORIALNY INTEGER,
@@ -215,6 +242,7 @@ CREATE TABLE Fakt_Wyniki_2023 (
 
 CREATE TABLE Fakt_Agregowane_Wyniki_2015 (
     Data DATE PRIMARY KEY,
+    Liczba_Komisji INTEGER,
     Liczba_Wyborcow_Suma INTEGER,
     Komisja_Otrzymala_Karty_Suma INTEGER,
     Niewykorzystane_Karty_Suma INTEGER,
@@ -258,6 +286,7 @@ CREATE TABLE Fakt_Agregowane_Wyniki_2015 (
 
 CREATE TABLE Fakt_Agregowane_Wyniki_2019 (
     Data DATE PRIMARY KEY,
+    Liczba_Komisji INTEGER,
     Liczba_Wyborcow_Suma INTEGER,
     Komisja_Otrzymala_Karty_Suma INTEGER,
     Niewykorzystane_Karty_Suma INTEGER,
@@ -294,6 +323,7 @@ CREATE TABLE Fakt_Agregowane_Wyniki_2019 (
 
 CREATE TABLE Fakt_Agregowane_Wyniki_2023 (
     Data DATE PRIMARY KEY,
+    Liczba_Komisji INTEGER,
     Liczba_Wyborcow_Suma INTEGER,
     Komisja_Otrzymala_Karty_Suma INTEGER,
     Niewykorzystane_Karty_Suma INTEGER,
@@ -328,4 +358,125 @@ CREATE TABLE Fakt_Agregowane_Wyniki_2023 (
     KW_Ruch_Naprawy_Polski_Suma INTEGER,
     KW_Mniejszosc_Niemiecka_Suma INTEGER,
     FOREIGN KEY (Data) REFERENCES Wymiar_Czas(Data)
+);
+
+CREATE TABLE Fakt_Agregowane_Gmina_2015 (
+    Gmina VARCHAR(350) PRIMARY KEY,
+    Liczba_Komisji INTEGER,
+    Liczba_Wyborcow_Suma INTEGER,
+    Komisja_Otrzymala_Karty_Suma INTEGER,
+    Niewykorzystane_Karty_Suma INTEGER,
+    Wydane_Karty_Suma INTEGER,
+    Liczba_Wyborcow_Pelnomocnik_Suma INTEGER,
+    Liczba_Wyborcow_Zaswiadczenie_Suma INTEGER,
+    Liczba_Otrzymanych_Kopert_Suma INTEGER,
+    Koperty_Brak_Oswiadczenia_Suma INTEGER,
+    Koperty_Brak_Podpisu_Suma INTEGER,
+    Koperty_Brak_Karty_Suma INTEGER,
+    Niezaklejona_Koperta_Suma INTEGER,
+    Koperty_Do_Urny_Suma INTEGER,
+    Karty_Z_Urny_Suma INTEGER,
+    Karty_Z_Kopert_Suma INTEGER,
+    Karty_Niewazne_Suma INTEGER,
+    Karty_Wazne_Suma INTEGER,
+    Glosy_Niewazne_Suma INTEGER,
+    Glosy_X_Wielu_Kandydatow_Suma INTEGER,
+    Glosy_Brak_X_Suma INTEGER,
+    Glosy_X_Uniewazniona_Lista_Suma INTEGER,
+    Glosy_Wazne_Suma INTEGER,
+    KW_PIS_Suma INTEGER,
+    KW_KOALICJA_OBYWATELSKA_Suma INTEGER,
+    KW_Razem_Suma INTEGER,
+    KW_KONFEDERACJA_Suma INTEGER,
+    KW_PSL_Suma INTEGER,
+    KW_Zjednoczona_Lewica_Suma INTEGER,
+    KW_Kukiz_Suma INTEGER,
+    KW_Nowoczesna_Suma INTEGER,
+    KW_JOW_Suma INTEGER,
+    KW_Stonoga_Suma INTEGER,
+    KW_Ruch_Spoleczny_Suma INTEGER,
+    KW_Zjednoczeni_Slask_Suma INTEGER,
+    KW_Samoobrona_Suma INTEGER,
+    KW_Braun_Szczesc_Boze_Suma INTEGER,
+    KW_Kongres_Prawicy_Suma INTEGER,
+    KW_Mniejszosc_Niemiecka_Suma INTEGER,
+    KW_Obywatele_Do_Parlamentu_Suma INTEGER,
+    FOREIGN KEY (Data) REFERENCES Wymiar_Czas(Data)
+);
+
+CREATE TABLE Fakt_Agregowane_Gmina_2019 (
+    Gmina VARCHAR(350) PRIMARY KEY,
+    Liczba_Komisji INTEGER,
+    Liczba_Wyborcow_Suma INTEGER,
+    Komisja_Otrzymala_Karty_Suma INTEGER,
+    Niewykorzystane_Karty_Suma INTEGER,
+    Wydane_Karty_Suma INTEGER,
+    Liczba_Wyborcow_Pelnomocnik_Suma INTEGER,
+    Liczba_Wyborcow_Zaswiadczenie_Suma INTEGER,
+    Liczba_Otrzymanych_Kopert_Suma INTEGER,
+    Koperty_Brak_Oswiadczenia_Suma INTEGER,
+    Koperty_Brak_Podpisu_Suma INTEGER,
+    Koperty_Brak_Karty_Suma INTEGER,
+    Niezaklejona_Koperta_Suma INTEGER,
+    Koperty_Do_Urny_Suma INTEGER,
+    Karty_Z_Urny_Suma INTEGER,
+    Karty_Z_Kopert_Suma INTEGER,
+    Karty_Niewazne_Suma INTEGER,
+    Karty_Wazne_Suma INTEGER,
+    Glosy_Niewazne_Suma INTEGER,
+    Glosy_X_Wielu_Kandydatow_Suma INTEGER,
+    Glosy_Brak_X_Suma INTEGER,
+    Glosy_X_Uniewazniona_Lista_Suma INTEGER,
+    Glosy_Wazne_Suma INTEGER,
+    KW_KOALICJA_OBYWATELSKA_Suma INTEGER,
+    KW_AKCJA_EMERYTOW_RENCISTOW_Suma INTEGER,
+    KW_KONFEDERACJA_Suma INTEGER,
+    KW_PSL_Suma INTEGER,
+    KW_PRAWICA_Suma INTEGER,
+    KW_PIS_Suma INTEGER,
+    KW_Skuteczni_Liroy_Suma INTEGER,
+    KW_SLD_Suma INTEGER,
+    KW_Bezpartyjni_Samorzadowcy_Suma INTEGER,
+    KW_Obywatele_Do_Parlamentu_Suma INTEGER,
+    FOREIGN KEY (Gmina) REFERENCES Wymiar_Gmina_2019(Nazwa)
+);
+
+CREATE TABLE Fakt_Agregowane_Gmina_2023 (
+    Gmina VARCHAR(350) PRIMARY KEY,
+    Liczba_Komisji INTEGER,
+    Liczba_Wyborcow_Suma INTEGER,
+    Komisja_Otrzymala_Karty_Suma INTEGER,
+    Niewykorzystane_Karty_Suma INTEGER,
+    Wydane_Karty_Suma INTEGER,
+    Liczba_Wyborcow_Pelnomocnik_Suma INTEGER,
+    Liczba_Wyborcow_Zaswiadczenie_Suma INTEGER,
+    Liczba_Otrzymanych_Kopert_Suma INTEGER,
+    Koperty_Brak_Oswiadczenia_Suma INTEGER,
+    Koperty_Brak_Podpisu_Suma INTEGER,
+    Koperty_Brak_Karty_Suma INTEGER,
+    Niezaklejona_Koperta_Suma INTEGER,
+    Koperty_Do_Urny_Suma INTEGER,
+    Karty_Z_Urny_Suma INTEGER,
+    Karty_Z_Kopert_Suma INTEGER,
+    Karty_Niewazne_Suma INTEGER,
+    Karty_Wazne_Suma INTEGER,
+    Glosy_Niewazne_Suma INTEGER,
+    Glosy_X_Wielu_Kandydatow_Suma INTEGER,
+    Glosy_Brak_X_Suma INTEGER,
+    Glosy_X_Uniewazniona_Lista_Suma INTEGER,
+    Glosy_Wazne_Suma INTEGER,
+    KW_Bezpartyjni_Samorzadowcy_Suma INTEGER,
+    KW_Trzecia_Droga_Polska_2050_PSL_Suma INTEGER,
+    KW_Nowa_Lewica_Suma INTEGER,
+    KW_PIS_Suma INTEGER,
+    KW_KONFEDERACJA_Suma INTEGER,
+    KW_KOALICJA_OBYWATELSKA_Suma INTEGER,
+    KW_Polska_Jest_Jedna_Suma INTEGER,
+    KW_Ruch_Dobrobytu_Pokoju_Suma INTEGER,
+    KW_Normalny_Kraj_Suma INTEGER,
+    KW_Antypartia_Suma INTEGER,
+    KW_Ruch_Naprawy_Polski_Suma INTEGER,
+    KW_Mniejszosc_Niemiecka_Suma INTEGER,
+    Data DATE,
+    FOREIGN KEY (Gmina) REFERENCES Wymiar_Gmina_2023(Nazwa)
 );
