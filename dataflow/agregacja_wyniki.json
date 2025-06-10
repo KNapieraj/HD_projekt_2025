@@ -45,6 +45,13 @@
 						"type": "LinkedServiceReference"
 					},
 					"name": "loadAgregacjaWyniki2019"
+				},
+				{
+					"linkedService": {
+						"referenceName": "SQLDatabase",
+						"type": "LinkedServiceReference"
+					},
+					"name": "sink1"
 				}
 			],
 			"transformations": [
@@ -75,6 +82,9 @@
 				{
 					"name": "derived2023",
 					"description": "Creating\nData"
+				},
+				{
+					"name": "AlterRow2017"
 				}
 			],
 			"scriptLines": [
@@ -335,6 +345,7 @@
 				"          KW_Ruch_Naprawy_Polski = sum(KW_Ruch_Naprawy_Polski),",
 				"          KW_Mniejszosc_Niemiecka = sum(KW_Mniejszosc_Niemiecka)) ~> aggregate2020",
 				"aggregate2020 derive(Data = toDate('15-10-2023', 'dd-MM-yyyy')) ~> derived2023",
+				"derived2023 alterRow(upsertIf(true())) ~> AlterRow2017",
 				"AlterRow2015 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
@@ -444,7 +455,21 @@
 				"     keys:['Data'],",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     errorHandlingOption: 'stopOnFirstError') ~> loadAgregacjaWyniki2019"
+				"     errorHandlingOption: 'stopOnFirstError') ~> loadAgregacjaWyniki2019",
+				"AlterRow2017 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'table',",
+				"     store: 'sqlserver',",
+				"     schemaName: 'dbo',",
+				"     tableName: 'Fakt_Agregowane_Wyniki_2023',",
+				"     insertable: true,",
+				"     updateable: false,",
+				"     deletable: false,",
+				"     upsertable: true,",
+				"     keys:['Data'],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError') ~> sink1"
 			]
 		}
 	}
