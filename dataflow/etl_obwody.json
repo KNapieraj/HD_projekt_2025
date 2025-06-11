@@ -573,7 +573,7 @@
 				"     validateSchema: false,",
 				"     format: 'table',",
 				"     store: 'sqlserver',",
-				"     schemaName: 'LoadWymiarGmina2015',",
+				"     schemaName: 'dbo',",
 				"     tableName: 'Wymiar_Gmina_2015',",
 				"     insertable: true,",
 				"     updateable: false,",
