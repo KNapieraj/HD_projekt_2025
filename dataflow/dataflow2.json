@@ -33,6 +33,9 @@
 			"transformations": [
 				{
 					"name": "union1"
+				},
+				{
+					"name": "aggregate1"
 				}
 			],
 			"scriptLines": [
@@ -171,7 +174,8 @@
 				"     schemaName: 'dbo',",
 				"     tableName: 'Fakt_Agregowane_Wyniki_2023',",
 				"     isolationLevel: 'READ_UNCOMMITTED') ~> readAgregacjaWyniki2023",
-				"readAgregacjaWyniki2015, readAgregacjaWyniki2019, readAgregacjaWyniki2023 union(byName: true)~> union1"
+				"readAgregacjaWyniki2015, readAgregacjaWyniki2019, readAgregacjaWyniki2023 union(byName: true)~> union1",
+				"union1 aggregate() ~> aggregate1"
 			]
 		}
 	}
