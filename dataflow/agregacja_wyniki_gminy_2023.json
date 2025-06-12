@@ -87,7 +87,7 @@
 				"     tableName: 'Fakt_Wyniki_2023',",
 				"     isolationLevel: 'READ_UNCOMMITTED') ~> ReadWyniki2023",
 				"ReadWyniki2023 aggregate(groupBy(Gmina),",
-				"     {Liczba Komisji} = count(ID_KOMISJI),",
+				"     {Liczba Komisji} = toInteger(count(ID_KOMISJI)),",
 				"          Liczba_Wyborcow = sum(Liczba_Wyborcow),",
 				"          Komisja_Otrzymala_Karty = sum(Komisja_Otrzymala_Karty),",
 				"          Niewykorzystane_Karty = sum(Niewykorzystane_Karty),",
