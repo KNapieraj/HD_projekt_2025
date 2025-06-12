@@ -34,7 +34,7 @@
 					"description": "Creating\nData"
 				},
 				{
-					"name": "AlterRow2016"
+					"name": "AlterRowAgregacjaWynik2019"
 				}
 			],
 			"scriptLines": [
@@ -117,8 +117,8 @@
 				"          KW_Bezpartyjni_Samorzadowcy = sum(KW_Bezpartyjni_Samorzadowcy),",
 				"          KW_Obywatele_Do_Parlamentu = sum(KW_Obywatele_Do_Parlamentu)) ~> aggregate2019",
 				"aggregate2019 derive(Data = toDate('13-10-2019', 'dd-MM-yyyy')) ~> derived2019",
-				"derived2019 alterRow(upsertIf(true())) ~> AlterRow2016",
-				"AlterRow2016 sink(allowSchemaDrift: true,",
+				"derived2019 alterRow(upsertIf(true())) ~> AlterRowAgregacjaWynik2019",
+				"AlterRowAgregacjaWynik2019 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
 				"          Data as date,",

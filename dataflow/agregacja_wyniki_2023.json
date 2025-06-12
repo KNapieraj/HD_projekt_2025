@@ -34,7 +34,7 @@
 					"description": "Creating\nData"
 				},
 				{
-					"name": "AlterRow2017"
+					"name": "AlterRowAgregacjaWynik2023"
 				}
 			],
 			"scriptLines": [
@@ -121,8 +121,8 @@
 				"          KW_Ruch_Naprawy_Polski = sum(KW_Ruch_Naprawy_Polski),",
 				"          KW_Mniejszosc_Niemiecka = sum(KW_Mniejszosc_Niemiecka)) ~> aggregate2023",
 				"aggregate2023 derive(Data = toDate('15-10-2023', 'dd-MM-yyyy')) ~> derived2023",
-				"derived2023 alterRow(upsertIf(true())) ~> AlterRow2017",
-				"AlterRow2017 sink(allowSchemaDrift: true,",
+				"derived2023 alterRow(upsertIf(true())) ~> AlterRowAgregacjaWynik2023",
+				"AlterRowAgregacjaWynik2023 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
 				"          Data as date,",

@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "agregacja_wyniki",
+						"referenceName": "agregacja_wyniki_2015",
 						"type": "DataFlowReference"
 					},
 					"compute": {
@@ -27,7 +27,7 @@
 				}
 			},
 			{
-				"name": "agregacjaWymiarGina",
+				"name": "agregacjaWymiarGmina",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [
 					{
