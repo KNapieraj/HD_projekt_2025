@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "etl_wyniki",
+						"referenceName": "etl_wyniki_2015",
 						"type": "DataFlowReference"
 					},
 					"compute": {
