@@ -35,9 +35,48 @@ def readAndLoadDataFromCSV(csv_file):
     folder_path = 'dane_zrodlowe'
     if not os.path.exists(folder_path):
         raise FileNotFoundError(f"INFO --- Folder '{folder_path}' nie istnieje.")
+
     file_path = os.path.join(folder_path, csv_file)
     print(f"INFO --- {csv_file}")
-    return pd.read_csv(file_path, on_bad_lines='skip', sep=';', low_memory=False)
+
+    df = pd.read_csv(file_path, on_bad_lines='skip', sep=';', low_memory=False)
+
+    # Usunięcie wierszy, gdzie druga komórka jest pusta
+    df = df[df.iloc[:, 1].notna()]
+
+    return df
+
+def generateWymiarCzas():
+    data = [
+        {"id_czasu": 20151025, "rok": 2015, "miesiac": 10, "dzien": 25, "kwartal": 4},
+        {"id_czasu": 20191013, "rok": 2019, "miesiac": 10, "dzien": 13, "kwartal": 4},
+        {"id_czasu": 20231015, "rok": 2023, "miesiac": 10, "dzien": 15, "kwartal": 4}
+    ]
+
+2015.10.25
+2019.10.13
+2023.10.15
+
+    return pd.DataFrame(data)
+
+def loadWymiarCzas(engine):
+    merge_sql = """
+        MERGE INTO Wymiar_Czas AS target
+        USING (SELECT * FROM (VALUES
+            (20151025, 2015, 10, 25, 4),
+            (20191013, 2019, 10, 13, 4),
+            (20231015, 2023, 10, 15, 4)
+        ) AS source (id_czasu, rok, miesiac, dzien, kwartal)) AS source
+        ON target.id_czasu = source.id_czasu
+        WHEN NOT MATCHED THEN
+            INSERT (id_czasu, rok, miesiac, dzien, kwartal)
+            VALUES (source.id_czasu, source.rok, source.miesiac, source.dzien, source.kwartal);
+    """
+
+    with engine.begin() as conn:
+        conn.execute(text(merge_sql))
+
+    print("INFO --- Wykonano MERGE: dodano brakujące rekordy do Wymiar_Czas.")
 
 def extractDataObwody(csv_file):
     df = readAndLoadDataFromCSV(csv_file)
@@ -66,6 +105,7 @@ def extractDataObwody(csv_file):
     })
 
     df_obwody['adres'] = df_obwody['adres'].astype(str).str.slice(0, 255)
+    df_obwody['id_obwodu'] = df_obwody['id_obwodu'].astype(str).str.replace('.', '')
 
     return df_obwody
 
@@ -188,9 +228,10 @@ def extractDataStatystykiObwodu(csv_file):
 
     # Generowanie ID obwodu (ID KOMISJI)
     df['id_obwodu'] = df.apply(
-        lambda row: f"{int(row['KOD TERYTORIALNY'])}{int(row['Numer obwodu'])}" if pd.notnull(row['KOD TERYTORIALNY']) else None,
-        axis=1
-    )
+    lambda row: f"{int(row['KOD TERYTORIALNY'])}{int(row['Numer obwodu'])}"
+    if pd.notnull(row['KOD TERYTORIALNY']) and pd.notnull(row['Numer obwodu']) else None,
+    axis=1
+)
 
     # Budowa końcowego DataFrame
     df_stat = pd.DataFrame({
@@ -240,11 +281,122 @@ def loadDataStatystykiObwodu(df_stat, engine):
 
     print("INFO --- Wykonano MERGE i usunięto tabelę tymczasową.")
 
+def extractDataKomitety(csv_files):
+    komitety = set()
 
+    for file in csv_files:
+        df = readAndLoadDataFromCSV(file)
+        for col in df.columns:
+            if col.startswith("KOMITET WYBORCZY") or col.startswith("KOALICYJNY KOMITET WYBORCZY"):
+                komitety.add(col.strip())
+
+    komitety = sorted(list(komitety))
+    df_komitety = pd.DataFrame({
+        'id_komitetu': range(1, len(komitety) + 1),
+        'nazwa_komitetu': komitety,
+        'skrot': [k.split()[-1] if len(k.split()) > 1 else k for k in komitety],
+        'typ': ['koalicyjny' if 'KOALICYJNY' in k else 'komitet' for k in komitety]
+    })
+
+    return df_komitety
+
+def loadDataKomitety(df_komitety, engine):
+    df_komitety.to_sql('Wymiar_Komitet_TMP', con=engine, if_exists='replace', index=False)
+    print("INFO --- Dane tymczasowe zapisane do Wymiar_Komitet_TMP.")
+
+    merge_sql = """
+        MERGE INTO Wymiar_Komitet AS target
+        USING Wymiar_Komitet_TMP AS source
+        ON target.id_komitetu = source.id_komitetu
+        WHEN MATCHED THEN
+            UPDATE SET
+                target.nazwa_komitetu = source.nazwa_komitetu,
+                target.skrot = source.skrot,
+                target.typ = source.typ
+        WHEN NOT MATCHED THEN
+            INSERT (id_komitetu, nazwa_komitetu, skrot, typ)
+            VALUES (source.id_komitetu, source.nazwa_komitetu, source.skrot, source.typ);
+    """
+
+    with engine.begin() as conn:
+        conn.execute(text(merge_sql))
+        conn.execute(text("DROP TABLE Wymiar_Komitet_TMP"))
+
+    print("INFO --- Wykonano MERGE i usunięto tabelę tymczasową.")
+
+def extractDataWynikiWyborcze(csv_file, df_komitety):
+    df = readAndLoadDataFromCSV(csv_file)
+    rok = int(csv_file.split('_')[-1].split('.')[0])
+    id_czasu = {
+        2015: 20151025,
+        2019: 20191013,
+        2023: 20231015
+    }.get(rok)
+
+    df['id_obwodu'] = df.apply(
+        lambda row: f"{int(row['KOD TERYTORIALNY'])}{int(row['Numer obwodu'])}" if pd.notnull(row['KOD TERYTORIALNY']) else None,
+        axis=1
+    )
+
+    records = []
+    for _, row in df.iterrows():
+        id_obwodu = row['id_obwodu']
+        if not id_obwodu:
+            continue
+
+        for _, komitet in df_komitety.iterrows():
+            nazwa = komitet['nazwa_komitetu']
+            if nazwa in row and pd.notnull(row[nazwa]):
+                id_komitetu = komitet['id_komitetu']
+                glosy = int(str(row[nazwa]).replace(' ', '').replace(',', '') or 0)
+                id_wyniku = generate_id_wyniku(id_obwodu, rok, id_komitetu)
+
+                records.append({
+                    'id_wyniku': id_wyniku,
+                    'id_obwodu': id_obwodu,
+                    'rok': rok,
+                    'id_komitetu': id_komitetu,
+                    'id_czasu': id_czasu,
+                    'glosy_na_komitet': glosy
+                })
+
+    return pd.DataFrame(records)
+
+def loadDataWynikiWyborcze(df_wyniki, engine):
+    df_wyniki.to_sql('Fakt_Wyniki_Wyborcze_TMP', con=engine, if_exists='replace', index=False)
+    print("INFO --- Dane tymczasowe zapisane do Fakt_Wyniki_Wyborcze_TMP.")
+
+    merge_sql = """
+        MERGE INTO Fakt_Wyniki_Wyborcze AS target
+        USING Fakt_Wyniki_Wyborcze_TMP AS source
+        ON target.id_wyniku = source.id_wyniku
+        WHEN MATCHED THEN
+            UPDATE SET
+                target.id_obwodu = source.id_obwodu,
+                target.rok = source.rok,
+                target.id_komitetu = source.id_komitetu,
+                target.id_czasu = source.id_czasu,
+                target.glosy_na_komitet = source.glosy_na_komitet
+        WHEN NOT MATCHED THEN
+            INSERT (id_wyniku, id_obwodu, rok, id_komitetu, id_czasu, glosy_na_komitet)
+            VALUES (source.id_wyniku, source.id_obwodu, source.rok, source.id_komitetu, source.id_czasu, source.glosy_na_komitet);
+    """
+
+    with engine.begin() as conn:
+        conn.execute(text(merge_sql))
+        conn.execute(text("DROP TABLE Fakt_Wyniki_Wyborcze_TMP"))
+
+    print("INFO --- Wykonano MERGE i usunięto tabelę tymczasową.")
+
+def generate_id_wyniku(id_obwodu, rok, id_komitetu):
+    key = f"{id_obwodu}_{rok}_{id_komitetu}"
+    return int(hashlib.sha256(key.encode()).hexdigest(), 16) % (10 ** 10)
 
 
 def main():
     engine = createEngine()
+
+    loadWymiarCzas(engine)
 
     # Przetwarzanie danych obwodow
     obwody_csv_files = [
@@ -254,6 +406,11 @@ def main():
         ]
     for csv_file in obwody_csv_files:
         df_obwody = extractDataObwody(csv_file)
+
+        # Sprawdzenie, czy id_gminy nie jest puste
+        print("Sprawdzanie id_gminy w df_obwody:")
+        print(df_obwody[['id_obwodu', 'id_gminy']].drop_duplicates().head())
+
         loadDataObwody(df_obwody, engine)
 
     # Przetwarzanie danych gmin
@@ -274,7 +431,21 @@ def main():
     ]
     for csv_file in stat_files:
         df_stat = extractDataStatystykiObwodu(csv_file)
+        print(df_stat[['id_obwodu', 'rok']].drop_duplicates())
         loadDataStatystykiObwodu(df_stat, engine)
+
+    komitet_files = [
+        "wyniki_gl_na_listy_po_obwodach_sejm_2015.csv",
+        "wyniki_gl_na_listy_po_obwodach_sejm_2019.csv",
+        "wyniki_gl_na_listy_po_obwodach_sejm_2023_utf8.csv"
+    ]
+
+    df_komitety = extractDataKomitety(komitet_files)
+    loadDataKomitety(df_komitety, engine)
+
+    for csv_file in komitet_files:
+        df_wyniki = extractDataWynikiWyborcze(csv_file, df_komitety)
+        loadDataWynikiWyborcze(df_wyniki, engine)
 
 
     # # Wstawienie danych do tabeli Wymiar_Obwod
