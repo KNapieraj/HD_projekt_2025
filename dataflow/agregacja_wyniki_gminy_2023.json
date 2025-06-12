@@ -22,7 +22,7 @@
 						"referenceName": "SQLDatabase",
 						"type": "LinkedServiceReference"
 					},
-					"name": "loadAgregacjaWyniki2023"
+					"name": "loadAgregacjaWynikiGmina2023"
 				}
 			],
 			"transformations": [
@@ -212,7 +212,7 @@
 				"          KW_Ruch_Naprawy_Polski_Suma = KW_Ruch_Naprawy_Polski,",
 				"          KW_Mniejszosc_Niemiecka_Suma = KW_Mniejszosc_Niemiecka,",
 				"          Data",
-				"     )) ~> loadAgregacjaWyniki2023"
+				"     )) ~> loadAgregacjaWynikiGmina2023"
 			]
 		}
 	}

@@ -22,7 +22,7 @@
 						"referenceName": "SQLDatabase",
 						"type": "LinkedServiceReference"
 					},
-					"name": "loadAgregacjaWyniki2019"
+					"name": "loadAgregacjaWynikiGmina2019"
 				}
 			],
 			"transformations": [
@@ -202,7 +202,7 @@
 				"          KW_SLD_Suma = KW_SLD,",
 				"          KW_Bezpartyjni_Samorzadowcy_Suma = KW_Bezpartyjni_Samorzadowcy,",
 				"          KW_Obywatele_Do_Parlamentu_Suma = KW_Obywatele_Do_Parlamentu",
-				"     )) ~> loadAgregacjaWyniki2019"
+				"     )) ~> loadAgregacjaWynikiGmina2019"
 			]
 		}
 	}
