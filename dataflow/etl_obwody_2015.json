@@ -63,7 +63,7 @@
 					"name": "aggregateWymiarCzas2015"
 				},
 				{
-					"name": "derivedColumn1"
+					"name": "AddedRokWymiarCzas2015"
 				},
 				{
 					"name": "alterRowWymiarCzas2015"
@@ -138,8 +138,8 @@
 				"          {Liczba Komisji} = toInteger(count({ID KOMISJI}))) ~> aggregateWymiarCzas2015",
 				"aggregateWymiarCzas2015 derive(Dzien = toInteger(25),",
 				"          Miesiac = toInteger(10),",
-				"          Rok = toInteger(2015)) ~> derivedColumn1",
-				"derivedColumn1 alterRow(upsertIf(true())) ~> alterRowWymiarCzas2015",
+				"          Rok = toInteger(2015)) ~> AddedRokWymiarCzas2015",
+				"AddedRokWymiarCzas2015 alterRow(upsertIf(true())) ~> alterRowWymiarCzas2015",
 				"alterRowWymiarObwody2015 sink(allowSchemaDrift: true,",
 				"     validateSchema: true,",
 				"     input(",
