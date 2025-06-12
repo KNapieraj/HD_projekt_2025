@@ -15839,14 +15839,14 @@
 146519;Żoliborz;Warszawa;mazowieckie;19;44;348;2767;2281;Szkoła Podstawowa nr 68;Warszawa;ul. Or-Ota;5;;01-507;Warszawa;stały;Tak;dzielnica w m.st. Warszawa;Szkoła Podstawowa nr 68, ul. Or-Ota 5, 01-507 Warszawa;al. Wojska Polskiego: parzyste od 46/48 do 58, nieparzyste od 35 do 41, ul. ks. T. Boguckiego: cała, ul. K. Brodzińskiego: cała, ul. Ł. Gołębiowskiego: cała, ul. S. Hozjusza: cała, ul. W. Kochowskiego: cała, ul. J. Kossaka: cała, ul. Z . Krasińskiego: nieparzyste od 21 do 27, ul. W. Niegolewskiego: cała, ul. Podstarościch: cała, ul. L. Rydygiera 4A, ul. H. Wieniawskiego: cała, ul. gen. J. Zajączka: parzyste 40, nieparzyste od 15 do 27
 146519;Żoliborz;Warszawa;mazowieckie;19;44;349;2960;2246;I Liceum Ogólnokształcące;Warszawa;ul. Alojzego Felińskiego;15;;01-513;Warszawa;stały;Tak;dzielnica w m.st. Warszawa;I Liceum Ogólnokształcące, ul. Alojzego Felińskiego 15, 01-513 Warszawa;al. Wojska Polskiego: nieparzyste od 17 do 31, parzyste od 18 do 42, ul. Bitwy pod Rokitną: cała, ul. S. Czarnieckiego: nieparzyste od 1 do 7, parzyste od 2 do 10, ul. A. Felińskiego: cała, ul. J. Kozietulskiego: cała, ul. J. Lechonia: cała, ul. L. Lisa-Kuli: cała, ul. A. Mickiewicza: nieparzyste od 9 do 27, ul. L. Mierosławskiego: parzyste od 18 do 26, nieparzyste od 23 do 31, Plac Inwalidów: 3, ul. S. Pogonowskiego: cała, ul. gen. J. Zajączka: nieparzyste od 7A do 11C, parzyste od 22 do 34
 146519;Żoliborz;Warszawa;mazowieckie;19;44;350;2411;2001;Szkoła Podstawowa nr 392;Warszawa;al. Aleja Wojska Polskiego;1A;;01-524;Warszawa;stały;Nie;dzielnica w m.st. Warszawa;Szkoła Podstawowa nr 392, al. Aleja Wojska Polskiego 1A, 01-524 Warszawa;al. Wojska Polskiego: nieparzyste od 1 do 13, ul. Dymińska: cała, ul. R. Krajewskiego: cała, ul. A. Mickiewicza: parzyste od 4 do 20, ul. Śmiała: parzyste od 4/18 do 24, nieparzyste od 1/3 do 25, ul. gen. J. Zajączka: 1/5, 8
-149801;Dar Młodzieży;statki;;19;44;1000;0;101;Dar Młodzieży;;;;;;;statek;Nie;statek;Dar Młodzieży;statek
-149801;Baltica;statki;;19;44;1001;0;17;Baltica;;;;;;;statek;Nie;statek;Baltica;statek
-149801;Fryderyk Chopin;statki;;19;44;1002;0;13;Fryderyk Chopin;;;;;;;statek;Nie;statek;Fryderyk Chopin;statek
-149801;Kontradmirał Xawery CZERNICKI;statki;;19;44;1003;0;51;Kontradmirał Xawery CZERNICKI;;;;;;;statek;Nie;statek;Kontradmirał Xawery CZERNICKI;statek
-149801;BALTIC BETA;statki;;19;44;1004;0;52;BALTIC BETA;;;;;;;statek;Nie;statek;BALTIC BETA;platforma
-149801;LOTOS PETROBALTIC;statki;;19;44;1005;0;27;LOTOS PETROBALTIC;;;;;;;statek;Nie;statek;LOTOS PETROBALTIC;platforma
-149801;PETROBALTIC;statki;;19;44;1006;0;27;PETROBALTIC;;;;;;;statek;Nie;statek;PETROBALTIC;platforma
-149801;PETRO GIANT;statki;;19;44;1007;0;54;PETRO GIANT;;;;;;;statek;Nie;statek;PETRO GIANT;platforma
+149801;statki;statki;;19;44;1000;0;101;Dar Młodzieży;;;;;;;statek;Nie;statek;Dar Młodzieży;statek
+149801;statki;statki;;19;44;1001;0;17;Baltica;;;;;;;statek;Nie;statek;Baltica;statek
+149801;statki;statki;;19;44;1002;0;13;Fryderyk Chopin;;;;;;;statek;Nie;statek;Fryderyk Chopin;statek
+149801;statki;statki;;19;44;1003;0;51;Kontradmirał Xawery CZERNICKI;;;;;;;statek;Nie;statek;Kontradmirał Xawery CZERNICKI;statek
+149801;statki;statki;;19;44;1004;0;52;BALTIC BETA;;;;;;;statek;Nie;statek;BALTIC BETA;platforma
+149801;statki;statki;;19;44;1005;0;27;LOTOS PETROBALTIC;;;;;;;statek;Nie;statek;LOTOS PETROBALTIC;platforma
+149801;statki;statki;;19;44;1006;0;27;PETROBALTIC;;;;;;;statek;Nie;statek;PETROBALTIC;platforma
+149801;statki;statki;;19;44;1007;0;54;PETRO GIANT;;;;;;;statek;Nie;statek;PETRO GIANT;platforma
 149901;zagranica;zagranica;;19;44;1;0;603;Tirana, Rruga E Bogdanëve 50, Tiranë 1001;Tirana;;;;;;zagranica;Nie;zagranica;Tirana, Rruga E Bogdanëve 50, Tiranë 1001, Tirana, Republika Albanii;Republika Albanii
 149901;zagranica;zagranica;;19;44;2;0;62;Algier, Rue Olof Palme, Nouveau-Paradou, 16035 Hydra-Alger;Algier;;;;;;zagranica;Nie;zagranica;Algier, Rue Olof Palme, Nouveau-Paradou, 16035 Hydra-Alger, Algier, Algierska Republika Ludowo-Demokratyczna;Algierska Republika Ludowo–Demokratyczna
 149901;zagranica;zagranica;;19;44;3;0;27;Luanda, Rua Damião de Góis 64 C. P. , 1340 Luanda;Luanda;;;;;;zagranica;Nie;zagranica;Luanda, Rua Damião de Góis 64 C. P. , 1340 Luanda, Luanda, Republika Angoli;Republika Angoli
