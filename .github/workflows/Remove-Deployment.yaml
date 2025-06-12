@@ -2,13 +2,8 @@ name: Remove - Deploy HD Project
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - dev
-      # - test
   pull_request:
     branches:
-      - test
       - master
 
 env:
