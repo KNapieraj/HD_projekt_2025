@@ -214,7 +214,7 @@
 				"     schemaName: 'dbo',",
 				"     tableName: 'Wymiar_Gmina_2023',",
 				"     insertable: true,",
-				"     updateable: false,",
+				"     updateable: true,",
 				"     deletable: false,",
 				"     upsertable: true,",
 				"     keys:['Nazwa'],",
