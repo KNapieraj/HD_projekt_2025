@@ -1,0 +1,9 @@
+{
+	"name": "hd-projekt-df",
+	"location": "westeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e808c96c-87de-4d14-a0f7-edce3b6ac4bb",
+		"tenantId": "322ca6db-4153-450e-8b3e-3978120de2db"
+	}
+}
