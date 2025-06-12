@@ -9,13 +9,6 @@ CREATE TABLE Wymiar_Czas (
     Liczba_Komisji INTEGER
 );
 
-CREATE TABLE Wymiar_Komitet_Wyborczy (
-    Nazwa VARCHAR(255) PRIMARY KEY,
-    Wyniki_2015 INTEGER DEFAULT 0,
-    Wyniki_2019 INTEGER DEFAULT 0,
-    Wyniki_2023 INTEGER DEFAULT 0
-);
-
 CREATE TABLE Wymiar_Gmina_2015 (
     Nazwa VARCHAR(350) PRIMARY KEY,
     Mieszkańcy INTEGER,
@@ -475,6 +468,5 @@ CREATE TABLE Fakt_Agregowane_Gmina_2023 (
     KW_Antypartia_Suma INTEGER,
     KW_Ruch_Naprawy_Polski_Suma INTEGER,
     KW_Mniejszosc_Niemiecka_Suma INTEGER,
-    Data DATE,
     FOREIGN KEY (Gmina) REFERENCES Wymiar_Gmina_2023(Nazwa)
 );
