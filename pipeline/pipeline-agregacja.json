@@ -1,9 +1,9 @@
 {
-	"name": "pipeline1",
+	"name": "pipeline-agregacja",
 	"properties": {
 		"activities": [
 			{
-				"name": "Data flow1",
+				"name": "agregacja",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "etl_obwody_copy1",
+						"referenceName": "agregacja_wyniki",
 						"type": "DataFlowReference"
 					},
 					"compute": {
@@ -24,6 +24,39 @@
 						"computeType": "General"
 					},
 					"traceLevel": "Fine"
+				}
+			},
+			{
+				"name": "agregacjaWymiarGina",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [
+					{
+						"activity": "agregacja",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "agregacja_wyniki_wymiar_gminy",
+						"type": "DataFlowReference"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine",
+					"runConcurrently": false,
+					"continueOnError": false
 				}
 			}
 		],
