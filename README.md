@@ -11,3 +11,7 @@ linki do danych:
 ### Wojciech Broniewicz
 ### Kamil Napieraj
 ### Arkadiusz Sanecki
+
+
+SQL Schema Diagram:
+https://gh.atlasgo.cloud/explore/00b6259a
