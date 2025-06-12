@@ -2,24 +2,19 @@ name: Remove - Deploy HD Project
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - dev
-      # - test
   pull_request:
     branches:
-      - test
       - master
 
 env:
-  azureDataFacAzureDataFactoryNametoryName: 'projekt-hd-df'
-  ResourceGroupName: 'ProjektHD2-rg'
-  serverName: 'hd-sql-server2'
-  sqlDBName: 'hd-sql-database2'
+  AzureDataFactoryName: 'hd-projekt-df'
+  ResourceGroupName: 'ProjektHD-rg'
+  serverName: 'hd-sql-server'
+  sqlDBName: 'hd-sql-database'
 
 jobs:
   Remove-DataFactory:
-    name: Remove SQL Database
+    name: Remove Azure Data Factory
     runs-on:
       - ubuntu-latest
     steps:
@@ -27,6 +22,7 @@ jobs:
         shell: pwsh
         run: |
             Install-Module -Name Az.Resources -Force -Scope CurrentUser
+            Install-Module -Name Az.DataFactory -Force -Scope CurrentUser
             Install-Module -Name Az.Sql -Force -Scope CurrentUser
       - name: Checkout code
         uses: actions/checkout@v2
@@ -40,14 +36,15 @@ jobs:
         shell: pwsh
         run: |
           Import-Module -Name Az.Resources
+          Import-Module Az.DataFactory
           Import-Module -Name Az.Sql
       - name: Run Remove action script
         shell: pwsh
         run: |
           . "${{ github.workspace }}/Scripts/Remove-AzureResources.ps1"
           Remove-DataFactory `
-          -azureDataFactoryName ${{ env.ResourceGroupName }} `
-          -resourceGroupName ${{ env.serverName }}
+          -azureDataFactoryName ${{ env.AzureDataFactoryName }} `
+          -resourceGroupName ${{ env.ResourceGroupName }}
 
   Remove-sqlDBName:
     name: Remove SQL Database

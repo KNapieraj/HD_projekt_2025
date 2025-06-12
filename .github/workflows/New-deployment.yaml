@@ -2,30 +2,24 @@ name: New - Deploy HD Project
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      # - test
-      - dev
   pull_request:
     branches:
-      - test
       - master
 
 env:
   AdministratorLogin: 'sqladminuser'
-  AzureDataFactoryName: 'projekt-hd-df'
+  AzureDataFactoryName: 'hd-projekt-df'
   Location: 'westeurope'
   ProductOwner: "Kamil_Napieraj"
-  ResourceGroupName: 'ProjektHD2'
-  resourceGroupConventionName: 'ProjektHD2-rg'
-  sqlServerName: 'hd-sql-server2'
+  ResourceGroupName: 'ProjektHD'
+  serverName: 'hd-sql-server'
   SkuTier: 'Basic'
   SkuName: 'Basic'
-  sqlDBName: 'hd-sql-database2'
+  sqlDBName: 'hd-sql-database'
 
 jobs:
-  new-resourceGroup:
-    name: Create Resource Group
+  new-action:
+    name: Create resource group > SQL Server > SQL Database > Azure Data Factory
     runs-on:
       - ubuntu-latest
     steps:
@@ -33,7 +27,7 @@ jobs:
         shell: pwsh
         run: |
             Install-Module -Name Az.Resources -Force -Scope CurrentUser
-
+            Install-Module -Name Az.DataFactory -Force -Scope CurrentUser
       - name: Checkout code
         uses: actions/checkout@v2
 
@@ -46,116 +40,19 @@ jobs:
         shell: pwsh
         run: |
           Import-Module -Name Az.Resources
-
+          Import-Module Az.DataFactory
       - name: Run New action script
         shell: pwsh
         run: |
           . "${{ github.workspace }}/Scripts/New-AzureResources.ps1"
-          New-ResourceGroup `
-          -location ${{ env.Location }} `
-          -ProductOwner ${{ env.ProductOwner }} `
-          -resourceGroupName ${{ env.ResourceGroupName }}
-
-  new-azureServerSQL:
-    name: Create Azure SQL Server
-    needs: new-resourceGroup
-    runs-on:
-      - ubuntu-latest
-    steps:
-      - name: Install Az.Resources module
-        shell: pwsh
-        run: |
-            Install-Module -Name Az.Resources -Force -Scope CurrentUser
-
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Login to Azure using PowerShell script
-        shell: pwsh
-        run: |
-            . "${{ github.workspace }}/Scripts/Login-AzServicePrincipal.ps1" `
-            -ServicePrincipalJson '${{ secrets.ARM_PROJEKTHD_SP }}'
-      - name: Import Az.Resources Module
-        shell: pwsh
-        run: |
-          Import-Module -Name Az.Resources
-
-      - name: Run New action script
-        shell: pwsh
-        run: |
-          . "${{ github.workspace }}/Scripts/New-AzureResources.ps1"
-          New-AzureServerSQL `
+          New-AzureResources `
           -administratorLogin ${{ env.AdministratorLogin }} `
           -administratorLoginPassword ${{ secrets.SQL_ADMIN_PASSWORD }} `
+          -azureDataFactoryName ${{ env.AzureDataFactoryName }} `
+          -location ${{ env.Location }} `
           -ProductOwner ${{ env.ProductOwner }} `
-          -resourceGroupConventionName ${{ env.resourceGroupConventionName }} `
-          -sqlServerName ${{ env.sqlServerName }}
-
-  new-azureDatabaseSQL:
-    name: Create Azure SQL Database
-    needs: new-azureServerSQL
-    runs-on:
-      - ubuntu-latest
-    steps:
-      - name: Install Az.Resources module
-        shell: pwsh
-        run: |
-            Install-Module -Name Az.Resources -Force -Scope CurrentUser
-
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Login to Azure using PowerShell script
-        shell: pwsh
-        run: |
-            . "${{ github.workspace }}/Scripts/Login-AzServicePrincipal.ps1" `
-            -ServicePrincipalJson '${{ secrets.ARM_PROJEKTHD_SP }}'
-      - name: Import Az.Resources Module
-        shell: pwsh
-        run: |
-          Import-Module -Name Az.Resources
-
-      - name: Run New action script
-        shell: pwsh
-        run: |
-          . "${{ github.workspace }}/Scripts/New-AzureResources.ps1"
-          New-AzureDatabaseSQL `
-          -ProductOwner ${{ env.ProductOwner }} `
-          -resourceGroupConventionName ${{ env.resourceGroupConventionName }} `
-          -sqlServerName ${{ env.sqlServerName }} `
+          -resourceGroupName ${{ env.ResourceGroupName }} `
+          -serverName ${{ env.serverName }} `
           -SkuTier ${{ env.SkuTier }} `
           -SkuName ${{ env.SkuName }} `
           -sqlDBName ${{ env.sqlDBName }}
-
-  new-azureDataFactory:
-    name: Create Azure Data Factory
-    needs: new-azureDatabaseSQL
-    runs-on:
-      - ubuntu-latest
-    steps:
-      - name: Install Az.Resources module
-        shell: pwsh
-        run: |
-            Install-Module -Name Az.Resources -Force -Scope CurrentUser
-
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Login to Azure using PowerShell script
-        shell: pwsh
-        run: |
-            . "${{ github.workspace }}/Scripts/Login-AzServicePrincipal.ps1" `
-            -ServicePrincipalJson '${{ secrets.ARM_PROJEKTHD_SP }}'
-      - name: Import Az.Resources Module
-        shell: pwsh
-        run: |
-          Import-Module -Name Az.Resources
-
-      - name: Run New action script
-        shell: pwsh
-        run: |
-          . "${{ github.workspace }}/Scripts/New-AzureResources.ps1"
-          New-AzureDataFactory `
-          -dataFactoryName ${{ env.AzureDataFactoryName }} `
-          -resourceGroupConventionName ${{ env.resourceGroupConventionName }} `
-          -ProductOwner ${{ env.ProductOwner }}

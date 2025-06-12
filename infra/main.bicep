@@ -1,5 +1,8 @@
 targetScope = 'subscription'
 
+@description('Nazwa dla Azure Data Factory')
+param azureDataFactoryName string
+
 @description('Nazwa grupy zasobów.')
 param resourceGroupName string
 
@@ -7,7 +10,7 @@ param resourceGroupName string
 param resourceGroupConventionName string = '${resourceGroupName}-rg'
 
 @description('Właściciel zasobu')
-param resourceGroupProductOwner string
+param ProductOwner string
 
 @description('Nazwa serwera SQL.')
 param serverName string
@@ -36,9 +39,9 @@ module rgModule './Modules/ResourceGroup.bicep' = {
   name: 'deployResourceGroup'
   scope: subscription()
   params: {
-    resourceGroupLocation: location
-    resourceGroupConventionName: resourceGroupConventionName
-    resourceGroupProductOwner: resourceGroupProductOwner
+    location: location
+    resourceGroupName: resourceGroupName
+    resourceGroupProductOwner: ProductOwner
   }
 }
 
@@ -47,9 +50,10 @@ module sqlServerModule './Modules/AzureSQLServer.bicep' = {
   name: 'deploySqlServer'
   scope: resourceGroup(resourceGroupConventionName)
   params: {
-    serverName: serverName
+    sqlServerName: serverName
     administratorLogin: administratorLogin
     administratorLoginPassword: administratorLoginPassword
+    resourceProductOwner:ProductOwner
   }
   dependsOn: [
     rgModule
@@ -61,12 +65,26 @@ module sqlDatabaseModule './Modules/AzureSQLDatabase.bicep' = {
   name: 'deploySqlDatabase'
   scope: resourceGroup(resourceGroupConventionName)
   params: {
-    sqlServerName: serverName
+    resourceProductOwner: ProductOwner
     sqlDBName: sqlDBName
+    sqlServerName: serverName
     skuTier: skuTier
     skuName: skuName
   }
   dependsOn: [
     sqlServerModule
+  ]
+}
+
+// Moduł: Azure Data Factory
+module azureDataFactoryModule './Modules/AzureDataFactory.bicep' = {
+  name: 'deployAzureDataFactory'
+  scope: resourceGroup(resourceGroupConventionName)
+  params: {
+    dataFactoryName: azureDataFactoryName
+    resourceProductOwner: ProductOwner
+  }
+  dependsOn: [
+    sqlDatabaseModule
   ]
 }

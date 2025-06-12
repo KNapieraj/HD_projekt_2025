@@ -5,11 +5,8 @@ param administratorLogin string
 @secure()
 param administratorLoginPassword string
 
-@description('Resource group full name')
-param resourceGroupConventionName string
-
-@description('Resource lock name')
-param resourceLockName string = '${sqlServerName}-lock'
+// @description('Resource lock name')
+// param resourceLockName string = '${sqlServerName}-lock'
 
 @description('Tags for resource')
 param resourceProductOwner string
@@ -17,14 +14,9 @@ param resourceProductOwner string
 @description('Nazwa serwera SQL.')
 param sqlServerName string
 
-resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' existing = {
-  name: resourceGroupConventionName
-}
-
 resource sqlServer 'Microsoft.Sql/servers@2022-05-01-preview' = {
   name: sqlServerName
-  scope: resourceGroup
-  location: resourceGroup.location
+  location: resourceGroup().location
   properties: {
     administratorLogin: administratorLogin
     administratorLoginPassword: administratorLoginPassword
@@ -43,10 +35,10 @@ resource firewallRule 'Microsoft.Sql/servers/firewallRules@2022-05-01-preview' =
   }
 }
 
-resource lock 'Microsoft.Authorization/locks@2022-09-01' = {
-  name: resourceLockName
-  scope: sqlServer
-  properties: {
-    level: 'CanNotDelete'
-  }
-}
+// resource lock 'Microsoft.Authorization/locks@2022-09-01' = {
+//   name: resourceLockName
+//   scope: sqlServer
+//   properties: {
+//     level: 'CanNotDelete'
+//   }
+// }

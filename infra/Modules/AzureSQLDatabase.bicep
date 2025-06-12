@@ -1,13 +1,10 @@
-@description('Resource group full name')
-param resourceGroupConventionName string
-
 @description('Tags for resource')
 param resourceProductOwner string
 
-@description('Resource lock name')
-param resourceLockName string = '${sqlDBName}-lock'
+// @description('Resource lock name')
+// param resourceLockName string = '${sqlDBName}-lock'
 
-@description('Pełna nazwa zasobu serwera SQL, np. format: my-sql-server')
+@description('Nazwa bazy danych SQL.')
 param sqlServerName string
 
 @description('Nazwa bazy danych SQL.')
@@ -24,14 +21,9 @@ param skuTier string
 ])
 param skuName string
 
-resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' existing = {
-  name: resourceGroupName
-}
-
 resource sqlDB 'Microsoft.Sql/servers/databases@2022-05-01-preview' = {
   name: '${sqlServerName}/${sqlDBName}'
-  scope: resourceGroup
-  location: resourceGroup.location
+  location: resourceGroup().location
   sku: {
     name: skuName
     tier: skuTier
@@ -41,10 +33,10 @@ resource sqlDB 'Microsoft.Sql/servers/databases@2022-05-01-preview' = {
   }
 }
 
-resource lock 'Microsoft.Authorization/locks@2022-09-01' = {
-  name: resourceLockName
-  scope: sqlDB
-  properties: {
-    level: 'CanNotDelete'
-  }
-}
+// resource lock 'Microsoft.Authorization/locks@2022-09-01' = {
+//   name: resourceLockName
+//   scope: sqlDB
+//   properties: {
+//     level: 'CanNotDelete'
+//   }
+// }
