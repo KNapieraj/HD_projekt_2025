@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "agregacja",
+				"name": "agregacja_wyniki_2015",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
@@ -27,11 +27,11 @@
 				}
 			},
 			{
-				"name": "agregacjaWymiarGmina",
+				"name": "agregacja_wyniki_2019",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [
 					{
-						"activity": "agregacja",
+						"activity": "agregacja_wyniki_2015",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -47,7 +47,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "agregacja_wyniki_wymiar_gminy",
+						"referenceName": "agregacja_wyniki_2019",
 						"type": "DataFlowReference"
 					},
 					"compute": {
@@ -57,6 +57,37 @@
 					"traceLevel": "Fine",
 					"runConcurrently": false,
 					"continueOnError": false
+				}
+			},
+			{
+				"name": "agregacja_wyniki_2023",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [
+					{
+						"activity": "agregacja_wyniki_2019",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "agregacja_wyniki_2023",
+						"type": "DataFlowReference"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
 				}
 			}
 		],
