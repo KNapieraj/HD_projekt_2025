@@ -1,5 +1,5 @@
 {
-	"name": "dataflow2",
+	"name": "delta_prosta",
 	"properties": {
 		"folder": {
 			"name": "Delta"
@@ -27,6 +27,20 @@
 						"type": "LinkedServiceReference"
 					},
 					"name": "readAgregacjaWyniki2023"
+				},
+				{
+					"linkedService": {
+						"referenceName": "SQLDatabase",
+						"type": "LinkedServiceReference"
+					},
+					"name": "source1"
+				},
+				{
+					"linkedService": {
+						"referenceName": "SQLDatabase",
+						"type": "LinkedServiceReference"
+					},
+					"name": "source2"
 				}
 			],
 			"sinks": [],
@@ -36,6 +50,9 @@
 				},
 				{
 					"name": "aggregate1"
+				},
+				{
+					"name": "join1"
 				}
 			],
 			"scriptLines": [
@@ -174,8 +191,41 @@
 				"     schemaName: 'dbo',",
 				"     tableName: 'Fakt_Agregowane_Wyniki_2023',",
 				"     isolationLevel: 'READ_UNCOMMITTED') ~> readAgregacjaWyniki2023",
+				"source(output(",
+				"          Nazwa as string,",
+				"          {Mieszkańcy} as integer,",
+				"          Wyborcy as integer,",
+				"          Liczba_Komisji as integer,",
+				"          Data as date",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'table',",
+				"     store: 'sqlserver',",
+				"     schemaName: 'dbo',",
+				"     tableName: 'Wymiar_Gmina_2015',",
+				"     isolationLevel: 'READ_UNCOMMITTED') ~> source1",
+				"source(output(",
+				"          Nazwa as string,",
+				"          {Mieszkańcy} as integer,",
+				"          Wyborcy as integer,",
+				"          Liczba_Komisji as integer,",
+				"          Data as date",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'table',",
+				"     store: 'sqlserver',",
+				"     schemaName: 'dbo',",
+				"     tableName: 'Wymiar_Gmina_2019',",
+				"     isolationLevel: 'READ_UNCOMMITTED') ~> source2",
 				"readAgregacjaWyniki2015, readAgregacjaWyniki2019, readAgregacjaWyniki2023 union(byName: true)~> union1",
-				"union1 aggregate() ~> aggregate1"
+				"union1 aggregate() ~> aggregate1",
+				"source1, source2 join(source1@Nazwa == source2@Nazwa,",
+				"     joinType:'inner',",
+				"     matchType:'exact',",
+				"     ignoreSpaces: false,",
+				"     broadcast: 'auto')~> join1"
 			]
 		}
 	}
