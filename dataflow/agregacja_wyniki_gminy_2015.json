@@ -21,7 +21,7 @@
 						"referenceName": "SQLDatabase",
 						"type": "LinkedServiceReference"
 					},
-					"name": "loadAgregacjaWyniki2015"
+					"name": "loadAgregacjaWynikiGmina2015"
 				}
 			],
 			"transformations": [
@@ -185,7 +185,7 @@
 				"     updateable: false,",
 				"     deletable: false,",
 				"     upsertable: true,",
-				"     keys:['Data'],",
+				"     keys:['Gmina'],",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
 				"     errorHandlingOption: 'stopOnFirstError',",
@@ -230,7 +230,7 @@
 				"          KW_Kongres_Prawicy_Suma = KW_Kongres_Prawicy,",
 				"          KW_Mniejszosc_Niemiecka_Suma = KW_Mniejszosc_Niemiecka,",
 				"          KW_Obywatele_Do_Parlamentu_Suma = KW_Obywatele_Do_Parlamentu",
-				"     )) ~> loadAgregacjaWyniki2015"
+				"     )) ~> loadAgregacjaWynikiGmina2015"
 			]
 		}
 	}
