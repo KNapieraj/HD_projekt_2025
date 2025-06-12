@@ -210,8 +210,7 @@
 				"          KW_Normalny_Kraj_Suma = KW_Normalny_Kraj,",
 				"          KW_Antypartia_Suma = KW_Antypartia,",
 				"          KW_Ruch_Naprawy_Polski_Suma = KW_Ruch_Naprawy_Polski,",
-				"          KW_Mniejszosc_Niemiecka_Suma = KW_Mniejszosc_Niemiecka,",
-				"          Data",
+				"          KW_Mniejszosc_Niemiecka_Suma = KW_Mniejszosc_Niemiecka",
 				"     )) ~> loadAgregacjaWyniki2023"
 			]
 		}
