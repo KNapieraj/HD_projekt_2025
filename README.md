@@ -38,10 +38,10 @@ https://gh.atlasgo.cloud/explore/00b6259a
 ---
 
 ## 👨‍💻 Autor
-**Jakub Adamczyk**
-**Wojciech Broniewicz**
-**Kamil Napieraj**
-**Arkadiusz Sanecki**
+**Jakub Adamczyk**<br>
+**Wojciech Broniewicz**<br>
+**Kamil Napieraj**<br>
+**Arkadiusz Sanecki**<br>
 
 ---
 
